@@ -1,0 +1,4 @@
+c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.dll
+c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.pdb
+c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.dll
+c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.pdb

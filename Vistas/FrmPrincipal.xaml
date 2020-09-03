@@ -1,0 +1,18 @@
+﻿<Window x:Class="Vistas.FrmPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Panel Principal" Height="300" Width="435">
+    <Grid>
+        <Label Content="Hola Que ase, soy un menú" Height="105" HorizontalAlignment="Left" Margin="53,79,0,0" Name="label1" VerticalAlignment="Top" Width="313" FontSize="24" />
+        <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="413">
+            <MenuItem Header="Usuarios" Name="miUsuarios" Click="miUsuarios_Click"></MenuItem>
+            <MenuItem Header="Películas" Name="miPeliculas" Click="miPeliculas_Click"></MenuItem>
+            <MenuItem Header="Butacas" Name="miButacas" Click="miButacas_Click"></MenuItem>
+            <MenuItem Header="Proyecciones" Name="miProyeccciones" Click="miProyeccciones_Click"></MenuItem>
+        </Menu>
+        <Menu Height="48" HorizontalAlignment="Left" Name="menuVendedor" VerticalAlignment="Top" Width="413">
+            <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
+            <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
+        </Menu>
+    </Grid>
+</Window>
