@@ -14,3 +14,5 @@ c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vi
 c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.pdb
 c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.baml
 c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.g.cs
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.baml
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.g.cs

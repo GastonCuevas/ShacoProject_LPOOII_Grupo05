@@ -19,6 +19,7 @@ namespace Vistas
     /// </summary>
     public partial class FrmPrincipal : Window
     {
+        public FrmClientes oFrmClientes = new FrmClientes();
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -44,7 +45,7 @@ namespace Vistas
 
         private void miClientes_Click(object sender, RoutedEventArgs e)
         {
-
+            oFrmClientes.Show();
         }
 
         private void miTickets_Click(object sender, RoutedEventArgs e)
