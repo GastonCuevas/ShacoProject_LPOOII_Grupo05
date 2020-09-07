@@ -1,0 +1,8 @@
+﻿<Window x:Class="Vistas.FrmPeliculas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FrmPeliculas" Height="324" Width="573">
+    <Grid>
+        
+    </Grid>
+</Window>

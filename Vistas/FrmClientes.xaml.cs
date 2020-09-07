@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
+using System.Text.RegularExpressions;
 
 namespace Vistas
 {
@@ -34,6 +35,11 @@ namespace Vistas
 
         }
 
+        /// <summary>
+        /// Método que agrega un Cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             Cliente oCliente = new Cliente();
@@ -60,6 +66,7 @@ namespace Vistas
             }
         }
 
+        //Método para limpiar los campos del FrmClientes
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtApellido.Text = "";
@@ -67,6 +74,71 @@ namespace Vistas
             txtEmail.Text = "";
             txtTelefono.Text = "";
             txtNombre.Text = "";
+        }
+
+        /// <summary>
+        /// Conjunto de Métodos que verifican si se puede habilitar el botón de agregar en el FrmClientes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
+              && txtEmail.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
+              && txtEmail.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtApellido_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
+              && txtEmail.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
+              && txtEmail.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtDNI_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
+              && txtEmail.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        /// <summary>
+        /// Conjunto de Métodos que validan los textBox de DNI y Teléfono para que solo se puedan ingresar números
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void txtDNI_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+        void txtTelefono_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
     }
 }

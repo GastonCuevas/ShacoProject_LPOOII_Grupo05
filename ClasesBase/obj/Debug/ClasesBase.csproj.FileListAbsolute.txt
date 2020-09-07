@@ -7,3 +7,4 @@ I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\bin\Debug\ClasesBase.pdb
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.dll
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache

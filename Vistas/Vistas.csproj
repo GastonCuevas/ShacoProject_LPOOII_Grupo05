@@ -70,6 +70,9 @@
     <Compile Include="FrmLogin.xaml.cs">
       <DependentUpon>FrmLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrmPeliculas.xaml.cs">
+      <DependentUpon>FrmPeliculas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.xaml.cs">
       <DependentUpon>FrmPrincipal.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FrmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrmPeliculas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
