@@ -16,3 +16,23 @@ c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vi
 c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.g.cs
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.baml
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.exe
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.pdb
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\bin\Debug\Vistas.exe
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\bin\Debug\Vistas.pdb
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\bin\Debug\ClasesBase.dll
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\bin\Debug\ClasesBase.pdb
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmButacas.baml
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmClientes.baml
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmLogin.baml
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmPrincipal.baml
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmButacas.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmClientes.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmLogin.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\FrmPrincipal.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\App.g.cs
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.g.resources
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache

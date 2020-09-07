@@ -61,6 +61,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmButacas.xaml.cs">
+      <DependentUpon>FrmButacas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrmClientes.xaml.cs">
       <DependentUpon>FrmClientes.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="FrmButacas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrmClientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
