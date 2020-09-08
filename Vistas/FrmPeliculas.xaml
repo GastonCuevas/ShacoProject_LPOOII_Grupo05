@@ -1,8 +1,29 @@
 ﻿<Window x:Class="Vistas.FrmPeliculas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FrmPeliculas" Height="324" Width="573">
-    <Grid>
-        
+        Title="FrmPeliculas" Height="407" Width="437">
+    <Grid Height="366" Width="379">
+        <Label Content="Codigo:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblcod" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,16,128,0" Name="txtcodigo" VerticalAlignment="Top" Width="161" />
+        <Label Content="Titulo:" Height="28" HorizontalAlignment="Left" Margin="12,59,0,0" Name="lbltitulo" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,64,0,0" Name="txttitulo" VerticalAlignment="Top" Width="161" />
+        <Label Content="Genero:" Height="28" HorizontalAlignment="Left" Margin="12,106,0,0" Name="lblcodigo" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,111,0,0" Name="cbgender" VerticalAlignment="Top" Width="161" SelectionChanged="cbgender_SelectionChanged">
+            <ComboBoxItem Content="Comedia" />
+            <ComboBoxItem Content="Accion" />
+            <ComboBoxItem Content="Drama" />
+        </ComboBox>
+        <Label Content="Duracion:" Height="28" HorizontalAlignment="Left" Margin="12,155,0,0" Name="lblduracion" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,159,0,0" Name="txtduracion" VerticalAlignment="Top" Width="161" />
+        <Label Content="Clase:" Height="28" HorizontalAlignment="Left" Margin="12,208,0,0" Name="lblclase" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,208,0,0" Name="cbclase" VerticalAlignment="Top" Width="161">
+            <ComboBoxItem Content="APT" />
+            <ComboBoxItem Content="SAM13" />
+            <ComboBoxItem Content="SAM16" />
+        </ComboBox>
+        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="12,262,0,0" Name="btnadd" VerticalAlignment="Top" Width="90" Click="btnadd_Click" />
+        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="127,262,0,0" Name="btnmod" VerticalAlignment="Top" Width="90" Click="btnmod_Click" IsEnabled="False"/>
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Right" Margin="0,262,45,0" Name="btndel" VerticalAlignment="Top" Width="90" Click="btndel_Click" IsEnabled="False"/>
+        <Button Content="Clean" Height="23" HorizontalAlignment="Left" Margin="12,311,0,0" Name="btnclean" VerticalAlignment="Top" Width="90" Click="btnclean_Click" />
     </Grid>
 </Window>

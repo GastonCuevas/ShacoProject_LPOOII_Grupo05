@@ -8,3 +8,8 @@ I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.csprojResolve
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.dll
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.pdb

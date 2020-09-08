@@ -7,9 +7,9 @@ namespace ClasesBase
 {
     public class Pelicula
     {
-        private string pel_Codigo;
+        private int pel_Codigo;
 
-        public string Pel_Codigo
+        public int Pel_Codigo
         {
             get { return pel_Codigo; }
             set { pel_Codigo = value; }
@@ -21,9 +21,9 @@ namespace ClasesBase
             get { return pel_Titulo; }
             set { pel_Titulo = value; }
         }
-        private string pel_Duracion;
+        private int pel_Duracion;
 
-        public string Pel_Duracion
+        public int Pel_Duracion
         {
             get { return pel_Duracion; }
             set { pel_Duracion = value; }
