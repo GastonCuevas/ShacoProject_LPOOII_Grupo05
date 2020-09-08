@@ -15,12 +15,11 @@
         </Grid.ColumnDefinitions>
         <Grid Height="236" Width="293" MouseLeftButtonDown="AddOrRemove" x:Name="butacaGrd" Margin="136,158,0,1" Grid.ColumnSpan="2" Grid.RowSpan="2">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="0*" />
-            <RowDefinition Height="59" />
-            <RowDefinition Height="77*" />
-            <RowDefinition Height="77*" />
-            <RowDefinition Height="77*" />
+            
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="75*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="75*" />
