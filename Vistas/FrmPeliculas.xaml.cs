@@ -36,9 +36,8 @@ namespace Vistas
             oPel.Pel_Titulo = txttitulo.Text;
             oPel.Pel_Duracion = Convert.ToInt32(txtduracion.Text);
             oPel.Pel_Codigo = Convert.ToInt32(txtcodigo.Text);
-            oPel.Pel_Genero = cbgender.SelectedItem.ToString();
-            oPel.Pel_Clase = cbgender.SelectedItem.ToString();
-
+            oPel.Pel_Genero = cbgender.Text;
+            oPel.Pel_Clase = cbclase.Text;
             if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != 0
                && oPel.Pel_Duracion != 0)
             {
@@ -61,6 +60,9 @@ namespace Vistas
             txttitulo.Text = "";
             txtduracion.Text = "";
             txtcodigo.Text = "";
+            cbgender.Text = null;
+            cbclase.Text = null;
+            
         }
 
         void txtcodigo_PreviewTextInput(object sender, TextCompositionEventArgs e)

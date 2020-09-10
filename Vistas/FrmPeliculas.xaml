@@ -4,7 +4,7 @@
         Title="FrmPeliculas" Height="407" Width="437">
     <Grid Height="366" Width="379">
         <Label Content="Codigo:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblcod" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,16,128,0" Name="txtcodigo" VerticalAlignment="Top" Width="161" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,16,128,0" Name="txtcodigo" VerticalAlignment="Top" Width="161" PreviewTextInput="txtcodigo_PreviewTextInput" MaxLength="10"/>
         <Label Content="Titulo:" Height="28" HorizontalAlignment="Left" Margin="12,59,0,0" Name="lbltitulo" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="90,64,0,0" Name="txttitulo" VerticalAlignment="Top" Width="161" />
         <Label Content="Genero:" Height="28" HorizontalAlignment="Left" Margin="12,106,0,0" Name="lblcodigo" VerticalAlignment="Top" />
@@ -14,9 +14,9 @@
             <ComboBoxItem Content="Drama" />
         </ComboBox>
         <Label Content="Duracion:" Height="28" HorizontalAlignment="Left" Margin="12,155,0,0" Name="lblduracion" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,159,0,0" Name="txtduracion" VerticalAlignment="Top" Width="161" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,159,0,0" Name="txtduracion" VerticalAlignment="Top" Width="161"  PreviewTextInput="txtduracion_PreviewTextInput" MaxLength="10"/>
         <Label Content="Clase:" Height="28" HorizontalAlignment="Left" Margin="12,208,0,0" Name="lblclase" VerticalAlignment="Top" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,208,0,0" Name="cbclase" VerticalAlignment="Top" Width="161">
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,208,0,0" Name="cbclase" VerticalAlignment="Top" Width="161" DataContext="{Binding}">
             <ComboBoxItem Content="APT" />
             <ComboBoxItem Content="SAM13" />
             <ComboBoxItem Content="SAM16" />
