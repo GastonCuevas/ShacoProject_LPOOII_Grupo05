@@ -86,3 +86,4 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vis
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.g.resources
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe.config

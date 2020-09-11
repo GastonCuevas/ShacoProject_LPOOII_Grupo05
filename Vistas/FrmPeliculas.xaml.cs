@@ -25,19 +25,19 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void cbgender_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void btnadd_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Método que agrega una película
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             Pelicula oPel = new Pelicula();
-            oPel.Pel_Titulo = txttitulo.Text;
-            oPel.Pel_Duracion = Convert.ToInt32(txtduracion.Text);
-            oPel.Pel_Codigo = Convert.ToInt32(txtcodigo.Text);
-            oPel.Pel_Genero = cbgender.Text;
-            oPel.Pel_Clase = cbclase.Text;
+            oPel.Pel_Titulo = txtTitulo.Text;
+            oPel.Pel_Duracion = Convert.ToInt32(txtDuracion.Text);
+            oPel.Pel_Codigo = Convert.ToInt32(txtCodigo.Text);
+            oPel.Pel_Genero = cbGenero.Text;
+            oPel.Pel_Clase = cbClase.Text;
             if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != 0
                && oPel.Pel_Duracion != 0)
             {
@@ -47,6 +47,7 @@ namespace Vistas
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     MessageBox.Show("Pelicula Incluida");
+                    limpiarCampos();
                 }
             }
             else 
@@ -55,34 +56,116 @@ namespace Vistas
             }
         }
 
-        private void btnclean_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Método que llama al método de limpiar campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txttitulo.Text = "";
-            txtduracion.Text = "";
-            txtcodigo.Text = "";
-            cbgender.Text = null;
-            cbclase.Text = null;
-            
+            limpiarCampos();
         }
 
-        void txtcodigo_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        /// <summary>
+        /// Método que valida que solo se pueden ingresar números al textbox de código.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void txtCodigo_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
 
-        void txtduracion_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        /// <summary>
+        /// Método que valida que solo se pueden ingresar números al textbox de duración.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void txtDuracion_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
 
-        private void btnmod_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Método que modifica la película seleccionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btndel_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Método que elimina la película seleccionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Método que limpia los campos del formulario.
+        /// </summary>
+        private void limpiarCampos() 
+        {
+            txtTitulo.Text = "";
+            txtDuracion.Text = "";
+            txtCodigo.Text = "";
+            cbGenero.Text = null;
+            cbClase.Text = null;
+        }
+
+        /// <summary>
+        /// Conjunto de métodos que verifican si se puede habilitar el botón de agregar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
+              && cbGenero.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtTitulo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
+              && cbGenero.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void txtDuracion_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
+              && cbGenero.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void cbClase_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
+              && cbGenero.SelectedValue != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
+        }
+
+        private void cbGenero_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
+              && cbGenero.Text != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
         }
 
     }

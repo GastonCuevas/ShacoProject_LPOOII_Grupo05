@@ -13,6 +13,8 @@
             <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
             <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
         </Menu>
+        <Button Content="Cerrar Sesión" Height="23" HorizontalAlignment="Left" Margin="531,0,0,0" Name="btnCerrarSesion" VerticalAlignment="Top" Width="75" Click="btnCerrarSesion_Click" />
+        <Label Content="Bienvenido: " Height="28" HorizontalAlignment="Left" Margin="180,56,0,0" Name="lblUsuarioLogueado" VerticalAlignment="Top" Width="215" />
     </Grid>
 </Window>
 

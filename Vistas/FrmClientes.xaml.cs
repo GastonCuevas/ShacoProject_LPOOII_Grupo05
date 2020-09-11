@@ -58,6 +58,7 @@ namespace Vistas
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     MessageBox.Show("Cliente Registrado");
+                    limpiarCampos();
                 }
             }
             else 
@@ -66,14 +67,10 @@ namespace Vistas
             }
         }
 
-        //Método para limpiar los campos del FrmClientes
+        //Método que llama al método de limpiar campos
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtApellido.Text = "";
-            txtDNI.Text = "";
-            txtEmail.Text = "";
-            txtTelefono.Text = "";
-            txtNombre.Text = "";
+            limpiarCampos();
         }
 
         /// <summary>
@@ -139,6 +136,18 @@ namespace Vistas
         void txtTelefono_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+        /// <summary>
+        /// Método que limpia los campos del formulario
+        /// </summary>
+        private void limpiarCampos() 
+        {
+            txtApellido.Text = "";
+            txtDNI.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
+            txtNombre.Text = "";
         }
     }
 }

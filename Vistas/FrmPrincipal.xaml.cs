@@ -19,7 +19,12 @@ namespace Vistas
     /// </summary>
     public partial class FrmPrincipal : Window
     {
+        //Creación de formularios.
+        public FrmLogin oFrmLogin = new FrmLogin();
         public FrmClientes oFrmClientes = new FrmClientes();
+        public FrmPeliculas oFrmPeliculas = new FrmPeliculas();
+        public FrmButacas oFrmButacas = new FrmButacas();
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -31,6 +36,10 @@ namespace Vistas
             cargaMenu(userLogued);
         }
 
+        /// <summary>
+        /// Método que valida el rol del usuario logueado para mostrar el menú.
+        /// </summary>
+        /// <param name="userLogued"></param>
         public void cargaMenu(Usuario userLogued){
 
             if (userLogued.Rol_Codigo.Equals("ADM"))
@@ -41,36 +50,51 @@ namespace Vistas
             {
                 menuAdmin.Visibility = System.Windows.Visibility.Collapsed;
             }
+
+            lblUsuarioLogueado.Content = "Bienvenido: " + userLogued.Usu_ApellidoNombre;
         }
 
+        //Método que muestra el formulario de gestión de clientes.
         private void miClientes_Click(object sender, RoutedEventArgs e)
         {
             oFrmClientes.Show();
         }
 
+        //Método que muestra el formulario de gestión de tickets.
         private void miTickets_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
+        //Método que muestra el formulario de gestión de usuarios.
         private void miUsuarios_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
+        //Método que muestra el formulario de gestión de películas.
         private void miPeliculas_Click(object sender, RoutedEventArgs e)
         {
-
+            oFrmPeliculas.Show();
         }
 
+        //Método que muestra el formulario de gestión de butacas.
         private void miButacas_Click(object sender, RoutedEventArgs e)
         {
-
+            oFrmButacas.Show();
         }
 
+        //Método que muestra el formulario de gestión de proyecciones.
         private void miProyeccciones_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        //Método que cierrra el formulario principal y abre el formulario de login
+        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            oFrmLogin.Show();
         }
 
     }
