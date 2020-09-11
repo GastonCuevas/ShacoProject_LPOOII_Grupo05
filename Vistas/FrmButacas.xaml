@@ -20,13 +20,15 @@
             <RowDefinition Height="75*" />
             <RowDefinition Height="75*" />
             <RowDefinition Height="75*" />
-        </Grid.RowDefinitions>
+            <RowDefinition Height="75*" />
+            </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="75*" />
-        </Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*" />
+            </Grid.ColumnDefinitions>
     </Grid>
         <TextBlock Grid.Row="1" Height="20" HorizontalAlignment="Left" Margin="55,20,0,0" Name="textBlock1" Text="A" VerticalAlignment="Top" Width="25" TextAlignment="Center" />
         <TextBlock Height="20" HorizontalAlignment="Left" Margin="55,76,0,0" Name="textBlock2" Text="B" TextAlignment="Center" VerticalAlignment="Top" Width="25" Grid.Row="1" />

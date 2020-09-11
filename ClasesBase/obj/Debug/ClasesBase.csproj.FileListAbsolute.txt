@@ -13,3 +13,8 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\Cla
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.pdb
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.dll
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.pdb
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.dll
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.pdb
