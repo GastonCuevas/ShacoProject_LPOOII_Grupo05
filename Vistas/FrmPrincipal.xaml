@@ -15,6 +15,9 @@
         </Menu>
         <Button Content="Cerrar Sesión" Height="23" HorizontalAlignment="Left" Margin="531,0,0,0" Name="btnCerrarSesion" VerticalAlignment="Top" Width="75" Click="btnCerrarSesion_Click" />
         <Label Content="Bienvenido: " Height="28" HorizontalAlignment="Left" Margin="180,56,0,0" Name="lblUsuarioLogueado" VerticalAlignment="Top" Width="215" />
+        <Image Name="imgFondoPrincipal" Width="550" Height="300" Margin="26,82,30,12" Stretch="Fill">
+            <Image.Source>Images/shacomain.jpg</Image.Source>
+        </Image>
     </Grid>
 </Window>
 
