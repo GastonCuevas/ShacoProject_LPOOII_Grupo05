@@ -148,6 +148,7 @@ namespace Vistas
             txtEmail.Text = "";
             txtTelefono.Text = "";
             txtNombre.Text = "";
+            btnAgregar.IsEnabled = false;
         }
     }
 }

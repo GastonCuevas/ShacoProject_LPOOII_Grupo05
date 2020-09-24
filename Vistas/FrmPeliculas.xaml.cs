@@ -116,6 +116,7 @@ namespace Vistas
             txtCodigo.Text = "";
             cbGenero.Text = null;
             cbClase.Text = null;
+            btnAgregar.IsEnabled = false;
         }
 
         /// <summary>
@@ -125,8 +126,8 @@ namespace Vistas
         /// <param name="e"></param>
         private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
-              && cbGenero.Text != "")
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
+              && cbGenero.SelectedValue != "")
             {
                 btnAgregar.IsEnabled = true;
             }
@@ -134,8 +135,8 @@ namespace Vistas
 
         private void txtTitulo_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
-              && cbGenero.Text != "")
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
+              && cbGenero.SelectedValue != "")
             {
                 btnAgregar.IsEnabled = true;
             }
@@ -143,8 +144,8 @@ namespace Vistas
 
         private void txtDuracion_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
-              && cbGenero.Text != "")
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
+              && cbGenero.SelectedValue != "")
             {
                 btnAgregar.IsEnabled = true;
             }
@@ -161,8 +162,8 @@ namespace Vistas
 
         private void cbGenero_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.Text != ""
-              && cbGenero.Text != "")
+            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
+              && cbGenero.SelectedValue != "")
             {
                 btnAgregar.IsEnabled = true;
             }

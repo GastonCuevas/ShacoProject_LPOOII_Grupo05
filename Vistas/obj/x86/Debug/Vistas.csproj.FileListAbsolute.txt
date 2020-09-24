@@ -87,3 +87,16 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vis
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\EstilosMain.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\App.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\PlantillaMain.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.xml

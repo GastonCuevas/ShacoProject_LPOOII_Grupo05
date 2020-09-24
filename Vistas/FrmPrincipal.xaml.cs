@@ -24,6 +24,7 @@ namespace Vistas
         public FrmClientes oFrmClientes = new FrmClientes();
         public FrmPeliculas oFrmPeliculas = new FrmPeliculas();
         public FrmButacas oFrmButacas = new FrmButacas();
+        public frmProyecciones oFrmProyecciones = new frmProyecciones();
 
         public FrmPrincipal()
         {
@@ -87,7 +88,7 @@ namespace Vistas
         //Método que muestra el formulario de gestión de proyecciones.
         private void miProyeccciones_Click(object sender, RoutedEventArgs e)
         {
-
+            oFrmProyecciones.Show();
         }
 
         //Método que cierrra el formulario principal y abre el formulario de login

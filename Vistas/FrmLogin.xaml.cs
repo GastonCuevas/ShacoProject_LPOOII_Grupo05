@@ -29,7 +29,7 @@ namespace Vistas
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
             Usuario vendedor = new Usuario();
             vendedor.Rol_Codigo = "VND";
@@ -47,13 +47,17 @@ namespace Vistas
 
             Usuario userLogued = new Usuario();
             Boolean encontrado = false;
+            //Traemos los valores de el controlUs.Login
+            String nombreUs = controlLogin.Usuario;
+            String contraseña = controlLogin.Contraseña;
             //MessageBox.Show("Comparé: " + vendedor.Usu_Contraseña + " con " + txtContraseña.Text);
-            if (txtNombreUsuario.Text == vendedor.Usu_NombreUsuario && pbContraseña.Password == vendedor.Usu_Contraseña)
+            
+            if (nombreUs == vendedor.Usu_NombreUsuario && contraseña == vendedor.Usu_Contraseña)
             {
                 userLogued = vendedor;
                 encontrado = true;
             }
-            if (txtNombreUsuario.Text == admin.Usu_NombreUsuario && pbContraseña.Password == admin.Usu_Contraseña)
+            if (nombreUs == admin.Usu_NombreUsuario && contraseña == admin.Usu_Contraseña)
             {
                 userLogued = admin;
                 encontrado = true;
@@ -62,6 +66,9 @@ namespace Vistas
             if (encontrado == false)
             {
                 MessageBox.Show("Datos incorrectos");
+                //Reiniciamos los valores del controlLogin
+                controlLogin.txtNombreUsuario.Text = "";
+                controlLogin.pbContraseña.Password = "";
             }
             else
             {

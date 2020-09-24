@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\
 Vistas
 none
 false
 DEBUG;TRACE
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\App.xaml
-51542369853
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\App.xaml
+91887802166
 
-11-1638336168
-13-1618545612
-FrmButacas.xaml;FrmClientes.xaml;FrmLogin.xaml;FrmPeliculas.xaml;FrmPrincipal.xaml;
+13-1842290211
+151631528312
+ControlesUsuario\Login.xaml;EstilosMain.xaml;FrmButacas.xaml;FrmClientes.xaml;FrmLogin.xaml;FrmPeliculas.xaml;FrmPrincipal.xaml;frmProyecciones.xaml;PlantillaMain.xaml;
 
 False
 
