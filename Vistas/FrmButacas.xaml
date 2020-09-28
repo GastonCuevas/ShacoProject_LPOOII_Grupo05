@@ -1,38 +1,12 @@
 ﻿<Window x:Class="Vistas.FrmButacas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FrmButacas" Height="520" Width="452">
+        Title="FrmButacas" Height="520" Width="937">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="159*" />
-            <RowDefinition Height="236*" />
-            <RowDefinition Height="28*" />
-            <RowDefinition Height="58*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="137*" />
-            <ColumnDefinition Width="293*" />
-        </Grid.ColumnDefinitions>
-        <Grid Height="236" Width="293" MouseLeftButtonDown="AddOrRemove" x:Name="butacaGrd" Margin="136,158,0,1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-        <Grid.RowDefinitions>
-            
-            <RowDefinition Height="75*" />
-            <RowDefinition Height="75*" />
-            <RowDefinition Height="75*" />
-            <RowDefinition Height="75*" />
-            <RowDefinition Height="75*" />
-            </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75*" />
-            <ColumnDefinition Width="75*" />
-            <ColumnDefinition Width="75*" />
-            <ColumnDefinition Width="75*" />
-            <ColumnDefinition Width="75*" />
-            </Grid.ColumnDefinitions>
-    </Grid>
-        <TextBlock Grid.Row="1" Height="20" HorizontalAlignment="Left" Margin="55,20,0,0" Name="textBlock1" Text="A" VerticalAlignment="Top" Width="25" TextAlignment="Center" />
-        <TextBlock Height="20" HorizontalAlignment="Left" Margin="55,76,0,0" Name="textBlock2" Text="B" TextAlignment="Center" VerticalAlignment="Top" Width="25" Grid.Row="1" />
-        <TextBlock Height="20" HorizontalAlignment="Left" Margin="55,132,0,0" Name="textBlock3" Text="C" TextAlignment="Center" VerticalAlignment="Top" Width="25" Grid.Row="1" />
-        <TextBlock Height="20" HorizontalAlignment="Left" Margin="55,189,0,0" Name="textBlock4" Text="D" TextAlignment="Center" VerticalAlignment="Top" Width="25" Grid.Row="1" />
+       
+        <Button Height="23" HorizontalAlignment="Left" Margin="759,113,0,0" Name="btnCrearSala" VerticalAlignment="Top" Width="75" Content="Crear" Click="btnCrearSala_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="758,84,0,0" Name="txtButacas" VerticalAlignment="Top" Width="120" Text="0" />
+        <Label Content="Cantidad de Butacas" Height="28" HorizontalAlignment="Left" Margin="759,50,0,0" Name="label1" VerticalAlignment="Top" />
+        <WrapPanel Height="457" HorizontalAlignment="Right" Margin="0,12,195,0" Name="wrpButaca" VerticalAlignment="Top" Width="708" />
     </Grid>
 </Window>

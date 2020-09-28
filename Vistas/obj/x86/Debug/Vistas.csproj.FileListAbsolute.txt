@@ -100,3 +100,15 @@ C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vi
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.dll
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.xml
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.xml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\ControlesUsuario\Login.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\EstilosMain.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmProyecciones.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\PlantillaMain.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\App.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\ControlesUsuario\Login.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmProyecciones.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\FontAwesome.WPF.dll
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\Newtonsoft.Json.dll
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\FontAwesome.WPF.xml

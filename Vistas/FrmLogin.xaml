@@ -5,7 +5,7 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         Title="Bienvenido" Height="300" Width="526">
     <Grid>
-        <control:Login x:Name="controlLogin" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0"></control:Login>
+        <control:Login x:Name="controlLogin" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Loaded="controlLogin_Loaded"></control:Login>
         <fa:ImageAwesome Icon="UserCircle" Width="30" Height="30" Margin="24,98,450,133" Foreground="White"></fa:ImageAwesome>
         <fa:ImageAwesome Icon="Lock" Width="30" Height="30" Margin="24,134,450,97" Foreground="White"></fa:ImageAwesome>
         <TextBlock FontSize="36" Foreground="White" FontFamily="Bauhaus 93" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Text="¡Bienvendo a ShacoCinema!"/>
