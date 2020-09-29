@@ -28,23 +28,23 @@ namespace ClasesBase
             get { return cli_DNI; }
             set { cli_DNI = value; }
         }
-        private int pro_Codigo;
+        private string pro_Codigo;
 
-        public int Pro_Codigo
+        public string Pro_Codigo
         {
             get { return pro_Codigo; }
             set { pro_Codigo = value; }
         }
-        private string but_Fila;
+        private int but_Fila;
 
-        public string But_Fila
+        public int But_Fila
         {
             get { return but_Fila; }
             set { but_Fila = value; }
         }
-        private string but_Nro;
+        private int but_Nro;
 
-        public string But_Nro
+        public int But_Nro
         {
             get { return but_Nro; }
             set { but_Nro = value; }

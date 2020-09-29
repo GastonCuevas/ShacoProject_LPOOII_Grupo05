@@ -32,18 +32,18 @@ namespace Vistas
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             Proyeccion oProyeccion = new Proyeccion();
-            oProyeccion.Pro_Codigo = Convert.ToInt32(txtCodigo.Text);
+            oProyeccion.Pro_Codigo = txtCodigo.Text;
             oProyeccion.Pel_Codigo = cbPelicula.Text;
-            oProyeccion.Pro_Fecha = dtpFecha.SelectedDate.ToString();
+            oProyeccion.Pro_Fecha = (DateTime)dtpFecha.SelectedDate;
             oProyeccion.Pro_Hora = txtHora.Text;
-            oProyeccion.Pro_NroSala = cbSala.Text;
+            oProyeccion.Sala_NroSala = Convert.ToInt32(cbSala.Text);
 
-            if (oProyeccion.Pro_Codigo != 0 && oProyeccion.Pel_Codigo != "" && oProyeccion.Pro_Fecha != null && 
-                oProyeccion.Pro_Hora != "" && oProyeccion.Pro_NroSala != "")
+            if (oProyeccion.Pro_Codigo != "" && oProyeccion.Pel_Codigo != "" && oProyeccion.Pro_Fecha != null && 
+                oProyeccion.Pro_Hora != "" && oProyeccion.Sala_NroSala != 0)
             {
                 if (MessageBox.Show("Código Película: " + oProyeccion.Pel_Codigo +
                     "\nCódigo Proyeccion: " + oProyeccion.Pro_Codigo + "\nFecha: "
-                    + oProyeccion.Pro_Fecha + "\nHora: " + oProyeccion.Pro_Hora + "\nN° Sala: " + oProyeccion.Pro_NroSala, "¿Está seguro que desea agregar esta Proyección?",
+                    + oProyeccion.Pro_Fecha + "\nHora: " + oProyeccion.Pro_Hora + "\nN° Sala: " + oProyeccion.Sala_NroSala, "¿Está seguro que desea agregar esta Proyección?",
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     MessageBox.Show("Proyección Incluida");

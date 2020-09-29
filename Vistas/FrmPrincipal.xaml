@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Panel Principal" Height="433" Width="651">
     <Grid>
-        <Menu Height="48" HorizontalAlignment="Left" Name="menuVendedor" VerticalAlignment="Top" Width="629">
+        <Menu Height="48" HorizontalAlignment="Left" Name="menuVendedor" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
             <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
             <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
         </Menu>
-        <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="629">
+        <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
             <MenuItem Header="Usuarios" Name="miUsuarios" Click="miUsuarios_Click"></MenuItem>
             <MenuItem Header="Películas" Name="miPeliculas" Click="miPeliculas_Click"></MenuItem>
             <MenuItem Header="Butacas" Name="miButacas" Click="miButacas_Click"></MenuItem>

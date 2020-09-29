@@ -25,6 +25,8 @@ namespace Vistas
             InitializeComponent();
         }
 
+        //public OpenFileDialog oOpenFileDialogImagen = new OpenFileDialog(); 
+
         /// <summary>
         /// Método que agrega una película
         /// </summary>
@@ -34,12 +36,12 @@ namespace Vistas
         {
             Pelicula oPel = new Pelicula();
             oPel.Pel_Titulo = txtTitulo.Text;
-            oPel.Pel_Duracion = Convert.ToInt32(txtDuracion.Text);
-            oPel.Pel_Codigo = Convert.ToInt32(txtCodigo.Text);
+            oPel.Pel_Duracion = txtDuracion.Text;
+            oPel.Pel_Codigo = txtCodigo.Text;
             oPel.Pel_Genero = cbGenero.Text;
             oPel.Pel_Clase = cbClase.Text;
-            if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != 0
-               && oPel.Pel_Duracion != 0)
+            if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != ""
+               && oPel.Pel_Duracion != "")
             {
                 if (MessageBox.Show("Titulo: " + oPel.Pel_Titulo +
                     ", " + "\nGenero: " + oPel.Pel_Genero + "\nClase: "
@@ -168,6 +170,25 @@ namespace Vistas
                 btnAgregar.IsEnabled = true;
             }
         }
+
+        /*//Este método carga la imagen de la película
+        private void btnCargar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.oOpenFileDialogImagen.ShowDialog();
+                if (this.oOpenFileDialogImagen.FileName.Equals("") == false)
+                {
+                    PictureBox imagenVistaPreviaPB = new PictureBox();
+                    //imagenVistaPreviaPB.Load(this.oOpenFileDialogImagen.FileName);
+                    meImagen.Source = this.oOpenFileDialogImagen.FileName;
+                }
+            }
+            catch (Exception ex) 
+            {
+                System.Windows.Forms.MessageBox.Show("No se puede cargar esta imagen: " + ex.ToString());
+            }
+        }*/
 
     }
 }

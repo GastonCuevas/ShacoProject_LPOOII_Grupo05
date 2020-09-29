@@ -7,26 +7,26 @@ namespace ClasesBase
 {
     public class Butaca
     {
-        private string but_Fila;
+        private int but_Fila;
 
-        public string But_Fila
+        public Int32 But_Fila
         {
             get { return but_Fila; }
             set { but_Fila = value; }
         }
-        private string but_Nro;
+        private int but_Nro;
 
-        public string But_Nro
+        public int But_Nro
         {
             get { return but_Nro; }
             set { but_Nro = value; }
         }
-        private string but_NroSala;
+        private int sala_NroSala;
 
-        public string But_NroSala
+        public int Sala_NroSala
         {
-            get { return but_NroSala; }
-            set { but_NroSala = value; }
+            get { return sala_NroSala; }
+            set { sala_NroSala = value; }
         }
     }
 }

@@ -7,16 +7,16 @@ namespace ClasesBase
 {
     public class Proyeccion
     {
-        private int pro_Codigo;
+        private string pro_Codigo;
 
-        public int Pro_Codigo
+        public string Pro_Codigo
         {
             get { return pro_Codigo; }
             set { pro_Codigo = value; }
         }
-        private string pro_Fecha;
+        private DateTime pro_Fecha;
 
-        public string Pro_Fecha
+        public DateTime Pro_Fecha
         {
             get { return pro_Fecha; }
             set { pro_Fecha = value; }
@@ -28,12 +28,12 @@ namespace ClasesBase
             get { return pro_Hora; }
             set { pro_Hora = value; }
         }
-        private string pro_NroSala;
+        private int sala_NroSala;
 
-        public string Pro_NroSala
+        public int Sala_NroSala
         {
-            get { return pro_NroSala; }
-            set { pro_NroSala = value; }
+            get { return sala_NroSala; }
+            set { sala_NroSala = value; }
         }
         private string pel_Codigo;
 

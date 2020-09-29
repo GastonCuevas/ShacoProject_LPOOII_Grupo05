@@ -2,10 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
-        Title="FrmPeliculas" Height="407" Width="437">
-    <Grid Height="366" Width="379">
+        Title="FrmPeliculas" Height="603" Width="586">
+    <Grid Height="560" Width="557">
         <Label Content="Código:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblCodigo" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,16,128,0" Name="txtCodigo" VerticalAlignment="Top" Width="161" PreviewTextInput="txtCodigo_PreviewTextInput" MaxLength="10" TextChanged="txtCodigo_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,18,306,0" Name="txtCodigo" VerticalAlignment="Top" Width="161" PreviewTextInput="txtCodigo_PreviewTextInput" MaxLength="10" TextChanged="txtCodigo_TextChanged" />
         <Label Content="Título:" Height="28" HorizontalAlignment="Left" Margin="12,59,0,0" Name="lblTitulo" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="90,64,0,0" Name="txtTitulo" VerticalAlignment="Top" Width="161" TextChanged="txtTitulo_TextChanged" />
         <Label Content="Género:" Height="28" HorizontalAlignment="Left" Margin="12,106,0,0" Name="lblGenero" VerticalAlignment="Top" />
@@ -14,7 +14,7 @@
             <ComboBoxItem Content="Acción" />
             <ComboBoxItem Content="Drama" />
         </ComboBox>
-        <Label Content="Duración:" Height="28" HorizontalAlignment="Left" Margin="12,155,0,0" Name="lblduracion" VerticalAlignment="Top" Width="63" />
+        <Label Content="Duración:" Height="28" HorizontalAlignment="Left" Margin="12,155,0,0" Name="lblduracion" VerticalAlignment="Top" Width="75" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="90,159,0,0" Name="txtDuracion" VerticalAlignment="Top" Width="161"  PreviewTextInput="txtDuracion_PreviewTextInput" MaxLength="10" TextChanged="txtDuracion_TextChanged" />
         <Label Content="Clase:" Height="28" HorizontalAlignment="Left" Margin="12,208,0,0" Name="lblclase" VerticalAlignment="Top" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,208,0,0" Name="cbClase" VerticalAlignment="Top" Width="161" DataContext="{Binding}" SelectionChanged="cbClase_SelectionChanged">
@@ -22,9 +22,9 @@
             <ComboBoxItem Content="SAM13" />
             <ComboBoxItem Content="SAM16" />
         </ComboBox>
-        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="12,262,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="90" Click="btnAgregar_Click" IsEnabled="False" />
-        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="127,262,0,0" Name="btnModificar" VerticalAlignment="Top" Width="90" Click="btnModificar_Click" IsEnabled="False"/>
-        <Button Content="Eliminar" Height="23" HorizontalAlignment="Right" Margin="0,262,45,0" Name="btnEliminar" VerticalAlignment="Top" Width="90" Click="btnEliminar_Click" IsEnabled="False"/>
-        <Button Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="12,311,0,0" Name="btnLimpiar" VerticalAlignment="Top" Width="90" Click="btnLimpiar_Click" />
+        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="20,450,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="90" Click="btnAgregar_Click" IsEnabled="False" />
+        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="135,450,0,0" Name="btnModificar" VerticalAlignment="Top" Width="90" Click="btnModificar_Click" IsEnabled="False"/>
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Right" Margin="0,450,215,0" Name="btnEliminar" VerticalAlignment="Top" Width="90" Click="btnEliminar_Click" IsEnabled="False"/>
+        <Button Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="20,499,0,0" Name="btnLimpiar" VerticalAlignment="Top" Width="90" Click="btnLimpiar_Click" />
     </Grid>
 </Window>

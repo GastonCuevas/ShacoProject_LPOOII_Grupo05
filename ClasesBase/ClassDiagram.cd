@@ -31,22 +31,29 @@
   <Class Name="ClasesBase.Proyeccion">
     <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAEAAAAAAIAAAAAAAAAEABAAAAAQAQAAAAAEgBAA=</HashCode>
+      <HashCode>EAAEAFAAAAAAIAAAAAAAAAAABAAAAAQAQAAAAAAgBAA=</HashCode>
       <FileName>Proyeccion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Butaca">
     <Position X="9.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAgAAAAAACAAAAAAAAgAAAAAgCAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAIABAAAAAAAAACAAAAAAAAAAAAAAgCAAAAAAAAAAA=</HashCode>
       <FileName>Butaca.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Ticket">
     <Position X="11" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAIAAAAAAAAAAAAAEAAAAAAAAAAEAIAAABAAAAAAAA=</HashCode>
+      <HashCode>AIAMAAAAAAAAAAACAIAAAAAAAAAAABwCAAQQAAAEAAA=</HashCode>
       <FileName>Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Sala">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sala.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
