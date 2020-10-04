@@ -42,5 +42,13 @@ namespace ClasesBase
             get { return pel_Clase; }
             set { pel_Clase = value; }
         }
+
+        private string pel_Imagen;
+
+        public string Pel_Imagen
+        {
+            get { return pel_Imagen; }
+            set { pel_Imagen = value; }
+        }
     }
 }

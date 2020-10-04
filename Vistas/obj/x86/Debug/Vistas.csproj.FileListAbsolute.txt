@@ -1,21 +1,3 @@
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.pdb
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\ClasesBase.dll
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\ClasesBase.pdb
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmLogin.baml
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmLogin.g.cs
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\App.g.cs
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.g.resources
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.exe
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.pdb
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.baml
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.g.cs
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.baml
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.g.cs
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.exe
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.pdb
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\bin\Debug\Vistas.exe
@@ -36,10 +18,6 @@ I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cac
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.g.resources
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmButacas.baml
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmButacas.g.cs
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPeliculas.baml
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPeliculas.g.cs
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.exe
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.pdb
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\Vistas.exe
@@ -86,20 +64,6 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vis
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.g.resources
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe.config
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\EstilosMain.baml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\App.baml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\PlantillaMain.baml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.baml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.g.cs
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.baml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.g.cs
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.dll
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.dll
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.xml
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.xml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\ControlesUsuario\Login.baml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\EstilosMain.baml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmProyecciones.baml
@@ -112,3 +76,39 @@ I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\FontAwesome.WPF.dll
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\Newtonsoft.Json.dll
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\FontAwesome.WPF.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.exe
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Vistas.pdb
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\FontAwesome.WPF.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\EstilosMain.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmButacas.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPeliculas.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\PlantillaMain.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\App.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ControlesUsuario\Login.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmButacas.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmClientes.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmLogin.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPeliculas.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmPrincipal.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmProyecciones.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\App.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmLogin.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.g.resources
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.pdb

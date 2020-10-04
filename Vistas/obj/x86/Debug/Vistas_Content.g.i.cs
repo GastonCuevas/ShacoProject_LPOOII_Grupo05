@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/shacomain.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pelclase.xml")]
 
 

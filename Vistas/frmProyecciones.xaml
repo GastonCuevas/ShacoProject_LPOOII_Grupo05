@@ -14,12 +14,12 @@
             <ComboBoxItem Content="Bastardos sin Gloria" />
         </ComboBox>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="171,49,0,0" Name="txtCodigo" VerticalAlignment="Top" Width="217" TextChanged="txtCodigo_TextChanged"/>
-        <DatePicker Height="23" HorizontalAlignment="Left" Margin="171,86,0,0" Name="dtpFecha" VerticalAlignment="Top" Width="217" Text="Selecciona una fecha" SelectedDateChanged="dtpFecha_SelectedDateChanged" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="171,86,0,0" Name="dtpFecha" VerticalAlignment="Top" Width="217" Text="Selecciona una fecha" SelectedDateChanged="dtpFecha_SelectedDateChanged" DataContext="{Binding}" BorderThickness="0" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="171,123,0,0" Name="txtHora" VerticalAlignment="Top" Width="217" TextChanged="txtHora_TextChanged"/>
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="171,160,0,0" Name="cbSala" VerticalAlignment="Top" Width="217" SelectionChanged="cbSala_SelectionChanged">
-            <ComboBoxItem Content="Sala 1" />
-            <ComboBoxItem Content="Sala 2" />
-            <ComboBoxItem Content="Sala 3" />
+            <ComboBoxItem Content="1" />
+            <ComboBoxItem Content="2" />
+            <ComboBoxItem Content="3" />
         </ComboBox>
         <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="36,214,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click" IsEnabled="False"/>
         <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="171,214,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" IsEnabled="False"/>

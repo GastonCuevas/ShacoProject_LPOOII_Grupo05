@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 using ClasesBase;
 using System.Text.RegularExpressions;
 
@@ -25,7 +26,7 @@ namespace Vistas
             InitializeComponent();
         }
 
-        //public OpenFileDialog oOpenFileDialogImagen = new OpenFileDialog(); 
+        public OpenFileDialog oOpenFileDialogImagen = new OpenFileDialog(); 
 
         /// <summary>
         /// Método que agrega una película
@@ -40,21 +41,23 @@ namespace Vistas
             oPel.Pel_Codigo = txtCodigo.Text;
             oPel.Pel_Genero = cbGenero.Text;
             oPel.Pel_Clase = cbClase.Text;
+            oPel.Pel_Imagen = imgVistaPrevia.Source.ToString();
+
             if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != ""
                && oPel.Pel_Duracion != "")
             {
-                if (MessageBox.Show("Titulo: " + oPel.Pel_Titulo +
+                if (System.Windows.MessageBox.Show("Titulo: " + oPel.Pel_Titulo +
                     ", " + "\nGenero: " + oPel.Pel_Genero + "\nClase: "
                     + oPel.Pel_Clase + "\nCodigo: " + oPel.Pel_Codigo +"\nDuracion: " + oPel.Pel_Duracion , "¿Está seguro que desea agregar esta Pelicula?", 
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    MessageBox.Show("Pelicula Incluida");
+                    System.Windows.MessageBox.Show("Pelicula Incluida");
                     limpiarCampos();
                 }
             }
             else 
             {
-                MessageBox.Show("¡Hay campos vacíos, complételos!");
+                System.Windows.MessageBox.Show("¡Hay campos vacíos, complételos!");
             }
         }
 
@@ -118,6 +121,7 @@ namespace Vistas
             txtCodigo.Text = "";
             cbGenero.Text = null;
             cbClase.Text = null;
+            imgVistaPrevia.Source = null;
             btnAgregar.IsEnabled = false;
         }
 
@@ -171,24 +175,42 @@ namespace Vistas
             }
         }
 
-        /*//Este método carga la imagen de la película
+        //Este método carga la imagen de la película
         private void btnCargar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                this.oOpenFileDialogImagen.ShowDialog();
+                //Agregamos algunas validaciones como el tipo de archivos que se puede seleccionar
+                oOpenFileDialogImagen.Filter = "Image Files (*.bmp;*.png;*.jpg;)|*.bmp;*.png;*.jpg";
+                oOpenFileDialogImagen.Multiselect = false;
+                oOpenFileDialogImagen.RestoreDirectory = true;
+
+                oOpenFileDialogImagen.ShowDialog();
+                
                 if (this.oOpenFileDialogImagen.FileName.Equals("") == false)
                 {
-                    PictureBox imagenVistaPreviaPB = new PictureBox();
-                    //imagenVistaPreviaPB.Load(this.oOpenFileDialogImagen.FileName);
-                    meImagen.Source = this.oOpenFileDialogImagen.FileName;
+                    imgVistaPrevia.Source = GetImageSource(oOpenFileDialogImagen.FileName);
                 }
             }
             catch (Exception ex) 
             {
-                System.Windows.Forms.MessageBox.Show("No se puede cargar esta imagen: " + ex.ToString());
+                System.Windows.MessageBox.Show("No se puede cargar esta imagen: " + ex.ToString());
             }
-        }*/
+        }
+
+        //Método que convierte en BitMap el directorio de la imagen seleccionada de dialog para poder usarlo como source en la imagen
+        public ImageSource GetImageSource(string filename)
+        {
+            string _fileName = filename;
+
+            BitmapImage glowIcon = new BitmapImage();
+
+            glowIcon.BeginInit();
+            glowIcon.UriSource = new Uri(_fileName);
+            glowIcon.EndInit();
+
+            return glowIcon;
+        }
 
     }
 }

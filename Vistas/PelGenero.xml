@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<generos>
+  <clave name="Drama"/>
+  <clave name="Terror"/>
+  <clave name="Comedia"/>
+  <clave name="Acción"/>
+  <clave name="Ciencia Ficción"/>
+  <clave name="Animada"/>
+  <clave name="Bélico"/>
+</generos>

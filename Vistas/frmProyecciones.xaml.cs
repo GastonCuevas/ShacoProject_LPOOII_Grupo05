@@ -91,47 +91,27 @@ namespace Vistas
         /// <param name="e"></param>
         private void cbPelicula_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtHora.Text != "" && cbSala.SelectedValue != "" && dtpFecha.SelectedDate != null
-              && cbPelicula.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
+            validar();
         }
 
         private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtHora.Text != "" && cbSala.SelectedValue != "" && dtpFecha.SelectedDate != null
-              && cbPelicula.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
+            validar();
         }
 
         private void dtpFecha_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtHora.Text != "" && cbSala.SelectedValue != "" && dtpFecha.SelectedDate != null
-              && cbPelicula.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
+            validar();
         }
 
         private void txtHora_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtHora.Text != "" && cbSala.SelectedValue != "" && dtpFecha.SelectedDate != null
-              && cbPelicula.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
+            validar();
         }
 
         private void cbSala_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtHora.Text != "" && cbSala.SelectedValue != "" && dtpFecha.SelectedDate != null
-              && cbPelicula.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
+            validar();
         }
 
         /// <summary>
@@ -146,6 +126,18 @@ namespace Vistas
             cbPelicula.Text = null;
 
             btnAgregar.IsEnabled = false;
+        }
+
+        //Método de validación de campos
+        private void validar() 
+        {
+            string sala = Convert.ToString(cbSala.SelectedValue);
+            string pelicula = Convert.ToString(cbPelicula.SelectedValue);
+            if (txtCodigo.Text != "" && txtHora.Text != "" && sala != "" && dtpFecha.SelectedDate != null
+              && pelicula != "")
+            {
+                btnAgregar.IsEnabled = true;
+            }
         }
     }
 }

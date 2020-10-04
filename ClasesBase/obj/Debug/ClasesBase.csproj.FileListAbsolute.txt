@@ -1,13 +1,8 @@
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.dll
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.pdb
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.dll
-c:\users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.pdb
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\bin\Debug\ClasesBase.dll
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\bin\Debug\ClasesBase.pdb
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.dll
 I:\Cosas\escuela\Apu\LPoo\RepoLpoo\ClasesBase\obj\Debug\ClasesBase.pdb
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.dll
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.pdb
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
@@ -18,7 +13,13 @@ I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\b
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.dll
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\obj\Debug\ClasesBase.pdb
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\FontAwesome.WPF.dll
-C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\FontAwesome.WPF.xml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\FontAwesome.WPF.dll
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\FontAwesome.WPF.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\FontAwesome.WPF.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\FontAwesome.WPF.xml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.dll.config
