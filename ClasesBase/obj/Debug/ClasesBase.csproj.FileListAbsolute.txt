@@ -23,3 +23,4 @@ C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Cl
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\ClasesBase\bin\Debug\ClasesBase.dll.config
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\ClasesBase\bin\Debug\ClasesBase.dll.config

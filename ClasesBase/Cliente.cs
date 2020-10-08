@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Cliente
+    public class Cliente:IDataErrorInfo
     {
         private int cli_DNI;
 
@@ -41,6 +42,57 @@ namespace ClasesBase
         {
             get { return cli_Email; }
             set { cli_Email = value; }
+        }
+
+        public string Error
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string this[string columnName]
+        {
+            get
+            {
+                string mensaje = string.Empty;
+                //VALIDACION//
+                if (columnName == "Cli_DNI")
+                {
+                    if (Cli_DNI.ToString().Length != 8)
+                    {
+                        mensaje = "Largo del DNI incorrecto";
+                    }
+                }
+
+                if (columnName == "Cli_Nombre")
+                {
+                    if (string.IsNullOrEmpty(Cli_Nombre))
+                    {
+                        mensaje = "Nombre es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Cli_Apellido")
+                {
+                    if (string.IsNullOrEmpty(Cli_Apellido))
+                    {
+                        mensaje = "Apellido es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Cli_Telefono")
+                {
+                    if (string.IsNullOrEmpty(Cli_Telefono))
+                    {
+                        mensaje = "Telefono es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Cli_Email")
+                {
+                    if (string.IsNullOrEmpty(Cli_Email))
+                    {
+                        mensaje = "Email es un campo obligatorio";
+                    }
+                }
+                return mensaje;
+            }
         }
     }
 }

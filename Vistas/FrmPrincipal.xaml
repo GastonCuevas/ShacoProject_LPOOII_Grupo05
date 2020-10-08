@@ -4,14 +4,16 @@
         Title="Panel Principal" Height="433" Width="651">
     <Grid>
         <Menu Height="48" HorizontalAlignment="Left" Name="menuVendedor" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
-            <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
-            <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
+           
         </Menu>
         <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
             <MenuItem Header="Usuarios" Name="miUsuarios" Click="miUsuarios_Click"></MenuItem>
             <MenuItem Header="Películas" Name="miPeliculas" Click="miPeliculas_Click"></MenuItem>
             <MenuItem Header="Butacas" Name="miButacas" Click="miButacas_Click"></MenuItem>
             <MenuItem Header="Proyecciones" Name="miProyeccciones" Click="miProyeccciones_Click"></MenuItem>
+            <MenuItem Header="Salas" Name="miSalas"></MenuItem>
+            <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
+            <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
         </Menu>
         <Button Content="Cerrar Sesión" Height="23" HorizontalAlignment="Left" Margin="531,0,0,0" Name="btnCerrarSesion" VerticalAlignment="Top" Width="98" Click="btnCerrarSesion_Click" />
         <Label Content="Bienvenido: " Height="28" HorizontalAlignment="Left" Margin="180,56,0,0" Name="lblUsuarioLogueado" VerticalAlignment="Top" Width="215" />

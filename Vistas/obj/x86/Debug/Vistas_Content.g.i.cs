@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pelclase.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("clientes.xml")]
 
 

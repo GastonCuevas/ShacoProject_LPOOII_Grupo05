@@ -116,11 +116,13 @@ namespace Vistas
 
         private void txtDNI_TextChanged(object sender, TextChangedEventArgs e)
         {
+            /*
             if (txtApellido.Text != "" && txtNombre.Text != "" && txtTelefono.Text != "" && txtDNI.Text != ""
               && txtEmail.Text != "")
             {
                 btnAgregar.IsEnabled = true;
             }
+             * */
         }
 
         /// <summary>

@@ -25,6 +25,7 @@ namespace Vistas
         public FrmPeliculas oFrmPeliculas = new FrmPeliculas();
         public FrmButacas oFrmButacas = new FrmButacas();
         public frmProyecciones oFrmProyecciones = new frmProyecciones();
+        //public FrmSalas oFrmSalas = new FrmSalas();
 
         public FrmPrincipal()
         {
@@ -70,7 +71,7 @@ namespace Vistas
         //Método que muestra el formulario de gestión de usuarios.
         private void miUsuarios_Click(object sender, RoutedEventArgs e)
         {
-
+            oFrmClientes.Show();
         }
 
         //Método que muestra el formulario de gestión de películas.
@@ -90,6 +91,12 @@ namespace Vistas
         {
             oFrmProyecciones.Show();
         }
+
+        //Método que muestra el formulario de gestión de Salas.
+        //private void miUsuarios_Click(object sender, RoutedEventArgs e)
+        //{
+            //oFrmSalas.Show();
+        //}
 
         //Método que cierrra el formulario principal y abre el formulario de login
         private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)

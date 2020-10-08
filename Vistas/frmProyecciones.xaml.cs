@@ -139,5 +139,10 @@ namespace Vistas
                 btnAgregar.IsEnabled = true;
             }
         }
+
+        private void cargarGrilla()
+        {
+            //dgvProyecciones.ItemsSource = TrabajarProyeccion.traerProyecciones();
+        }
     }
 }

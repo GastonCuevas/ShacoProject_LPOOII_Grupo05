@@ -42,7 +42,6 @@ namespace Vistas
             if (MessageBox.Show("Desea seleccionar esta butaca?", b.Name.ToString(), MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 b.Background = Brushes.Gray;
-                SuperMario();
             }
         }
         private void SuperMario()
