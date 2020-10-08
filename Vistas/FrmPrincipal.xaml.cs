@@ -25,6 +25,7 @@ namespace Vistas
         public FrmPeliculas oFrmPeliculas = new FrmPeliculas();
         public FrmButacas oFrmButacas = new FrmButacas();
         public frmProyecciones oFrmProyecciones = new frmProyecciones();
+        public FrmModificarCliente oFrmModificarCliente = new FrmModificarCliente();
         //public FrmSalas oFrmSalas = new FrmSalas();
 
         public FrmPrincipal()
@@ -103,6 +104,11 @@ namespace Vistas
         {
             this.Close();
             oFrmLogin.Show();
+        }
+        //Método que cierrra el formulario principal y abre el formulario de loginXD
+        private void miModificar_Click(object sender, RoutedEventArgs e)
+        {
+            oFrmModificarCliente.Show();
         }
 
     }

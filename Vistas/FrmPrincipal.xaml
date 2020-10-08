@@ -8,6 +8,7 @@
         </Menu>
         <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
             <MenuItem Header="Usuarios" Name="miUsuarios" Click="miUsuarios_Click"></MenuItem>
+            <MenuItem Header="Modificar Usuario" Name="miModificar" Click="miModificar_Click"></MenuItem>
             <MenuItem Header="Películas" Name="miPeliculas" Click="miPeliculas_Click"></MenuItem>
             <MenuItem Header="Butacas" Name="miButacas" Click="miButacas_Click"></MenuItem>
             <MenuItem Header="Proyecciones" Name="miProyeccciones" Click="miProyeccciones_Click"></MenuItem>

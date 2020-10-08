@@ -212,5 +212,10 @@ namespace Vistas
             return glowIcon;
         }
 
+        private void grdPeliculas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
     }
 }
