@@ -19,14 +19,6 @@ namespace Vistas
     /// </summary>
     public partial class FrmPrincipal : Window
     {
-        //Creación de formularios.
-        public FrmLogin oFrmLogin = new FrmLogin();
-        public FrmClientes oFrmClientes = new FrmClientes();
-        public FrmPeliculas oFrmPeliculas = new FrmPeliculas();
-        public FrmButacas oFrmButacas = new FrmButacas();
-        public frmProyecciones oFrmProyecciones = new frmProyecciones();
-        public FrmModificarCliente oFrmModificarCliente = new FrmModificarCliente();
-        //public FrmSalas oFrmSalas = new FrmSalas();
 
         public FrmPrincipal()
         {
@@ -60,6 +52,7 @@ namespace Vistas
         //Método que muestra el formulario de gestión de clientes.
         private void miClientes_Click(object sender, RoutedEventArgs e)
         {
+            FrmClientes oFrmClientes = new FrmClientes();
             oFrmClientes.Show();
         }
 
@@ -72,24 +65,28 @@ namespace Vistas
         //Método que muestra el formulario de gestión de usuarios.
         private void miUsuarios_Click(object sender, RoutedEventArgs e)
         {
+            FrmClientes oFrmClientes = new FrmClientes();
             oFrmClientes.Show();
         }
 
         //Método que muestra el formulario de gestión de películas.
         private void miPeliculas_Click(object sender, RoutedEventArgs e)
         {
+            FrmPeliculas oFrmPeliculas = new FrmPeliculas();
             oFrmPeliculas.Show();
         }
 
         //Método que muestra el formulario de gestión de butacas.
         private void miButacas_Click(object sender, RoutedEventArgs e)
         {
+            FrmButacas oFrmButacas = new FrmButacas();
             oFrmButacas.Show();
         }
 
         //Método que muestra el formulario de gestión de proyecciones.
         private void miProyeccciones_Click(object sender, RoutedEventArgs e)
         {
+            frmProyecciones oFrmProyecciones = new frmProyecciones();
             oFrmProyecciones.Show();
         }
 
@@ -99,15 +96,17 @@ namespace Vistas
             //oFrmSalas.Show();
         //}
 
-        //Método que cierrra el formulario principal y abre el formulario de login
+        //Método que cierra el formulario principal y abre el formulario de login
         private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
+            FrmLogin oFrmLogin = new FrmLogin();
             this.Close();
             oFrmLogin.Show();
         }
-        //Método que cierrra el formulario principal y abre el formulario de loginXD
+        //Método que cierra el formulario principal y abre el formulario de loginXD
         private void miModificar_Click(object sender, RoutedEventArgs e)
         {
+            FrmModificarCliente oFrmModificarCliente = new FrmModificarCliente();
             oFrmModificarCliente.Show();
         }
 

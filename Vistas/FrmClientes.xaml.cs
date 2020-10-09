@@ -152,5 +152,12 @@ namespace Vistas
             txtNombre.Text = "";
             btnAgregar.IsEnabled = false;
         }
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            FrmModificarCliente oFrmModificarCliente = new FrmModificarCliente();
+            oFrmModificarCliente.Show();
+        }
+
+        
     }
 }
