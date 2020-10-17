@@ -40,7 +40,7 @@
     </Window.Resources>
 
         <Grid Height="334" Width="469">
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,13,160,0" Name="txtDni" VerticalAlignment="Top" Width="206" TextChanged="txtDni_TextChanged" Style="{StaticResource EstiloError}" PreviewTextInput="txtDni_PreviewTextInput">
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,13,160,0" Name="txtDni" VerticalAlignment="Top" Width="206" TextChanged="txtDni_TextChanged" Style="{StaticResource EstiloError}" PreviewTextInput="txtDni_PreviewTextInput" MaxLength="10">
             <TextBox.Text>
                 <Binding Source="{StaticResource ResourceKey=oCliente}" 
                          Path="MethodParameters[0]" 
@@ -57,15 +57,15 @@
         <Label Content="Apellido" Height="27" HorizontalAlignment="Left" Margin="5,115,0,0" Name="lblApellido" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="103,121,0,0" Name="txtApellido" VerticalAlignment="Top" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Apellido, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />
         <Label Content="Telefono" Height="27" HorizontalAlignment="Left" Margin="5,172,0,0" Name="label1" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,178,0,0" Name="txtTelefono" Style="{StaticResource EstiloError}" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Telefono, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="206" IsEnabled="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,178,0,0" Name="txtTelefono" Style="{StaticResource EstiloError}" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Telefono, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="206" IsEnabled="False" PreviewTextInput="txtTelefono_PreviewTextInput"/>
         <Label Content="Email" Height="27" HorizontalAlignment="Left" Margin="5,218,0,0" Name="label2" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="103,224,0,0" Name="txtEmail" Style="{StaticResource EstiloError}" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Email, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="206" IsEnabled="False" />
-        <Button Content="Modificar" Height="38" HorizontalAlignment="Left" Margin="157,270,0,0" Name="btn_modificar" VerticalAlignment="Top" Width="102" Click="btn_modificar_Click" />
-        <Button Content="Eliminar" Height="38" HorizontalAlignment="Right" Margin="0,270,70,0" Name="btn_eliminar" VerticalAlignment="Top" Width="102" Click="btn_eliminar_Click" />
-        <Button Content="Confirmar agregar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Click" />
-        <Button Content="Cancelar" Height="82" HorizontalAlignment="Left" Margin="344,146,0,0" Name="btn_Cancelar" VerticalAlignment="Top" Width="102" Click="btn_Cancelar_Click" />
-        <Button Content="Agregar" Height="38" HorizontalAlignment="Left" Margin="20,270,0,0" Name="btn_Agregar" VerticalAlignment="Top" Width="102" Click="btn_Agregar_Click" />
-        <Button Content="Confirmar modificar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar_Modificar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Modificar_Click" />
-        <Button Content="Confirmar eliminar" Height="82" HorizontalAlignment="Left" Margin="344,34,0,0" Name="btn_Confirmar_Eliminar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Eliminar_Click" />
+        <Button Content="Modificar" Height="26" HorizontalAlignment="Left" Margin="168,276,0,0" Name="btn_modificar" VerticalAlignment="Top" Width="102" Click="btn_modificar_Click" IsEnabled="False" />
+        <Button Content="Eliminar" Height="26" HorizontalAlignment="Right" Margin="0,276,65,0" Name="btn_eliminar" VerticalAlignment="Top" Width="102" Click="btn_eliminar_Click" IsEnabled="False" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Click" />
+        <Button Content="Cancelar" Height="82" HorizontalAlignment="Left" Margin="344,153,0,0" Name="btn_Cancelar" VerticalAlignment="Top" Width="102" Click="btn_Cancelar_Click" />
+        <Button Content="Agregar" Height="26" HorizontalAlignment="Left" Margin="20,276,0,0" Name="btn_Agregar" VerticalAlignment="Top" Width="113" Click="btn_Agregar_Click" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar_Modificar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Modificar_Click" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,34,0,0" Name="btn_Confirmar_Eliminar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Eliminar_Click" />
     </Grid>
 </Window>

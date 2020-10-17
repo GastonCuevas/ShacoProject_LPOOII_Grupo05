@@ -9,7 +9,8 @@ namespace ClasesBase
 {
     public class TrabajarCliente
     {
-        public Cliente traerCliente(int dni)
+        //Método que busca un Cliente dependiendo de su DNI
+        public static Cliente traerCliente(int dni)
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
 
@@ -33,7 +34,48 @@ namespace ClasesBase
             conn.Close();
             return oCliente;
         }
-        public DataTable traerClientes()
+
+        //Método que valida si el Cliente ya está registrado
+        public static Boolean validarCliente(int dni)
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @" select cli_dni " + "From Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+            Boolean bandera = false;
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (reader["cli_dni"].Equals(dni))
+                    {
+                        bandera = true;
+                    }
+                }
+                reader.Close();
+            }
+            catch (SqlException ex)
+            {
+                string error = ex.Message;
+                bandera = false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return bandera;
+        }
+
+        //Método que trae todos los clientes de la base de datos 
+        public static DataTable traerClientes()
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
@@ -45,6 +87,7 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
         //AGREGAR Cliente
         public static void AgregarCliente(Cliente oCliente)
         {
@@ -68,6 +111,7 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
         //MODIFICAR Cliente
         public static void ModificarCliente(Cliente oCliente)
         {
@@ -91,6 +135,7 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
         //ELIMINAR Cliente
         public static void EliminarCliente(int ID)
         {
@@ -110,5 +155,4 @@ namespace ClasesBase
         }
 
     }
-
 }

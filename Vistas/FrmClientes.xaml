@@ -2,41 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FrmClientes" Height="361" Width="1046"
-        xmlns:DATOS="clr-namespace:ClasesBase;assembly=ClasesBase" Loaded="Window_Loaded">
+        xmlns:DATOS="clr-namespace:ClasesBase;assembly=ClasesBase">
     <Window.Resources>
-        
-        <ObjectDataProvider x:Key="oCliente" ObjectType="{x:Type DATOS:Cliente}"></ObjectDataProvider>
         <ObjectDataProvider
             ObjectType="{x:Type DATOS:TrabajarCliente}"
             MethodName="traerClientes"
             x:Key="lista_clientes"
            />
-        <ControlTemplate x:Key="TextBoxErrorTemplate">
-            <DockPanel>
-                <Ellipse DockPanel.Dock="Right" Margin="2,0" Width="10" Height="10">
-                    <Ellipse.Fill>
-                        <LinearGradientBrush>
-                            <GradientStop Color="White" Offset="0" />
-                            <GradientStop Color="Orange" Offset="1" />
-                        </LinearGradientBrush>
-                    </Ellipse.Fill>
-                </Ellipse>
-                <AdornedElementPlaceholder />
-            </DockPanel>
-        </ControlTemplate>
-        <Style x:Key="EstiloError" TargetType="TextBox">
-            <Setter Property="Margin" Value="4,4,10,4" />
-            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource TextBoxErrorTemplate}" />
-            <Style.Triggers>
-                <Trigger Property="Validation.HasError" Value="True">
-                    <Setter Property="ToolTip">
-                        <Setter.Value>
-                            <Binding Path="(Validation.Errors)[0].ErrorContent" RelativeSource="{x:Static RelativeSource.Self}" />
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
     </Window.Resources>
     <Grid Width="1000">
         <Grid.ColumnDefinitions>
@@ -47,29 +19,15 @@
             <RowDefinition Height="192*" />
             <RowDefinition Height="130*" />
         </Grid.RowDefinitions>
-        <Label Content="DNI:" Height="28" HorizontalAlignment="Left" Margin="13,20,0,0" Name="lblDNI" VerticalAlignment="Top" Width="62" />
-        <Label Content="Nombre: " Height="28" HorizontalAlignment="Left" Margin="13,50,0,0" Name="lblNombre" VerticalAlignment="Top" Width="62" />
-        <Label Content="Apellido: " HorizontalAlignment="Left" Margin="13,80,0,43" Name="lblApellido" Width="62" Grid.RowSpan="2" />
-        <Label Content="Teléfono: " Height="28" HorizontalAlignment="Left" Margin="13,110,0,0" Name="lblTelefono" VerticalAlignment="Top" Width="62" />
-        <Label Content="Email: " Height="28" HorizontalAlignment="Left" Margin="13,140,0,0" Name="lblEmail" VerticalAlignment="Top" Width="62" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,20,0,0" Name="txtDNI" VerticalAlignment="Top" Width="214" TextChanged="txtDNI_TextChanged" PreviewTextInput="txtDNI_PreviewTextInput" Text="{Binding Source={StaticResource oCliente}, Path=Cli_DNI, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,50,0,0" Name="txtNombre" VerticalAlignment="Top" Width="214" TextChanged="txtNombre_TextChanged" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Nombre, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,80,0,0" Name="txtApellido" VerticalAlignment="Top" Width="214" TextChanged="txtApellido_TextChanged" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Apellido, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,110,0,0" Name="txtTelefono" VerticalAlignment="Top" Width="214" TextChanged="txtTelefono_TextChanged" PreviewTextInput="txtTelefono_PreviewTextInput" MaxLength="10" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Telefono, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,140,0,0" Name="txtEmail" VerticalAlignment="Top" Width="214" TextChanged="txtEmail_TextChanged" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Email, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" />
-        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="35,6,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click" IsEnabled="False" Grid.Row="1" />
-        <Button Content="Editar" Height="23" HorizontalAlignment="Right" Margin="0,6,661,0" Name="btnEditar" VerticalAlignment="Top" Width="75" Click="btnEditar_Click" IsEnabled="False" Grid.Row="1" />
-        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="147,6,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" IsEnabled="False" Grid.Row="1" />
-        <Button Content="Buscar"  HorizontalAlignment="Left" Margin="147,53,0,0" Name="btnBuscar" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click" Grid.Row="1" />
-        <Button Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="35,95,0,0" Name="btnLimpiar" VerticalAlignment="Top" Width="75" Click="btnLimpiar_Click" Grid.Row="1" />
+        <Button Content="Buscar"  HorizontalAlignment="Left" Margin="28,22,0,0" Name="btnBuscar" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click" />
         <ListView Height="282" HorizontalAlignment="Left" Margin="341,22,0,0" Name="grdClientes" VerticalAlignment="Top" Width="647" Grid.RowSpan="2" ItemsSource="{Binding Source={StaticResource lista_clientes}}" Grid.ColumnSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="100" Header="DNI" DisplayMemberBinding="{Binding Path=CLI_DNI}"/>
                     <GridViewColumn Width="100" Header="Nombre" DisplayMemberBinding="{Binding Path=CLI_Nombre}"/>
                     <GridViewColumn Width="100" Header="Apellido" DisplayMemberBinding="{Binding Path=CLI_Apellido}"/>
-                    <GridViewColumn Width="100" Header="Telefono" DisplayMemberBinding="{Binding Path=CLI_Telefono}"/>
-                    <GridViewColumn Width="160" Header="Email" DisplayMemberBinding="{Binding Path=CLI_Email}"/>
+                    <GridViewColumn Width="100" Header="Teléfono" DisplayMemberBinding="{Binding Path=CLI_Telefono}"/>
+                    <GridViewColumn Width="250" Header="Email" DisplayMemberBinding="{Binding Path=CLI_Email}"/>
                 </GridView>
             </ListView.View>
         </ListView>
