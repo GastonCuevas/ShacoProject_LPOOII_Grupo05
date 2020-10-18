@@ -25,11 +25,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         //Método que busca el cliente mediante el DNI 
         private void txtDni_TextChanged(object sender, TextChangedEventArgs e)
         {

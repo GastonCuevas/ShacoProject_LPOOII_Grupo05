@@ -35,29 +35,12 @@ namespace Vistas
         /// <param name="e"></param>
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            Pelicula oPel = new Pelicula();
-            oPel.Pel_Titulo = txtTitulo.Text;
-            oPel.Pel_Duracion = txtDuracion.Text;
-            oPel.Pel_Codigo = txtCodigo.Text;
-            oPel.Pel_Genero = cbGenero.Text;
-            oPel.Pel_Clase = cbClase.Text;
-            oPel.Pel_Imagen = imgVistaPrevia.Source.ToString();
-
-            if (oPel.Pel_Titulo != "" && oPel.Pel_Genero != "" && oPel.Pel_Clase != "" && oPel.Pel_Codigo != ""
-               && oPel.Pel_Duracion != "")
+            if (System.Windows.MessageBox.Show("¿Desea agregar una nueva Película?", "Agregar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                if (System.Windows.MessageBox.Show("Titulo: " + oPel.Pel_Titulo +
-                    ", " + "\nGenero: " + oPel.Pel_Genero + "\nClase: "
-                    + oPel.Pel_Clase + "\nCodigo: " + oPel.Pel_Codigo +"\nDuracion: " + oPel.Pel_Duracion , "¿Está seguro que desea agregar esta Pelicula?", 
-                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-                {
-                    System.Windows.MessageBox.Show("Pelicula Incluida");
-                    limpiarCampos();
-                }
-            }
-            else 
-            {
-                System.Windows.MessageBox.Show("¡Hay campos vacíos, complételos!");
+                habilitarTXT();
+                mostrarCampos();
+                limpiarCampos();
+                btnConfirmarAgregar.Visibility = Visibility.Visible;
             }
         }
 
@@ -69,16 +52,6 @@ namespace Vistas
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             limpiarCampos();
-        }
-
-        /// <summary>
-        /// Método que valida que solo se pueden ingresar números al textbox de código.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void txtCodigo_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
 
         /// <summary>
@@ -98,7 +71,51 @@ namespace Vistas
         /// <param name="e"></param>
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
+            if (System.Windows.MessageBox.Show("¿Desea modificar la Película?:\n" + txtTitulo.Text, "Modificar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                habilitarTXT();
+                mostrarCampos();
+                btnConfirmarModificar.Visibility = Visibility.Visible;
+                txtCodigo.IsEnabled = false;
+            }
+        }
 
+        //Conjunto de métodos que cambian el diseño del formulario
+        private void mostrarCampos()
+        {
+            btnCancelar.Visibility = Visibility.Visible;
+            btnAgregar.Visibility = Visibility.Hidden;
+            btnEliminar.Visibility = Visibility.Hidden;
+            btnModificar.Visibility = Visibility.Hidden;
+        }
+
+        private void ocultarCampos()
+        {
+            btnConfirmarAgregar.Visibility = Visibility.Hidden;
+            btnConfirmarModificar.Visibility = Visibility.Hidden;
+            btnConfirmarEliminar.Visibility = Visibility.Hidden;
+            btnCancelar.Visibility = Visibility.Hidden;
+            btnAgregar.Visibility = Visibility.Visible;
+            btnEliminar.Visibility = Visibility.Visible;
+            btnModificar.Visibility = Visibility.Visible;
+        }
+
+        private void habilitarTXT()
+        {
+            txtTitulo.IsEnabled = true;
+            cbGenero.IsEnabled = true;
+            cbClase.IsEnabled = true;
+            txtDuracion.IsEnabled = true;
+            btnCargar.IsEnabled = true;
+        }
+
+        private void desHabilitarTXT()
+        {
+            txtTitulo.IsEnabled = false;
+            txtDuracion.IsEnabled = false;
+            cbClase.IsEnabled = false;
+            cbGenero.IsEnabled = false;
+            btnCargar.IsEnabled = true;
         }
 
         /// <summary>
@@ -108,7 +125,13 @@ namespace Vistas
         /// <param name="e"></param>
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (System.Windows.MessageBox.Show("¿Está seguro que quiere eliminar la Película?:\n" + txtTitulo.Text, "Eliminar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                txtCodigo.IsEnabled = false;
+                desHabilitarTXT();
+                mostrarCampos();
+                btnConfirmarEliminar.Visibility = Visibility.Visible;
+            }
         }
 
         /// <summary>
@@ -122,57 +145,52 @@ namespace Vistas
             cbGenero.Text = null;
             cbClase.Text = null;
             imgVistaPrevia.Source = null;
-            btnAgregar.IsEnabled = false;
         }
 
         /// <summary>
-        /// Conjunto de métodos que verifican si se puede habilitar el botón de agregar.
+        /// Método que busca la película por el código
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void txtCodigo_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
-              && cbGenero.SelectedValue != "")
+            if (txtCodigo.Text != "")
             {
-                btnAgregar.IsEnabled = true;
+                Pelicula oPelicula = new Pelicula();
+                oPelicula = TrabajarPelicula.traerPelicula(txtCodigo.Text);
+                cargarPelicula(oPelicula);
             }
         }
 
-        private void txtTitulo_TextChanged(object sender, TextChangedEventArgs e)
+        //Método que carga los campos cuando se encuentra la película buscada
+        public void cargarPelicula(Pelicula peli)
         {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
-              && cbGenero.SelectedValue != "")
+            txtTitulo.Text = "";
+            cbGenero.SelectedIndex = 0;
+            txtDuracion.Text = "0";
+            cbClase.SelectedIndex = 0;
+            imgVistaPrevia.Source = null;
+            if (peli != null)
             {
-                btnAgregar.IsEnabled = true;
+                if (peli.Pel_Titulo != null)
+                {
+                    txtTitulo.Text = peli.Pel_Titulo;
+                    cbGenero.SelectedValue = peli.Pel_Genero;
+                    txtDuracion.Text = peli.Pel_Duracion;
+                    cbClase.SelectedValue = peli.Pel_Clase;
+                    imgVistaPrevia.Source = GetImageSource(peli.Pel_Imagen);
+                    btnModificar.IsEnabled = true;
+                    btnEliminar.IsEnabled = true;
+                }
             }
-        }
+            else
+            {
+                btnModificar.IsEnabled = false;
+                btnEliminar.IsEnabled = false;
+            }
 
-        private void txtDuracion_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
-              && cbGenero.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
-        }
 
-        private void cbClase_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
-              && cbGenero.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
-        }
 
-        private void cbGenero_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (txtCodigo.Text != "" && txtTitulo.Text != "" && txtDuracion.Text != "" && cbClase.SelectedValue != ""
-              && cbGenero.SelectedValue != "")
-            {
-                btnAgregar.IsEnabled = true;
-            }
         }
 
         //Este método carga la imagen de la película
@@ -212,10 +230,83 @@ namespace Vistas
             return glowIcon;
         }
 
-        private void grdPeliculas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //Botones de Confirmación de operaciones
+        private void btnConfirmarModificar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (txtCodigo.Text != "" && txtDuracion.Text != "0" && txtTitulo.Text != "" && cbGenero.Text != "" && cbClase.Text != "" && imgVistaPrevia.Source != null)
+            {
+                Pelicula oPelicula = new Pelicula();
+                oPelicula.Pel_Codigo = txtCodigo.Text;
+                oPelicula.Pel_Titulo = txtTitulo.Text;
+                oPelicula.Pel_Duracion = txtDuracion.Text;
+                oPelicula.Pel_Genero = cbGenero.Text;
+                oPelicula.Pel_Clase = cbClase.Text;
+                oPelicula.Pel_Imagen = Convert.ToString(imgVistaPrevia.Source);
+                TrabajarPelicula.ModificarPelicula(oPelicula);
+                System.Windows.MessageBox.Show("¡Pelicula modificada con éxito!");
+                ocultarCampos();
+                desHabilitarTXT();
+                txtCodigo.IsEnabled = true;
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("¡No olvide completar todos los campos!");
+            }
         }
 
+        private void btnConfirmarEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            string cod = txtCodigo.Text;
+            TrabajarPelicula.EliminarPelicula(cod);
+            System.Windows.MessageBox.Show("¡Película eliminada con éxito!");
+            limpiarCampos();
+            ocultarCampos();
+            txtCodigo.IsEnabled = true;
+            btnModificar.IsEnabled = false;
+            btnEliminar.IsEnabled = false;
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCodigo.IsEnabled = true;
+            btnCargar.IsEnabled = false;
+            ocultarCampos();
+            desHabilitarTXT();
+        }
+
+        private void btnConfirmarAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtTitulo.Text != "" && cbGenero.Text != "" && cbClase.Text != "" && txtCodigo.Text != ""
+               && txtDuracion.Text != "")
+            {
+                Pelicula oPel = new Pelicula();
+                oPel.Pel_Titulo = txtTitulo.Text;
+                oPel.Pel_Duracion = txtDuracion.Text;
+                oPel.Pel_Codigo = txtCodigo.Text;
+                oPel.Pel_Genero = cbGenero.Text;
+                oPel.Pel_Clase = cbClase.Text;
+                oPel.Pel_Imagen = imgVistaPrevia.Source.ToString();
+
+                Boolean bandera = TrabajarPelicula.validarPelicula(txtCodigo.Text);
+
+                if (bandera == false)
+                {
+                    if (System.Windows.MessageBox.Show("Titulo: " + oPel.Pel_Titulo +
+                    ", " + "\nGenero: " + oPel.Pel_Genero + "\nClase: "
+                    + oPel.Pel_Clase + "\nCodigo: " + oPel.Pel_Codigo + "\nDuracion: " + oPel.Pel_Duracion, "¿Está seguro que desea agregar esta Pelicula?",
+                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                    {
+                        TrabajarPelicula.AgregarPelicula(oPel);
+                        System.Windows.MessageBox.Show("Pelicula Incluida");
+                        limpiarCampos();
+                        ocultarCampos();
+                    }
+                }
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("¡Hay campos vacíos, complételos!");
+            }
+        }
     }
 }
