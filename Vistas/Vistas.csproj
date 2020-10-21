@@ -94,6 +94,9 @@
     <Compile Include="frmProyecciones.xaml.cs">
       <DependentUpon>frmProyecciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.xaml.cs">
+      <DependentUpon>frmUsuarios.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="frmProyecciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

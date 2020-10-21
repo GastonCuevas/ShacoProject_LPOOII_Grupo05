@@ -61,6 +61,7 @@
     <Compile Include="TrabajarPelicula.cs" />
     <Compile Include="TrabajarProyeccion.cs" />
     <Compile Include="TrabajarSala.cs" />
+    <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

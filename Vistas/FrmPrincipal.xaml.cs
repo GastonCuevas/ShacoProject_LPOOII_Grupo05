@@ -65,8 +65,8 @@ namespace Vistas
         //Método que muestra el formulario de gestión de usuarios.
         private void miUsuarios_Click(object sender, RoutedEventArgs e)
         {
-            FrmClientes oFrmClientes = new FrmClientes();
-            oFrmClientes.Show();
+            frmUsuarios oFrmUsuarios = new frmUsuarios();
+            oFrmUsuarios.Show();
         }
 
         //Método que muestra el formulario de gestión de películas.

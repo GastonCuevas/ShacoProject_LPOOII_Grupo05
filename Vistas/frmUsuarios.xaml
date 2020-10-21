@@ -1,0 +1,48 @@
+﻿<Window x:Class="Vistas.frmUsuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        Title="Gestón de Usuarios" Height="390" Width="702" Loaded="Window_Loaded">
+    
+    <Window.Resources>
+        <ObjectDataProvider x:Key="LIST_USER" ObjectType="{x:Type svc:TrabajarUsuario}" MethodName="TraerUsuarios"></ObjectDataProvider>
+    </Window.Resources>
+    
+    <Grid>
+        <TextBlock Name="txtIndex" Text="Index: 0" Margin="167,0,-167,0" Foreground="White"></TextBlock>
+        <Canvas Name="canvas_content" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}" Margin="12,22,12,70">
+            <StackPanel Margin="40" Canvas.Left="359" Canvas.Top="-20" Height="194">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Button Name="btnFirts" Content="|&lt;" Click="btnFirts_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
+                    <Button Name="btnPrevius" Content="&lt;" Click="btnPrevius_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
+                    <Button Name="btnNext" Content="&gt;" Click="btnNext_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
+                    <Button Name="btnLast" Content="&gt;|" Click="btnLast_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
+                </StackPanel>
+                <StackPanel Width="190" Height="75" Margin="5">
+                    <TextBlock Text="{Binding Usu_NombreUsuario}" Height="25" Background="Aqua" Padding="5"/>
+                    <TextBlock Text="{Binding Usu_Contraseña}" Height="25" Background="Azure" Padding="5"/>
+                    <TextBlock Text="{Binding Usu_ApellidoNombre}" Height="25" Background="Aqua" Padding="5"/>
+                </StackPanel>
+                <Button Name="btnSeleccionar" Content="Seleccionar" Click="btnSeleccionar_Click" Height="26" Width="86"></Button>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnAgregar" Content="Agregar" Click="btnAgregar_Click" Margin="5"></Button>
+                    <Button Name="btnEliminar" Content="Eliminar" Click="btnEliminar_Click" Margin="5" IsEnabled="False"></Button>
+                    <Button Name="btnCancelar" Content="Cancelar" Click="btnCancelar_Click" Margin="5" IsEnabled="False"></Button>
+                    <Button Name="btnGuardar" Content="Guardar" Click="btnGuardar_Click" Margin="5" IsEnabled="False"></Button>
+                </StackPanel>
+                <StackPanel Width="294" Orientation="Vertical">
+                    <Label Name="lblNombreUsuario" Content="Nombre De Usuario: "></Label>
+                    <TextBox Name="txtNombreUsuario" Width="281" Height="23"></TextBox>
+                    <Label Name="lblContraseña" Content="Contraseña: "></Label>
+                    <TextBox Name="txtContraseña" Width="279" Height="23"></TextBox>
+                    <Label Name="lblApellidoNombre" Content="Apellido y Nombre: "></Label>
+                    <TextBox Name="txtApellidoNombre" Width="281" Height="23"></TextBox>
+                    <Label Name="lblCodigo" Content="Código: "></Label>
+                    <TextBox Name="txtCodigo" Width="280" Height="23"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>
