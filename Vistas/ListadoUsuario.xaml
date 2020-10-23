@@ -29,5 +29,6 @@
         </ListView>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="187,16,0,0" Name="txtBuscar" VerticalAlignment="Top" Width="206" TextChanged="txtBuscar_TextChanged" />
         <Label Content="Buscar:" Height="28" HorizontalAlignment="Left" Margin="126,16,0,0" Name="label1" VerticalAlignment="Top" Width="102" />
+        <Button Content="Imprimir" Height="23" HorizontalAlignment="Left" Margin="451,16,0,0" Name="btnImprimir" VerticalAlignment="Top" Width="75" Click="btnImprimir_Click" />
     </Grid>
 </Window>

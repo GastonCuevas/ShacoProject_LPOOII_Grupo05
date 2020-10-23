@@ -25,11 +25,11 @@ namespace ClasesBase
             if (reader.Read())
             {
                 oCliente = new Cliente();
-                oCliente.Cli_DNI = (int)reader["cli_dni"];
-                oCliente.Cli_Nombre = (string)reader["cli_nombre"];
-                oCliente.Cli_Apellido = (string)reader["cli_apellido"];
-                oCliente.Cli_Telefono = (string)reader["cli_Telefono"];
-                oCliente.Cli_Email = (string)reader["cli_Email"];
+                oCliente.Cli_DNI = reader.GetInt32(reader.GetOrdinal("cli_dni"));
+                oCliente.Cli_Nombre = reader.GetString(reader.GetOrdinal("cli_nombre"));
+                oCliente.Cli_Apellido = reader.GetString(reader.GetOrdinal("cli_apellido"));
+                oCliente.Cli_Telefono = reader.GetString(reader.GetOrdinal("cli_telefono"));
+                oCliente.Cli_Email = reader.GetString(reader.GetOrdinal("cli_email"));
             }
             conn.Close();
             return oCliente;

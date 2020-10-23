@@ -88,14 +88,17 @@
     <Compile Include="ControlesUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificarCliente.xaml.cs">
-      <DependentUpon>FrmModificarCliente.xaml</DependentUpon>
-    </Compile>
     <Compile Include="frmProyecciones.xaml.cs">
       <DependentUpon>frmProyecciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrmSalas.xaml.cs">
+      <DependentUpon>FrmSalas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.xaml.cs">
       <DependentUpon>frmUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmVistaPrevia.xaml.cs">
+      <DependentUpon>frmVistaPrevia.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListadoUsuario.xaml.cs">
       <DependentUpon>ListadoUsuario.xaml</DependentUpon>
@@ -170,10 +173,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FrmModificarCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="FrmPeliculas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,7 +185,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FrmSalas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="frmUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmVistaPrevia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

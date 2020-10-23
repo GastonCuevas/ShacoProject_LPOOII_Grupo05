@@ -91,10 +91,11 @@ namespace Vistas
         }
 
         //Método que muestra el formulario de gestión de Salas.
-        //private void miUsuarios_Click(object sender, RoutedEventArgs e)
-        //{
-            //oFrmSalas.Show();
-        //}
+        private void miSalas_Click(object sender, RoutedEventArgs e)
+        {
+            FrmSalas oFrmSalas = new FrmSalas();
+            oFrmSalas.Show();
+        }
 
         //Método que cierra el formulario principal y abre el formulario de login
         private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
@@ -102,12 +103,6 @@ namespace Vistas
             FrmLogin oFrmLogin = new FrmLogin();
             this.Close();
             oFrmLogin.Show();
-        }
-        //Método que cierra el formulario principal y abre el formulario de loginXD
-        private void miModificar_Click(object sender, RoutedEventArgs e)
-        {
-            FrmModificarCliente oFrmModificarCliente = new FrmModificarCliente();
-            oFrmModificarCliente.Show();
         }
 
     }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\
 Vistas
 none
 false
 DEBUG;TRACE
-I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\App.xaml
-12-140358254
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\App.xaml
+13268903452
 
-16350938739
-19110555302
-ControlesUsuario\Login.xaml;EstilosMain.xaml;FrmButacas.xaml;FrmClientes.xaml;FrmLogin.xaml;FrmModificarCliente.xaml;FrmPeliculas.xaml;FrmPrincipal.xaml;frmProyecciones.xaml;frmUsuarios.xaml;ListadoUsuario.xaml;PlantillaMain.xaml;
+171235383438
+19-1802253548
+ControlesUsuario\Login.xaml;EstilosMain.xaml;FrmButacas.xaml;FrmClientes.xaml;FrmLogin.xaml;FrmPeliculas.xaml;FrmPrincipal.xaml;frmProyecciones.xaml;FrmSalas.xaml;frmUsuarios.xaml;frmVistaPrevia.xaml;ListadoUsuario.xaml;PlantillaMain.xaml;
 
-True
+False
 

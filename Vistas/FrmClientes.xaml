@@ -1,26 +1,84 @@
 ﻿<Window x:Class="Vistas.FrmClientes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FrmClientes" Height="361" Width="1046"
-        xmlns:DATOS="clr-namespace:ClasesBase;assembly=ClasesBase">
+        Title="FrmClientes" Height="361" Width="1199"
+        xmlns:DATOS="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:TIPOS="clr-namespace:System;assembly=mscorlib" Loaded="Window_Loaded">
     <Window.Resources>
         <ObjectDataProvider
             ObjectType="{x:Type DATOS:TrabajarCliente}"
             MethodName="traerClientes"
             x:Key="lista_clientes"
            />
+        <ObjectDataProvider x:Key="oCliente" ObjectType="{x:Type DATOS:TrabajarCliente}" MethodName="traerCliente">
+            <ObjectDataProvider.MethodParameters>
+
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ControlTemplate x:Key="TextBoxErrorTemplate">
+            <DockPanel>
+                <Ellipse DockPanel.Dock="Right" Margin="2,0" Width="10" Height="10">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush>
+                            <GradientStop Color="White" Offset="0" />
+                            <GradientStop Color="Orange" Offset="1" />
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <AdornedElementPlaceholder />
+            </DockPanel>
+        </ControlTemplate>
+        <Style x:Key="EstiloError" TargetType="TextBox">
+            <Setter Property="Margin" Value="4,4,10,4" />
+            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource TextBoxErrorTemplate}" />
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip">
+                        <Setter.Value>
+                            <Binding Path="(Validation.Errors)[0].ErrorContent" RelativeSource="{x:Static RelativeSource.Self}" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
-    <Grid Width="1000">
+    <Grid Width="1171">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="987*" />
             <ColumnDefinition Width="13*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="192*" />
-            <RowDefinition Height="130*" />
+            <RowDefinition Height="321*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Content="Buscar"  HorizontalAlignment="Left" Margin="28,22,0,0" Name="btnBuscar" VerticalAlignment="Top" Width="75" Click="btnBuscar_Click" />
-        <ListView Height="282" HorizontalAlignment="Left" Margin="341,22,0,0" Name="grdClientes" VerticalAlignment="Top" Width="647" Grid.RowSpan="2" ItemsSource="{Binding Source={StaticResource lista_clientes}}" Grid.ColumnSpan="2">
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,13,847,0" Name="txtDni" VerticalAlignment="Top" Width="206" TextChanged="txtDni_TextChanged" Style="{StaticResource EstiloError}" PreviewTextInput="txtDni_PreviewTextInput" MaxLength="10">
+            <TextBox.Text>
+                <Binding Source="{StaticResource ResourceKey=oCliente}" 
+                         Path="MethodParameters[0]" 
+                         BindsDirectlyToSource="True" 
+                         UpdateSourceTrigger="PropertyChanged" 
+                         ValidatesOnExceptions="True" 
+                         ValidatesOnDataErrors="True">
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Content="Dni" Height="28" HorizontalAlignment="Left" Margin="5,7,0,0" Name="lblDni" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,65,0,0" Name="txtNombre" VerticalAlignment="Top" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Nombre, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />
+        <Label Content="Nombre" Height="28" HorizontalAlignment="Left" Margin="5,60,0,0" Name="lblNombre" VerticalAlignment="Top" />
+        <Label Content="Apellido" Height="27" HorizontalAlignment="Left" Margin="5,115,0,0" Name="lblApellido" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,121,0,0" Name="txtApellido" VerticalAlignment="Top" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Apellido, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />
+        <Label Content="Telefono" Height="27" HorizontalAlignment="Left" Margin="5,172,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,178,0,0" Name="txtTelefono" Style="{StaticResource EstiloError}" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Telefono, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="206" IsEnabled="False" PreviewTextInput="txtTelefono_PreviewTextInput"/>
+        <Label Content="Email" Height="27" HorizontalAlignment="Left" Margin="5,218,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,224,0,0" Name="txtEmail" Style="{StaticResource EstiloError}" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Email, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="206" IsEnabled="False" />
+        <Button Content="Modificar" Height="26" HorizontalAlignment="Left" Margin="168,276,0,0" Name="btn_modificar" VerticalAlignment="Top" Width="102" Click="btn_modificar_Click" IsEnabled="False" />
+        <Button Content="Eliminar" Height="26" HorizontalAlignment="Right" Margin="0,276,750,0" Name="btn_eliminar" VerticalAlignment="Top" Width="102" Click="btn_eliminar_Click" IsEnabled="False" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Click" />
+        <Button Content="Cancelar" Height="82" HorizontalAlignment="Left" Margin="344,153,0,0" Name="btn_Cancelar" VerticalAlignment="Top" Width="102" Click="btn_Cancelar_Click" />
+        <Button Content="Agregar" Height="26" HorizontalAlignment="Left" Margin="20,276,0,0" Name="btn_Agregar" VerticalAlignment="Top" Width="113" Click="btn_Agregar_Click" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,33,0,0" Name="btn_Confirmar_Modificar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Modificar_Click" />
+        <Button Content="Confirmar" Height="82" HorizontalAlignment="Left" Margin="344,34,0,0" Name="btn_Confirmar_Eliminar" VerticalAlignment="Top" Width="102" Click="btn_Confirmar_Eliminar_Click" />
+        <ListView Height="282" HorizontalAlignment="Left" Margin="505,14,0,0" Name="grdClientes" VerticalAlignment="Top" Width="647" ItemsSource="{Binding Source={StaticResource lista_clientes}}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="100" Header="DNI" DisplayMemberBinding="{Binding Path=CLI_DNI}"/>
@@ -31,6 +89,5 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
     </Grid>
 </Window>

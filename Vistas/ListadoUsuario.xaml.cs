@@ -35,5 +35,11 @@ namespace Vistas
             DataTable dt = TrabajarUsuario.traerUsuarioSP(txtBuscar.Text);
             grdUsuarios.ItemsSource = dt.DefaultView;
         }
+
+        private void btnImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            frmVistaPrevia oFrmVistaPrevia = new frmVistaPrevia();
+            oFrmVistaPrevia.Show();
+        }
     }
 }

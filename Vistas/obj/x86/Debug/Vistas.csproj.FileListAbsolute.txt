@@ -128,11 +128,15 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Frm
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.g.cs
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.baml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.g.cs
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmModificarCliente.baml
-C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmModificarCliente.g.cs
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmUsuarios.baml
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmUsuarios.g.cs
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmUsuarios.baml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmUsuarios.g.cs
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\ListadoUsuario.baml
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\ListadoUsuario.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ListadoUsuario.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\ListadoUsuario.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmSalas.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmSalas.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmVistaPrevia.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmVistaPrevia.g.cs
