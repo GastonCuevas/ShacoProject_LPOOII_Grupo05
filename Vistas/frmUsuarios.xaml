@@ -5,11 +5,14 @@
         Title="Gestón de Usuarios" Height="390" Width="702" Loaded="Window_Loaded">
     
     <Window.Resources>
-        <ObjectDataProvider x:Key="LIST_USER" ObjectType="{x:Type svc:TrabajarUsuario}" MethodName="TraerUsuarios"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="LIST_USER" ObjectType="{x:Type svc:TrabajarUsuario}" MethodName="TraerUsuariosObservable"></ObjectDataProvider>
     </Window.Resources>
     
+    
     <Grid>
-        <TextBlock Name="txtIndex" Text="Index: 0" Margin="167,0,-167,0" Foreground="White"></TextBlock>
+        <Grid.Resources>
+            <XmlDataProvider x:Key="clave_codigo" Source="Codigos.xml" XPath="/codigos"/>
+        </Grid.Resources>
         <Canvas Name="canvas_content" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}" Margin="12,22,12,70">
             <StackPanel Margin="40" Canvas.Left="359" Canvas.Top="-20" Height="194">
                 <StackPanel Orientation="Horizontal" Margin="5">
@@ -23,7 +26,8 @@
                     <TextBlock Text="{Binding Usu_Contraseña}" Height="25" Background="Azure" Padding="5"/>
                     <TextBlock Text="{Binding Usu_ApellidoNombre}" Height="25" Background="Aqua" Padding="5"/>
                 </StackPanel>
-                <Button Name="btnSeleccionar" Content="Seleccionar" Click="btnSeleccionar_Click" Height="26" Width="86"></Button>
+                <Button Name="btnSeleccionar" Content="Seleccionar" Click="btnSeleccionar_Click" Height="26" Width="86" Margin="10"></Button>
+                <Button Content="Listado de usuarios" Height="26" Name="btnListado" Width="132" Click="btnListado_Click" />
             </StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -32,7 +36,7 @@
                     <Button Name="btnCancelar" Content="Cancelar" Click="btnCancelar_Click" Margin="5" IsEnabled="False"></Button>
                     <Button Name="btnGuardar" Content="Guardar" Click="btnGuardar_Click" Margin="5" IsEnabled="False"></Button>
                 </StackPanel>
-                <StackPanel Width="294" Orientation="Vertical">
+                <StackPanel Width="294" Orientation="Vertical" Height="278">
                     <Label Name="lblNombreUsuario" Content="Nombre De Usuario: "></Label>
                     <TextBox Name="txtNombreUsuario" Width="281" Height="23"></TextBox>
                     <Label Name="lblContraseña" Content="Contraseña: "></Label>
@@ -40,9 +44,10 @@
                     <Label Name="lblApellidoNombre" Content="Apellido y Nombre: "></Label>
                     <TextBox Name="txtApellidoNombre" Width="281" Height="23"></TextBox>
                     <Label Name="lblCodigo" Content="Código: "></Label>
-                    <TextBox Name="txtCodigo" Width="280" Height="23"></TextBox>
+                    <ComboBox Height="22" Name="cbCodigo" Width="281" ItemsSource="{Binding Source={StaticResource clave_codigo}, XPath=clave/@name}" SelectedIndex="0"/>
                 </StackPanel>
             </StackPanel>
+            <TextBlock Name="txtIndex" Text="Index: 1" Foreground="White" Canvas.Left="481" Canvas.Top="5"></TextBlock>
         </Canvas>
     </Grid>
 </Window>

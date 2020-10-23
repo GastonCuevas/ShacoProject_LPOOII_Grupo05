@@ -1,0 +1,33 @@
+﻿<Window x:Class="Vistas.ListadoUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListadoUsuario" Height="444" Width="560"
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarUsuario}"
+            MethodName="traerUsuariosSP"
+            x:Key="lista_usuarios"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarUsuario}"
+            MethodName="traerUsuarioSP"
+            x:Key="lista_encontrados"
+           />
+    </Window.Resources>
+    <Grid>
+        <ListView ItemsSource="{Binding Source={StaticResource lista_usuarios}}" Margin="12,56,12,12" Name="grdUsuarios">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=USU_NombreUsuario}" Header="Usuario" Width="150" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=USU_ID}" Header="ID" Width="40" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=USU_ApellidoNombre}" Header="Nombre" Width="140" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=USU_Contraseña}" Header="Contraseña" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ROL_Codigo}" Header="Codigo" Width="80" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="187,16,0,0" Name="txtBuscar" VerticalAlignment="Top" Width="206" TextChanged="txtBuscar_TextChanged" />
+        <Label Content="Buscar:" Height="28" HorizontalAlignment="Left" Margin="126,16,0,0" Name="label1" VerticalAlignment="Top" Width="102" />
+    </Grid>
+</Window>

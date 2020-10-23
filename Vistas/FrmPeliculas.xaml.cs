@@ -13,6 +13,8 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using ClasesBase;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Vistas
 {
@@ -220,13 +222,10 @@ namespace Vistas
         public ImageSource GetImageSource(string filename)
         {
             string _fileName = filename;
-
             BitmapImage glowIcon = new BitmapImage();
-
             glowIcon.BeginInit();
             glowIcon.UriSource = new Uri(_fileName);
             glowIcon.EndInit();
-
             return glowIcon;
         }
 
@@ -243,6 +242,8 @@ namespace Vistas
                 oPelicula.Pel_Clase = cbClase.Text;
                 oPelicula.Pel_Imagen = Convert.ToString(imgVistaPrevia.Source);
                 TrabajarPelicula.ModificarPelicula(oPelicula);
+                DataTable dt = TrabajarPelicula.traerPeliculas();
+                grdPeliculas.ItemsSource = dt.DefaultView;
                 System.Windows.MessageBox.Show("¡Pelicula modificada con éxito!");
                 ocultarCampos();
                 desHabilitarTXT();
@@ -258,6 +259,8 @@ namespace Vistas
         {
             string cod = txtCodigo.Text;
             TrabajarPelicula.EliminarPelicula(cod);
+            DataTable dt = TrabajarPelicula.traerPeliculas();
+            grdPeliculas.ItemsSource = dt.DefaultView;
             System.Windows.MessageBox.Show("¡Película eliminada con éxito!");
             limpiarCampos();
             ocultarCampos();
@@ -297,6 +300,10 @@ namespace Vistas
                     MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                     {
                         TrabajarPelicula.AgregarPelicula(oPel);
+
+                        DataTable dt = TrabajarPelicula.traerPeliculas();
+                        grdPeliculas.ItemsSource = dt.DefaultView;
+
                         System.Windows.MessageBox.Show("Pelicula Incluida");
                         limpiarCampos();
                         ocultarCampos();

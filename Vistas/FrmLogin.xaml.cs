@@ -29,40 +29,23 @@ namespace Vistas
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
         private void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
-            Usuario vendedor = new Usuario();
-            vendedor.Rol_Codigo = "VND";
-            vendedor.Usu_ApellidoNombre = "Angello Miguél";
-            vendedor.Usu_Contraseña = "vendedor";
-            vendedor.Usu_ID = 2;
-            vendedor.Usu_NombreUsuario = "icansellursoul";
-
-            Usuario admin = new Usuario();
-            admin.Rol_Codigo = "ADM";
-            admin.Usu_ApellidoNombre = "Moreno Gisell";
-            admin.Usu_Contraseña = "admin";
-            admin.Usu_ID = 1;
-            admin.Usu_NombreUsuario = "adminisfornoobs";
-
             Usuario userLogued = new Usuario();
             Boolean encontrado = false;
             //Traemos los valores de el controlUs.Login
             String nombreUs = controlLogin.Usuario;
             String contraseña = controlLogin.Contraseña;
-            //MessageBox.Show("Comparé: " + vendedor.Usu_Contraseña + " con " + txtContraseña.Text);
-            
-            if (nombreUs == vendedor.Usu_NombreUsuario && contraseña == vendedor.Usu_Contraseña)
+            //Validación de login
+            if (TrabajarUsuario.ValidarUsuario(nombreUs,contraseña)==true)
             {
-                userLogued = vendedor;
                 encontrado = true;
+                userLogued = TrabajarUsuario.traerUsuario(nombreUs);
             }
-            if (nombreUs == admin.Usu_NombreUsuario && contraseña == admin.Usu_Contraseña)
-            {
-                userLogued = admin;
-                encontrado = true;
-            }
-
             if (encontrado == false)
             {
                 MessageBox.Show("Datos incorrectos");

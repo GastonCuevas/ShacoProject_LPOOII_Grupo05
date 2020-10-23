@@ -46,8 +46,9 @@ namespace ClasesBase
 
         public Usuario(){}
 
-        public Usuario(string nombreUsuario, string contraseña, string apellidoNombre, string codigo) 
+        public Usuario(int ID, string nombreUsuario, string contraseña, string apellidoNombre, string codigo) 
         {
+            Usu_ID = ID;
             Usu_NombreUsuario = nombreUsuario;
             Usu_Contraseña = contraseña;
             Usu_ApellidoNombre = apellidoNombre;

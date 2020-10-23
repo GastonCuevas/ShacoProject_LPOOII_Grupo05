@@ -10,7 +10,7 @@ namespace ClasesBase
     public class TrabajarPelicula
     {
         //Método que trae todas las películas de la base de datos
-        public DataTable traerPeliculas() 
+        public static DataTable traerPeliculas() 
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
 
