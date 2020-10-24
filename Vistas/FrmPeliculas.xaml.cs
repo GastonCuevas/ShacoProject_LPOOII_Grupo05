@@ -246,6 +246,9 @@ namespace Vistas
                 grdPeliculas.ItemsSource = dt.DefaultView;
                 System.Windows.MessageBox.Show("¡Pelicula modificada con éxito!");
                 ocultarCampos();
+                limpiarCampos();
+                btnModificar.IsEnabled = false;
+                btnEliminar.IsEnabled = false;
                 desHabilitarTXT();
                 txtCodigo.IsEnabled = true;
             }
@@ -273,6 +276,7 @@ namespace Vistas
         {
             txtCodigo.IsEnabled = true;
             btnCargar.IsEnabled = false;
+            btnAgregar.IsEnabled = true;
             ocultarCampos();
             desHabilitarTXT();
         }
@@ -307,6 +311,9 @@ namespace Vistas
                         System.Windows.MessageBox.Show("Pelicula Incluida");
                         limpiarCampos();
                         ocultarCampos();
+                        desHabilitarTXT();
+                        btnModificar.IsEnabled = false;
+                        btnEliminar.IsEnabled = false;
                     }
                 }
             }

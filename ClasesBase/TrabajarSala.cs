@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    class TrabajarSala
+    public class TrabajarSala
     {
-        public DataTable traerSalas()
+        public static DataTable traerSalas()
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
 

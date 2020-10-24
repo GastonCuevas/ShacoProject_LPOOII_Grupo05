@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
-        Title="FrmPeliculas" Height="603" Width="947">
+        Title="Películas" Height="603" Width="947">
     
     <Window.Resources>
         <ObjectDataProvider

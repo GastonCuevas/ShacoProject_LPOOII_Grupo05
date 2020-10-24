@@ -1,30 +1,57 @@
 ﻿<Window x:Class="Vistas.frmProyecciones"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Proyecciones" Height="348" Width="894">
-    <Grid Width="871">
-        <Label Content="Película: " Height="31" HorizontalAlignment="Left" Margin="24,12,0,0" Name="lblPelicula" VerticalAlignment="Top" Width="70" />
-        <Label Content="Código: " Height="31" HorizontalAlignment="Left" Margin="24,49,0,0" Name="lblCodigo" VerticalAlignment="Top" Width="70" />
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        Title="Proyecciones" Height="355" Width="1008">
+
+    <Window.Resources>
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarProyeccion}"
+            MethodName="traerProyecciones"
+            x:Key="lista_proyecciones"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarSala}"
+            MethodName="traerSalas"
+            x:Key="lista_salas"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarPelicula}"
+            MethodName="traerPeliculas"
+            x:Key="lista_peliculas"
+           />
+    </Window.Resources>
+    <Grid Width="946" Height="321">
+
+        <ListView Name="grdProyecciones" Margin="453,18,12,160"
+                  ItemsSource="{Binding Source={StaticResource lista_proyecciones}}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="80" Header="Código" DisplayMemberBinding="{Binding Path=PRO_Codigo}"/>
+                    <GridViewColumn Width="150" Header="Película" DisplayMemberBinding="{Binding Path=PEL_Codigo}"/>
+                    <GridViewColumn Width="90" Header="Fecha" DisplayMemberBinding="{Binding Path=PRO_Fecha}"/>
+                    <GridViewColumn Width="80" Header="Hora" DisplayMemberBinding="{Binding Path=PRO_Hora}"/>
+                    <GridViewColumn Width="70" Header="Sala" DisplayMemberBinding="{Binding Path=SALA_NroSala}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label Content="Película: " Height="31" HorizontalAlignment="Left" Margin="24,49,0,0" Name="lblPelicula" VerticalAlignment="Top" Width="70" />
+        <Label Content="Código: " Height="31" HorizontalAlignment="Left" Margin="24,12,0,0" Name="lblCodigo" VerticalAlignment="Top" Width="70" />
         <Label Content="Fecha: " Height="31" HorizontalAlignment="Left" Margin="24,86,0,0" Name="lblFecha" VerticalAlignment="Top" Width="70" />
         <Label Content="Hora: " Height="31" HorizontalAlignment="Left" Margin="24,123,0,0" Name="lblHora" VerticalAlignment="Top" Width="70" />
         <Label Content="Sala: " Height="31" HorizontalAlignment="Left" Margin="24,160,0,0" Name="lblSala" VerticalAlignment="Top" Width="70" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="171,12,0,0" Name="cbPelicula" VerticalAlignment="Top" Width="217" SelectionChanged="cbPelicula_SelectionChanged">
-            <ComboBoxItem Content="Interstelar" />
-            <ComboBoxItem Content="El Lobo de Wall Strett" />
-            <ComboBoxItem Content="Bastardos sin Gloria" />
-        </ComboBox>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="171,49,0,0" Name="txtCodigo" VerticalAlignment="Top" Width="217" TextChanged="txtCodigo_TextChanged"/>
-        <DatePicker Height="23" HorizontalAlignment="Left" Margin="171,86,0,0" Name="dtpFecha" VerticalAlignment="Top" Width="217" Text="Selecciona una fecha" SelectedDateChanged="dtpFecha_SelectedDateChanged" DataContext="{Binding}" BorderThickness="0" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="171,123,0,0" Name="txtHora" VerticalAlignment="Top" Width="217" TextChanged="txtHora_TextChanged"/>
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="171,160,0,0" Name="cbSala" VerticalAlignment="Top" Width="217" SelectionChanged="cbSala_SelectionChanged">
-            <ComboBoxItem Content="1" />
-            <ComboBoxItem Content="2" />
-            <ComboBoxItem Content="3" />
-        </ComboBox>
-        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="36,214,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click" IsEnabled="False"/>
-        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="171,214,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" IsEnabled="False"/>
-        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="306,214,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" IsEnabled="False"/>
-        <Button Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="36,254,0,0" Name="btnLimpiar" VerticalAlignment="Top" Width="75" Click="btnLimpiar_Click"/>
-        <DataGrid AutoGenerateColumns="True" Height="265" HorizontalAlignment="Left" Margin="439,12,0,0" Name="dgvProyecciones" VerticalAlignment="Top" Width="394" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="100,12,0,0" Name="txtCodigo" VerticalAlignment="Top" Width="217" TextChanged="txtCodigo_TextChanged" IsEnabled="true"/>
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_peliculas}}" DisplayMemberPath="PEL_Titulo" SelectedValuePath="PEL_Codigo" Height="23" HorizontalAlignment="Left" Margin="100,49,0,0" Name="cbPelicula" VerticalAlignment="Top" Width="217" IsEnabled="False"/>
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="100,86,0,0" Name="dtpFecha" VerticalAlignment="Top" Width="217" Text="Selecciona una fecha" BorderThickness="0" IsEnabled="False"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="100,123,0,0" Name="txtHora" VerticalAlignment="Top" Width="217" IsEnabled="False"/>
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_salas}}" DisplayMemberPath="SALA_NroSala" SelectedValuePath="SALA_NroSala" Height="23" HorizontalAlignment="Left" Margin="100,160,0,0" Name="cbSala" VerticalAlignment="Top" Width="217" IsEnabled="False"/>
+        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="36,214,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click"/>
+        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="136,214,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" IsEnabled="False"/>
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="233,214,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" IsEnabled="False"/>
+        <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="338,18,0,0" Name="btnConfirmarAgregar" Click="btnConfirmarAgregar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
+        <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="338,18,0,0" Name="btnConfirmarModificar" Click="btnConfirmarModificar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
+        <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="338,18,0,0" Name="btnConfirmarEliminar" Click="btnConfirmarEliminar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
+        <Button Content="Cancelar" Height="71" HorizontalAlignment="Left" Margin="338,102,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="109" Visibility="Hidden" Click="btnCancelar_Click"/>
     </Grid>
 </Window>

@@ -94,6 +94,9 @@
     <Compile Include="FrmSalas.xaml.cs">
       <DependentUpon>FrmSalas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmTickets.xaml.cs">
+      <DependentUpon>frmTickets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.xaml.cs">
       <DependentUpon>frmUsuarios.xaml</DependentUpon>
     </Compile>
@@ -186,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FrmSalas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmTickets.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
