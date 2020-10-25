@@ -24,6 +24,21 @@ namespace ClasesBase
             return (dt);
         }
 
+        public static DataTable traerProyeccionesCB()
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select PRO_Codigo, PEL_Codigo + '-' + PRO_Hora as datos FROM proyeccion order by PRO_Hora asc";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            conn.Close();
+            return (dt);
+        }
+
         //AGREGAR Proyeccción
         public static void AgregarProyeccion(Proyeccion oProyeccion)
         {

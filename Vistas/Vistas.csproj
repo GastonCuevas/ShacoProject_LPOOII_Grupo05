@@ -100,6 +100,9 @@
     <Compile Include="frmUsuarios.xaml.cs">
       <DependentUpon>frmUsuarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmVentaTicket.xaml.cs">
+      <DependentUpon>frmVentaTicket.xaml</DependentUpon>
+    </Compile>
     <Compile Include="frmVistaPrevia.xaml.cs">
       <DependentUpon>frmVistaPrevia.xaml</DependentUpon>
     </Compile>
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="frmUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmVentaTicket.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

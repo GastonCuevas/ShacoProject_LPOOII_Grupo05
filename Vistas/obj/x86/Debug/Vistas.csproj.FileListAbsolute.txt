@@ -142,3 +142,5 @@ C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vi
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmVistaPrevia.g.cs
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmTickets.baml
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmTickets.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmVentaTicket.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmVentaTicket.g.cs

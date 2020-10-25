@@ -31,11 +31,15 @@ namespace Vistas
             cargaMenu(userLogued);
         }
 
+        Usuario user = new Usuario();
+
         /// <summary>
         /// Método que valida el rol del usuario logueado para mostrar el menú.
         /// </summary>
         /// <param name="userLogued"></param>
         public void cargaMenu(Usuario userLogued){
+
+            user = userLogued;
 
             if (userLogued.Rol_Codigo.Equals("ADM"))
             {
@@ -59,7 +63,8 @@ namespace Vistas
         //Método que muestra el formulario de gestión de tickets.
         private void miTickets_Click(object sender, RoutedEventArgs e)
         {
-
+            frmTickets oFrmTickets = new frmTickets(user);
+            oFrmTickets.Show();
         }
 
         //Método que muestra el formulario de gestión de usuarios.

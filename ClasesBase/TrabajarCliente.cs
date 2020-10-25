@@ -154,5 +154,21 @@ namespace ClasesBase
             conn.Close();
         }
 
+        //Método que trae la lista de Clientes para el ComboBox
+        public static DataTable traerClientesCB()
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select CLI_DNI, CLI_Apellido + ', ' + CLI_Nombre as datos FROM Cliente order by CLI_Apellido asc";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            conn.Close();
+            return (dt);
+        }
+
     }
 }

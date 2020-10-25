@@ -1,8 +1,54 @@
 ﻿<Window x:Class="Vistas.frmTickets"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="frmTickets" Height="487" Width="817">
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        Title="Venta de Tickets" Height="487" Width="817" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarProyeccion}"
+            MethodName="traerProyeccionesCB"
+            x:Key="lista_proyecciones"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarButaca}"
+            MethodName="traerButacasCB"
+            x:Key="lista_butacas"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarCliente}"
+            MethodName="traerClientesCB"
+            x:Key="lista_clientes"
+           />
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarTicket}"
+            MethodName="traerTickets"
+            x:Key="lista_tickets"
+           />
+    </Window.Resources>
     <Grid>
-        
+
+        <ListView Name="grdTickets" Margin="342,12,45,166"
+                  ItemsSource="{Binding Source={StaticResource lista_tickets}}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="105" Header="Número Ticket" DisplayMemberBinding="{Binding Path=TICK_Nro}"/>
+                    <GridViewColumn Width="90" Header="Fecha" DisplayMemberBinding="{Binding Path=TICK_FechaVenta}"/>
+                    <GridViewColumn Width="130" Header="Código Proyección" DisplayMemberBinding="{Binding Path=PRO_Codigo}"/>
+                    <GridViewColumn Width="80" Header="Cliente" DisplayMemberBinding="{Binding Path=CLI_DNI}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Label Content="Cliente: " Height="28" HorizontalAlignment="Left" Margin="12,28,0,0" Name="lblCliente" VerticalAlignment="Top" />
+        <Label Content="Fila: " Height="28" HorizontalAlignment="Left" Margin="12,62,0,0" Name="lblFila" VerticalAlignment="Top" />
+        <Label Content="Número Butaca: " Height="28" HorizontalAlignment="Left" Margin="12,96,0,0" Name="lblNumBut" VerticalAlignment="Top" />
+        <Label Content="Proyección" Height="28" HorizontalAlignment="Left" Margin="12,130,0,0" Name="lblProyeccion" VerticalAlignment="Top" />
+        <Label Content="Fecha de Venta: " Height="28" HorizontalAlignment="Left" Margin="12,164,0,0" Name="lblFechaVenta" VerticalAlignment="Top" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_clientes}}" DisplayMemberPath="datos" SelectedValuePath="CLI_DNI" Height="23" HorizontalAlignment="Left" Margin="152,33,0,0" Name="cbCliente" VerticalAlignment="Top" Width="144" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_butacas}}" DisplayMemberPath="butacas" SelectedValuePath="BUT_Nro" Height="23" HorizontalAlignment="Left" Margin="152,67,0,0" Name="cbFila" VerticalAlignment="Top" Width="144" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_butacas}}" DisplayMemberPath="BUT_Nro" SelectedValuePath="BUT_Nro" Height="23" HorizontalAlignment="Left" Margin="152,101,0,0" Name="cbNumButaca" VerticalAlignment="Top" Width="144" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_proyecciones}}" DisplayMemberPath="datos" SelectedValuePath="PRO_Codigo" Height="23" HorizontalAlignment="Left" Margin="152,135,0,0" Name="cbProyeccion" VerticalAlignment="Top" Width="144" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="152,167,0,0" Name="dtpFechaVenta" VerticalAlignment="Top" Width="144" />
+        <Button Content="Realiar Venta" Height="25" HorizontalAlignment="Left" Margin="82,214,0,0" Name="btnVenderTicket" VerticalAlignment="Top" Width="139" Click="btnVenderTicket_Click"/>
     </Grid>
 </Window>

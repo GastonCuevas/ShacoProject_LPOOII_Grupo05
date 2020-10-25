@@ -7,9 +7,9 @@ namespace ClasesBase
 {
     public class Butaca
     {
-        private int but_Fila;
+        private string but_Fila;
 
-        public Int32 But_Fila
+        public string But_Fila
         {
             get { return but_Fila; }
             set { but_Fila = value; }
