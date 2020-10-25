@@ -62,5 +62,10 @@ namespace Vistas
             }
             
         }
+
+        private void controlLogin_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

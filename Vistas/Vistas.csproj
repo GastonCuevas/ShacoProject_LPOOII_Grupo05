@@ -88,6 +88,12 @@
     <Compile Include="ControlesUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmPantallaCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantallaCarga.Designer.cs">
+      <DependentUpon>frmPantallaCarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProyecciones.xaml.cs">
       <DependentUpon>frmProyecciones.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="frmPantallaCarga.resx">
+      <DependentUpon>frmPantallaCarga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -256,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Codigos.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

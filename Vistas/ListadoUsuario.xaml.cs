@@ -21,25 +21,45 @@ namespace Vistas
     /// </summary>
     public partial class ListadoUsuario : Window
     {
+        private CollectionViewSource vistaColeccionFiltrada; 
+
         public ListadoUsuario()
         {
             InitializeComponent();
+            vistaColeccionFiltrada = Resources["vista_usuarios"] as CollectionViewSource;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+           
         }
+
         private void txtBuscar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            DataTable dt = TrabajarUsuario.traerUsuarioSP(txtBuscar.Text);
-            grdUsuarios.ItemsSource = dt.DefaultView;
+            if (vistaColeccionFiltrada != null)
+            {
+                vistaColeccionFiltrada.Filter += CollectionViewSource_Filter;
+            }
         }
 
         private void btnImprimir_Click(object sender, RoutedEventArgs e)
         {
             frmVistaPrevia oFrmVistaPrevia = new frmVistaPrevia();
             oFrmVistaPrevia.Show();
+        }
+
+        private void CollectionViewSource_Filter(object sender, FilterEventArgs e)
+        {
+            Usuario usuario = e.Item as Usuario;
+            if (usuario.Usu_NombreUsuario.StartsWith(txtBuscar.Text, StringComparison.CurrentCultureIgnoreCase))
+            {
+                //MessageBox.Show(usuario.Usu_NombreUsuario);
+                e.Accepted = true;
+            }
+            else
+            {
+                e.Accepted = false;
+            }
         }
     }
 }

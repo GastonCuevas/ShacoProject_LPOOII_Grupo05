@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="90" Width="396">
-    <Grid Height="170" Width="399">
-        <Label Content="Nombre de Usuario: " Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="Contraseña: " Height="28" HorizontalAlignment="Left" Margin="12,46,0,0" Name="label2" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="158,12,0,0" Name="txtNombreUsuario" VerticalAlignment="Top" Width="220" />
-        <PasswordBox Height="28" HorizontalAlignment="Right" Margin="0,46,21,0" Name="pbContraseña" VerticalAlignment="Top" Width="220" />
-
+             mc:Ignorable="d" Height="Auto" Width="Auto">
+    <Grid Height="122" Width="228" Background="Black">
+        <Label Content="Nombre de Usuario: " Height="28" HorizontalAlignment="Left" Margin="6,7,0,0" Name="label1" VerticalAlignment="Top" Style="{StaticResource Txt}" />
+        <Label Content="Contraseña: " Height="28" HorizontalAlignment="Left" Margin="6,61,0,0" Name="label2" VerticalAlignment="Top" Style="{StaticResource Txt}" />
+        <TextBox Height="28" HorizontalAlignment="Right" Margin="0,26,12,0" Name="txtNombreUsuario" VerticalAlignment="Top" Width="204" Style="{StaticResource TxtEstandar}" />
+        <PasswordBox Height="28" HorizontalAlignment="Right" Margin="0,80,12,0" Name="pbContraseña" VerticalAlignment="Top" Width="204" Style="{StaticResource PassEstandar}" />
     </Grid>
 </UserControl>

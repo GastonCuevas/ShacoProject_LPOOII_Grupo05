@@ -105,7 +105,7 @@ namespace ClasesBase
             da.Fill(dt);
             foreach(DataRow row in dt.Rows)
             {
-                listaUsuario.Add(new Usuario(Convert.ToInt32(row["USU_ID"]), row["USU_NombreUsuario"].ToString(), row["USU_Contraseña"].ToString(), row["USU_ApellidoNombre"].ToString(), row["ROL_Codigo"].ToString()));
+                listaUsuario.Add(new Usuario(Convert.ToInt32(row["USU_ID"]),row["USU_NombreUsuario"].ToString(), row["USU_Contraseña"].ToString(), row["USU_ApellidoNombre"].ToString(), row["ROL_Codigo"].ToString()));
             }
             return listaUsuario;
         }
