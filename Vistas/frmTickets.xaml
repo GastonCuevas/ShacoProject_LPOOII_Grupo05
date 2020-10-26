@@ -49,6 +49,6 @@
         <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_butacas}}" DisplayMemberPath="BUT_Nro" SelectedValuePath="BUT_Nro" Height="23" HorizontalAlignment="Left" Margin="152,101,0,0" Name="cbNumButaca" VerticalAlignment="Top" Width="144" />
         <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_proyecciones}}" DisplayMemberPath="datos" SelectedValuePath="PRO_Codigo" Height="23" HorizontalAlignment="Left" Margin="152,135,0,0" Name="cbProyeccion" VerticalAlignment="Top" Width="144" />
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="152,167,0,0" Name="dtpFechaVenta" VerticalAlignment="Top" Width="144" />
-        <Button Content="Realiar Venta" Height="25" HorizontalAlignment="Left" Margin="82,214,0,0" Name="btnVenderTicket" VerticalAlignment="Top" Width="139" Click="btnVenderTicket_Click"/>
+        <Button Content="Realizar Venta" Height="25" HorizontalAlignment="Left" Margin="82,214,0,0" Name="btnVenderTicket" VerticalAlignment="Top" Width="139" Click="btnVenderTicket_Click"/>
     </Grid>
 </Window>

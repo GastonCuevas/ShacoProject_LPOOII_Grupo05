@@ -112,7 +112,7 @@ namespace Vistas
                 limpiarCampos();
             }
             else {
-                MessageBox.Show("Complete los campos");
+                MessageBox.Show("¡Complete TODOS los campos!");
             }
         }
 
@@ -158,6 +158,7 @@ namespace Vistas
                 oUsuario.Usu_ID = buscarID(index);
                 listaUsuario[index] = oUsuario;
                 TrabajarUsuario.ModificarUsuario(oUsuario);
+                MessageBox.Show("¡Se modificó con éxito!");
                 btnGuardar.IsEnabled = false;
                 btnEliminar.IsEnabled = false;
                 btnCancelar.IsEnabled = false;
@@ -190,11 +191,6 @@ namespace Vistas
             cbCodigo.Text = "";
         }
 
-        private void btnFill_Click(object sender, RoutedEventArgs e)
-        {
-            txtIndex.Text = Convert.ToString(TrabajarUsuario.TraerUsuarios());
-        }
-
         private void cargarGrilla()
         {
             ObjectDataProvider odp = (ObjectDataProvider)this.Resources["LIST_USER"];
@@ -205,6 +201,7 @@ namespace Vistas
         private int buscarID(int index){
             return listaUsuario[index].Usu_ID;
         }
+
         private void ocultarNavegacion() {
             btnFirts.IsEnabled = false;
             btnPrevius.IsEnabled = false;

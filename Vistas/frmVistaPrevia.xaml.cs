@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -21,6 +22,18 @@ namespace Vistas
         public frmVistaPrevia()
         {
             InitializeComponent();
+        }
+
+        public CollectionViewSource usuarios;
+
+        public frmVistaPrevia(CollectionViewSource vista_usuarios)
+        {
+            InitializeComponent();
+            usuarios = vista_usuarios;
+
+            Binding binding = new Binding();
+            binding.Source = usuarios;
+            BindingOperations.SetBinding(grdUsuarios, ListView.ItemsSourceProperty, binding);
         }
 
         private void btnImprimir_Click(object sender, RoutedEventArgs e)

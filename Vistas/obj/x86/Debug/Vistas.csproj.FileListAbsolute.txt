@@ -192,3 +192,4 @@ C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj
 C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.frmPantallaCarga.resources
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.frmPantallaCarga.resources

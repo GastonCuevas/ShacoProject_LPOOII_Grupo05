@@ -41,7 +41,7 @@ namespace Vistas
 
         private void btnVenderTicket_Click(object sender, RoutedEventArgs e)
         {
-            if (System.Windows.MessageBox.Show("¿Realizar Venta?", "Venta de Tickets", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (System.Windows.MessageBox.Show("¿Confirmar Venta?", "Venta de Tickets", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 Ticket oTicket = new Ticket();
                 oTicket.But_Fila = cbFila.SelectedValue.ToString();

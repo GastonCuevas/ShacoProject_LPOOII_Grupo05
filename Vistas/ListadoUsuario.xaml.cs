@@ -29,11 +29,6 @@ namespace Vistas
             vistaColeccionFiltrada = Resources["vista_usuarios"] as CollectionViewSource;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
         private void txtBuscar_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (vistaColeccionFiltrada != null)
@@ -44,7 +39,7 @@ namespace Vistas
 
         private void btnImprimir_Click(object sender, RoutedEventArgs e)
         {
-            frmVistaPrevia oFrmVistaPrevia = new frmVistaPrevia();
+            frmVistaPrevia oFrmVistaPrevia = new frmVistaPrevia(vistaColeccionFiltrada);
             oFrmVistaPrevia.Show();
         }
 
@@ -53,7 +48,6 @@ namespace Vistas
             Usuario usuario = e.Item as Usuario;
             if (usuario.Usu_NombreUsuario.StartsWith(txtBuscar.Text, StringComparison.CurrentCultureIgnoreCase))
             {
-                //MessageBox.Show(usuario.Usu_NombreUsuario);
                 e.Accepted = true;
             }
             else

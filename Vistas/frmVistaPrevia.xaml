@@ -10,8 +10,7 @@
             x:Key="listado_usuarios" 
             ObjectType="{x:Type data:TrabajarUsuario}" 
             MethodName="TraerUsuarios">
-        </ObjectDataProvider>
-        
+        </ObjectDataProvider>        
     </Window.Resources>
     
     <Grid Height="482" Width="700">
@@ -20,15 +19,15 @@
                 <FlowDocument Name="DocMain">
                     <Paragraph>Listado de Usuarios</Paragraph>
                     <BlockUIContainer>
-                        <ListView ItemsSource="{Binding Source={StaticResource ResourceKey=listado_usuarios}}">
+                        <ListView Name="grdUsuarios" ItemsSource="{Binding Source={StaticResource ResourceKey=listado_usuarios}}">
                             <ListView.View>
                                 <GridView>
                                     <GridView.Columns>
-                                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Path=USU_ID}" Width="40"></GridViewColumn>
-                                        <GridViewColumn Header="Usuario" DisplayMemberBinding="{Binding Path=USU_NombreUsuario}" Width="100"></GridViewColumn>
-                                        <GridViewColumn Header="Contraseña" DisplayMemberBinding="{Binding Path=USU_Contraseña}" Width="100"></GridViewColumn>
-                                        <GridViewColumn Header="Nombre y Apellido" DisplayMemberBinding="{Binding Path=USU_ApellidoNombre}" Width="200"></GridViewColumn>
-                                        <GridViewColumn Header="Código" DisplayMemberBinding="{Binding Path=ROL_Codigo}" Width="60"></GridViewColumn>
+                                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Path=Usu_ID}" Width="40"></GridViewColumn>
+                                        <GridViewColumn Header="Usuario" DisplayMemberBinding="{Binding Path=Usu_NombreUsuario}" Width="100"></GridViewColumn>
+                                        <GridViewColumn Header="Contraseña" DisplayMemberBinding="{Binding Path=Usu_Contraseña}" Width="100"></GridViewColumn>
+                                        <GridViewColumn Header="Nombre y Apellido" DisplayMemberBinding="{Binding Path=Usu_ApellidoNombre}" Width="200"></GridViewColumn>
+                                        <GridViewColumn Header="Código" DisplayMemberBinding="{Binding Path=Rol_Codigo}" Width="60"></GridViewColumn>
                                     </GridView.Columns>
                                 </GridView>
                             </ListView.View>

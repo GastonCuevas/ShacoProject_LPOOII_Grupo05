@@ -1,9 +1,9 @@
 ﻿<Window x:Class="Vistas.ListadoUsuario"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ListadoUsuario" Height="301" Width="580"
+        Title="Listado De Usuarios" Height="301" Width="580"
         xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
-        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase" Loaded="Window_Loaded">
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase">
     <Window.Resources>
         <ObjectDataProvider
             ObjectType="{x:Type svc:TrabajarUsuario}"
@@ -21,7 +21,7 @@
             Filter="CollectionViewSource_Filter"
             >
             <CollectionViewSource.SortDescriptions>
-                <componentModel:SortDescription PropertyName="USU_NombreUsuario" Direction="Descending"/>
+                <componentModel:SortDescription PropertyName="Usu_NombreUsuario" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
             </CollectionViewSource>
     </Window.Resources>

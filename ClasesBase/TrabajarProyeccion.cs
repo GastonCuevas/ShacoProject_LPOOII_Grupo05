@@ -28,7 +28,7 @@ namespace ClasesBase
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select PRO_Codigo, PEL_Codigo + '-' + PRO_Hora as datos FROM proyeccion order by PRO_Hora asc";
+            cmd.CommandText = "Select PRO_Codigo, PEL_Codigo + ' - ' + PRO_Hora + 'hs' as datos FROM proyeccion order by PRO_Hora asc";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             conn.Open();
