@@ -90,6 +90,7 @@ namespace Vistas
             
         }
 
+        //Método que actualiza la variable que representa el tamaño de la lista
         private void actulizarContador() 
         {
             tamaño = listaUsuario.Count;
@@ -198,16 +199,20 @@ namespace Vistas
             Vista = (CollectionView)CollectionViewSource.GetDefaultView(canvas_content.DataContext);
             actulizarContador();
         }
+
+        //Devuelve el ID de Usuario dependiendo del index
         private int buscarID(int index){
             return listaUsuario[index].Usu_ID;
         }
 
+        //Comportamiento de los botones de navegación
         private void ocultarNavegacion() {
             btnFirts.IsEnabled = false;
             btnPrevius.IsEnabled = false;
             btnLast.IsEnabled = false;
             btnNext.IsEnabled = false;
         }
+
         private void mostrarNavegacion()
         {
             btnFirts.IsEnabled = true;
@@ -216,6 +221,7 @@ namespace Vistas
             btnNext.IsEnabled = true;
         }
 
+        //Abre el listado de Usuarios
         private void btnListado_Click(object sender, RoutedEventArgs e)
         {
             ListadoUsuario oListadoUsuarios = new ListadoUsuario();
