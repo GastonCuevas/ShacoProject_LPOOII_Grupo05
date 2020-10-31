@@ -40,7 +40,7 @@ namespace Vistas
             txtProyeccion.Text = "Proyección: " + oTicket.Pro_Codigo;
             txtFecha.Text = "Fecha: " + oTicket.Tick_FechaVenta.ToString();
             txtCliente.Text = "Cliente: " + oTicket.Cli_DNI;
-            txtButaca.Text = "Butaca: " + oTicket.But_Fila;
+            //txtButaca.Text = "Butaca: " + oTicket.But_ID;
         }
     }
 }

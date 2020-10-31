@@ -26,7 +26,7 @@
   <Class Name="ClasesBase.Pelicula">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQgAAAAAAgIICAAAAQAAAAAAAAAACAAAAAACAggAAA=</HashCode>
+      <HashCode>AAQgAgAAAAgIICAAAAQAAgAAAAAAACAAAAAACAggAAA=</HashCode>
       <FileName>Pelicula.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,21 +40,21 @@
   <Class Name="ClasesBase.Butaca">
     <Position X="9.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAIABAAAAAAAAACAAAAAAAAAAAAAAgCAAAAAAAAAAA=</HashCode>
+      <HashCode>EAgIABAAAAAAAAACAAAAAgAAAAAACAgCAAAAAgAAAAA=</HashCode>
       <FileName>Butaca.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Ticket">
     <Position X="11" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAMAAAAAAAAAAACAIAAAAAAAAAAABwCAAQQAAAEAAA=</HashCode>
+      <HashCode>AIgEAAAAAAAAAAAAAIAAAAAAAEAACBRAAAQQAAAEAAA=</HashCode>
       <FileName>Ticket.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Sala">
     <Position X="12.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAgAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAgAABAAAAAAAAAAAAAAAAAAAAAACAAEAAAABAAAAAA=</HashCode>
       <FileName>Sala.cs</FileName>
     </TypeIdentifier>
   </Class>

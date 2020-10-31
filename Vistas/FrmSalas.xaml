@@ -1,8 +1,45 @@
 ﻿<Window x:Class="Vistas.FrmSalas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FrmSalas" Height="300" Width="300">
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        Title="FrmSalas" Height="372" Width="830">
+    <Window.Resources>
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarSala}"
+            MethodName="traerSalas"
+            x:Key="lista_salas"
+           />
+    </Window.Resources>
     <Grid>
+
+        <Grid.Resources>
+            <XmlDataProvider x:Key="clave_denominaciones" Source="DenominacionSala.xml" XPath="/denominaciones"/>
+        </Grid.Resources>
+
+        <ListView Name="grdSalas" Margin="526,12,12,151"
+                  ItemsSource="{Binding Source={StaticResource lista_salas}}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="60" Header="Número" DisplayMemberBinding="{Binding Path=SALA_NroSala}"/>
+                    <GridViewColumn Width="100" Header="Cant. Butacas" DisplayMemberBinding="{Binding Path=SALA_CantButacas}"/>
+                    <GridViewColumn Width="100" Header="Denominación" DisplayMemberBinding="{Binding Path=SALA_Denominacion}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
         
+        <Label Content="Denominación: " Height="31" HorizontalAlignment="Left" Margin="25,59,0,0" Name="lblDenominacion" VerticalAlignment="Top" Width="153" />
+        <Label Content="Filas: " Height="31" HorizontalAlignment="Left" Margin="25,114,0,0" Name="lblFilas" VerticalAlignment="Top" Width="153" Visibility="Hidden"/>
+        <Label Content="Columnas: " Height="31" HorizontalAlignment="Left" Margin="25,86,0,0" Name="lblColumnas" VerticalAlignment="Top" Width="153" Visibility="Hidden"/>
+        <Label Content="Cantidad de Butacas: " Height="31" Margin="25,149,447,0" Name="lblCantidadButacas" VerticalAlignment="Top" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource clave_denominaciones}, XPath=clave/@name}" Height="23" Margin="197,59,447,0" Name="cbDenominacion" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="197,86,0,0" Name="txtColumnas" VerticalAlignment="Top" Width="164" PreviewTextInput="txtColumnas_PreviewTextInput" TextChanged="txtColumnas_TextChanged" IsEnabled="False" Visibility="Hidden"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="197,112,0,0" Name="txtFilas" VerticalAlignment="Top" Width="164" PreviewTextInput="txtFilas_PreviewTextInput" TextChanged="txtFilas_TextChanged" IsEnabled="False" Visibility="Hidden"/>
+        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="61,194,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click" />
+        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="142,194,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnModificar_Click" />
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="223,194,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnEliminar_Click" />
+        <Button Content="Confirmar" Height="85" HorizontalAlignment="Left" Margin="404,12,0,0" Name="btnConfirmar" VerticalAlignment="Top" Width="99" Visibility="Hidden" Click="btnConfirmar_Click" />
+        <Button Content="Cancelar" Height="85" HorizontalAlignment="Left" Margin="404,112,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="99" Visibility="Hidden" Click="btnCancelar_Click" />
+        <Label Content="Sala Número: " Height="31" HorizontalAlignment="Left" Margin="25,30,0,0" Name="lblNroSala" VerticalAlignment="Top" Width="153" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="197,30,0,0" Name="txtNroSala" VerticalAlignment="Top" Width="164" TextChanged="txtNroSala_TextChanged" PreviewTextInput="txtNroSala_PreviewTextInput"/>
     </Grid>
 </Window>

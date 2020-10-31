@@ -239,9 +239,6 @@
     <Resource Include="PelClase.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Clientes.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
@@ -268,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DenominacionSala.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

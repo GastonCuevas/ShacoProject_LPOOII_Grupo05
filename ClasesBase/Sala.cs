@@ -21,5 +21,13 @@ namespace ClasesBase
             get { return sala_CantButacas; }
             set { sala_CantButacas = value; }
         }
+
+        private string sala_Denominacion;
+
+        public string Sala_Denominacion
+        {
+            get { return sala_Denominacion; }
+            set { sala_Denominacion = value; }
+        }
     }
 }

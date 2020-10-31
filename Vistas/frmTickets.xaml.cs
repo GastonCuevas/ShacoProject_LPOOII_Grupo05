@@ -43,8 +43,8 @@ namespace Vistas
         {
             if (System.Windows.MessageBox.Show("¿Confirmar Venta?", "Venta de Tickets", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                Ticket oTicket = new Ticket();
-                oTicket.But_Fila = cbFila.SelectedValue.ToString();
+                /*Ticket oTicket = new Ticket();
+                oTicket.But_ID = cbFila.SelectedValue.ToString();
                 oTicket.But_Nro = Convert.ToInt32(cbNumButaca.SelectedValue.ToString());
                 oTicket.Cli_DNI = Convert.ToInt32(cbCliente.SelectedValue.ToString());
                 oTicket.Pro_Codigo = cbProyeccion.SelectedValue.ToString();
@@ -57,7 +57,7 @@ namespace Vistas
                 grdTickets.ItemsSource = dt.DefaultView;
 
                 frmVentaTicket oFrmVentaTicket = new frmVentaTicket(usuario,oTicket);
-                oFrmVentaTicket.Show();
+                oFrmVentaTicket.Show();*/
 
             }
         }

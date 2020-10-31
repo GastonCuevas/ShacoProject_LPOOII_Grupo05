@@ -35,19 +35,20 @@ namespace ClasesBase
             get { return pro_Codigo; }
             set { pro_Codigo = value; }
         }
-        private string but_Fila;
+        private string but_ID;
 
-        public string But_Fila
+        public string But_ID
         {
-            get { return but_Fila; }
-            set { but_Fila = value; }
+            get { return but_ID; }
+            set { but_ID = value; }
         }
-        private int but_Nro;
 
-        public int But_Nro
+        private decimal tick_Precio;
+
+        public decimal Tick_Precio
         {
-            get { return but_Nro; }
-            set { but_Nro = value; }
+            get { return tick_Precio; }
+            set { tick_Precio = value; }
         }
     }
 }

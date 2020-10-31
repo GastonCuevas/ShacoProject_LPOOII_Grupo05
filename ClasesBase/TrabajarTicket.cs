@@ -39,8 +39,8 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@F", oTicket.Tick_FechaVenta);
             cmd.Parameters.AddWithValue("@C", oTicket.Pro_Codigo);
             cmd.Parameters.AddWithValue("@DNI", oTicket.Cli_DNI);
-            cmd.Parameters.AddWithValue("@Nro", oTicket.But_Nro);
-            cmd.Parameters.AddWithValue("@Fila", oTicket.But_Fila);
+            //cmd.Parameters.AddWithValue("@Nro", oTicket.But_Nro);
+            cmd.Parameters.AddWithValue("@Fila", oTicket.But_ID);
 
 
             conn.Open();

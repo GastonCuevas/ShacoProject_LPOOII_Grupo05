@@ -7,9 +7,9 @@ namespace ClasesBase
 {
     public class Butaca
     {
-        private string but_Fila;
+        private int but_Fila;
 
-        public string But_Fila
+        public int But_Fila
         {
             get { return but_Fila; }
             set { but_Fila = value; }
@@ -27,6 +27,22 @@ namespace ClasesBase
         {
             get { return sala_NroSala; }
             set { sala_NroSala = value; }
+        }
+
+        private string but_Estado;
+
+        public string But_Estado
+        {
+            get { return but_Estado; }
+            set { but_Estado = value; }
+        }
+
+        private int but_ID;
+
+        public int But_ID
+        {
+            get { return but_ID; }
+            set { but_ID = value; }
         }
     }
 }
