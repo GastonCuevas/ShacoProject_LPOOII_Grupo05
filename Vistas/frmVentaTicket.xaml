@@ -6,12 +6,13 @@
         <PageContent>
             <FixedPage>
                 <Grid Background="White">
-                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,188,0,0" Name="txtButaca" Text="Butaca" VerticalAlignment="Top" Width="186" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,217,0,0" Name="txtButaca" Text="Butaca" VerticalAlignment="Top" Width="186" />
                     <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,101,0,0" Name="txtCliente" Text="Cliente" VerticalAlignment="Top" Width="186" />
                     <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,130,0,0" Name="txtProyeccion" Text="Proyección" VerticalAlignment="Top" Width="186" />
-                    <TextBlock Height="23" Margin="46,159,81,0" Name="txtFecha" Text="Fecha" VerticalAlignment="Top" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,217,0,0" Name="txtVendedor" Text="Vendedor: " VerticalAlignment="Top" Width="212" />
-                    <TextBlock Height="36" HorizontalAlignment="Left" Margin="99,12,0,0" Name="txtVenta" FontSize="25" Text="ShacoCinema" FontFamily="Arial Rounded MT" VerticalAlignment="Top" Width="133" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,159,0,0" Name="txtPrecio" Text="Precio" VerticalAlignment="Top" Width="186" />
+                    <TextBlock Height="23" Margin="46,188,81,0" Name="txtFecha" Text="Fecha" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="46,246,0,0" Name="txtVendedor" Text="Vendedor: " VerticalAlignment="Top" Width="212" />
+                    <TextBlock Height="36" HorizontalAlignment="Left" Margin="76,12,0,0" Name="txtVenta" FontSize="25" Text="ShacoCinema" FontFamily="Arial Rounded MT" VerticalAlignment="Top" Width="172" />
                 </Grid>
     </FixedPage>
         </PageContent>

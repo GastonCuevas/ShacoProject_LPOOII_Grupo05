@@ -21,6 +21,9 @@ namespace Vistas
     /// </summary>
     public partial class frmTickets : Window
     {
+        public int butacaSeleccionadaId = 0;
+        private decimal precioSala; 
+
         public frmTickets()
         {
             InitializeComponent();
@@ -44,12 +47,11 @@ namespace Vistas
             if (System.Windows.MessageBox.Show("¿Confirmar Venta?", "Venta de Tickets", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 Ticket oTicket = new Ticket();
-                oTicket.But_ID = 40;
-                oTicket.Tick_Nro = 45;
+                oTicket.But_ID = butacaSeleccionadaId;
                 oTicket.Cli_DNI = Convert.ToInt32(cbCliente.SelectedValue.ToString());
                 oTicket.Pro_Codigo = cbProyeccion.SelectedValue.ToString();
                 oTicket.Tick_FechaVenta = (DateTime)dtpFechaVenta.SelectedDate;
-                oTicket.Tick_Precio = Convert.ToDecimal(12);
+                oTicket.Tick_Precio = Convert.ToDecimal(precioSala);
                 TrabajarTicket.AgregarTicket(oTicket);
                 MessageBox.Show("Venta realizada con éxito");
 
@@ -64,11 +66,14 @@ namespace Vistas
 
         private void btnSeleccionarButaca_Click(object sender, RoutedEventArgs e)
         {
+            //Traemos la proyección seleccionada
             Proyeccion oProyeccion = TrabajarProyeccion.traerProyeccion(cbProyeccion.SelectedValue.ToString());
-            
+
+            //Traemos la aala dentro de la proyección seleccionada
             Sala oSala = TrabajarSala.traerSala(oProyeccion.Sala_NroSala);
-            MessageBox.Show(oSala.Sala_Columnas.ToString());
-            FrmButacas butacas = new FrmButacas(oSala,oProyeccion);
+            precioSala = oSala.Sala_Precio;
+
+            FrmButacas butacas = new FrmButacas(oSala,oProyeccion,this);
             butacas.Show();
         }
     }

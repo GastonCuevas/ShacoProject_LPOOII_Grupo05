@@ -129,5 +129,23 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        //ELIMINAR Proyección según la sala
+        public static void EliminarProyeccionSala(int nroSala)
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = @"delete from Proyeccion
+                                where
+                                SALA_NroSala=@nroSala";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@nroSala", nroSala);
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

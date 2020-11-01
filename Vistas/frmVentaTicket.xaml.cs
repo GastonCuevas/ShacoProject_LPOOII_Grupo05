@@ -36,11 +36,14 @@ namespace Vistas
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            Butaca oButaca = TrabajarButaca.traerButaca(oTicket.But_ID);
+
             txtVendedor.Text = "Vendedor: " + usuario.Usu_ApellidoNombre;
             txtProyeccion.Text = "Proyección: " + oTicket.Pro_Codigo;
             txtFecha.Text = "Fecha: " + oTicket.Tick_FechaVenta.ToString();
             txtCliente.Text = "Cliente: " + oTicket.Cli_DNI;
-            //txtButaca.Text = "Butaca: " + oTicket.But_ID;
+            txtButaca.Text = "Butaca: Fila: " + oButaca.But_Fila + " - Número: " + oButaca.But_Nro;
+            txtPrecio.Text = "Precio: $" + oTicket.Tick_Precio;
         }
     }
 }

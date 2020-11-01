@@ -219,6 +219,18 @@ namespace Vistas
                         filas =Convert.ToInt32(txtFilas.Text);
                         Sala oSala = new Sala();
                         oSala.Sala_Denominacion = cbDenominacion.SelectedValue.ToString();
+                        if (cbDenominacion.SelectedValue.ToString().Equals("Sala 2D")) 
+                        {
+                            oSala.Sala_Precio = Convert.ToDecimal(200);
+                        }
+                        else if (cbDenominacion.SelectedValue.ToString().Equals("Sala 3D"))
+                        {
+                            oSala.Sala_Precio = Convert.ToDecimal(250);
+                        }
+                        else 
+                        {
+                            oSala.Sala_Precio = Convert.ToDecimal(300);
+                        }
                         oSala.Sala_CantButacas = cantidadBut;
                         oSala.Sala_Columnas = columnas;
                         oSala.Sala_Filas = filas;
@@ -235,6 +247,8 @@ namespace Vistas
                         txtFilas.Text = "";
                         MessageBox.Show("¡Sala Modificada con éxito!");
                         cbDenominacion.IsEnabled = false;
+                        btnConfirmar.Visibility = Visibility.Hidden;
+                        btnCancelar.Visibility = Visibility.Hidden;
                     }
                     
                 }
@@ -243,6 +257,18 @@ namespace Vistas
                     Sala oSala = new Sala();
                     oSala.Sala_NroSala = Convert.ToInt32(txtNroSala.Text);
                     oSala.Sala_Denominacion = cbDenominacion.SelectedValue.ToString();
+                    if (cbDenominacion.SelectedValue.ToString().Equals("Sala 2D"))
+                    {
+                        oSala.Sala_Precio = Convert.ToDecimal(200);
+                    }
+                    else if (cbDenominacion.SelectedValue.ToString().Equals("Sala 3D"))
+                    {
+                        oSala.Sala_Precio = Convert.ToDecimal(250);
+                    }
+                    else
+                    {
+                        oSala.Sala_Precio = Convert.ToDecimal(300);
+                    }
                     oSala.Sala_CantButacas = cantidadBut;
                     oSala.Sala_Columnas = columnas;
                     oSala.Sala_Filas = filas;
@@ -257,6 +283,7 @@ namespace Vistas
                     TrabajarSala.EliminarSala(Convert.ToInt32(txtNroSala.Text));
                     actualizarGrilla();
                     TrabajarButaca.EliminarButaca(Convert.ToInt32(txtNroSala.Text));
+                    TrabajarProyeccion.EliminarProyeccionSala(Convert.ToInt32(txtNroSala.Text));
                     txtNroSala.Text = "";
                     MessageBox.Show("¡Sala Eliminada con éxito!");
                     cbDenominacion.IsEnabled = false;
@@ -292,7 +319,7 @@ namespace Vistas
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("¿Desea agregar una Sala?:\n", "Agregar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("¿Desea agregar una Sala?\n", "Agregar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 mostrarFilasyColumnas();
                 opcion = 1;

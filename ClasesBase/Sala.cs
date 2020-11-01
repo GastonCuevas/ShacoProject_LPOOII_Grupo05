@@ -43,5 +43,13 @@ namespace ClasesBase
             get { return sala_Filas; }
             set { sala_Filas = value; }
         }
+
+        private decimal sala_Precio;
+
+        public decimal Sala_Precio
+        {
+            get { return sala_Precio; }
+            set { sala_Precio = value; }
+        }
     }
 }

@@ -3,7 +3,7 @@
   <Class Name="ClasesBase.Usuario">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAEAAAAAAEAAAABBAgAAgSCAAAAAAAIAAAAAACA=</HashCode>
+      <HashCode>AQAAAAEAAAAAAUAACABBAgAAgSCAAAAAAAIAAAAAACA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -54,8 +54,15 @@
   <Class Name="ClasesBase.Sala">
     <Position X="12.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAgAABAAAAAAAAAAAAAAAAAAAAAACAAEAAAABAAAAAA=</HashCode>
+      <HashCode>EwgAABAAAAAAAAAAAAAAIAAAACAACAAEAAAABAMAAAA=</HashCode>
       <FileName>Sala.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.ButacaTicket">
+    <Position X="14.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAIAAAAAAAAAAAAAAAKAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ButacaTicket.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

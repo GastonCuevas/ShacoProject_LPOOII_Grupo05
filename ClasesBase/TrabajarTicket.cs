@@ -47,6 +47,7 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
         //Método que trae los tickets segun proyeccion
         public static DataTable traerTicketsProyeccion(string codigo)
         {

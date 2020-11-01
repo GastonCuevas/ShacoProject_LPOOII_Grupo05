@@ -89,6 +89,7 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
         //Traer una butaca
         public static Butaca traerButaca(int id)
         {
@@ -113,6 +114,26 @@ namespace ClasesBase
             }
             conn.Close();
             return oButaca;
+        }
+
+        //Traer todas las butacas de una sala
+        public static DataTable traerButacaSala(int nroSala)
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select * FROM Butaca where SALA_NroSala=@nro";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@nro", nroSala);
+            conn.Open();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            conn.Close();
+            return dt;
         }
 
     }

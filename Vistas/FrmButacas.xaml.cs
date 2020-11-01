@@ -25,91 +25,76 @@ namespace Vistas
     {
         DataTable ocupados = new DataTable();
         Sala sala = new Sala();
-        ObservableCollection<int> listaEncontrados = new ObservableCollection<int>();
-        ObservableCollection<int> listadoAsientosOcupados = new ObservableCollection<int>();
+        private ObservableCollection<int> listaEncontrados = new ObservableCollection<int>();
+        private ObservableCollection<int> listadoAsientosOcupados = new ObservableCollection<int>();
+        private ObservableCollection<ButacaTicket> listadoButacasTickets = new ObservableCollection<ButacaTicket>();
+        frmTickets oFrmTickets;
+
         Proyeccion proyeccion = new Proyeccion();
         public FrmButacas()
         {
             InitializeComponent();
         }
-        public FrmButacas(Sala oSala, Proyeccion oProyeccion)
+        public FrmButacas(Sala oSala, Proyeccion oProyeccion,frmTickets formulario)
         {
+            oFrmTickets = formulario;
             proyeccion = oProyeccion;
             sala = oSala;
-            MessageBox.Show(sala.Sala_Columnas.ToString());
             ocupados = TrabajarTicket.traerTicketsProyeccion(proyeccion.Pro_Codigo);
             obtenerButacas(ocupados);
             InitializeComponent();
         }
 
         void obtenerButacas(DataTable dt){
+
             foreach(DataRow row in dt.Rows){
                 listaEncontrados.Add(Convert.ToInt32(row["BUT_ID"]));
             }
-            listadoAsientosOcupados = obtenerAsientos(listaEncontrados);
+            //MessageBox.Show(listaEncontrados.Count.ToString());
         }
 
-        private ObservableCollection<int> obtenerAsientos(ObservableCollection<int> listaID) {
-            Butaca oButaca = new Butaca();
-            ObservableCollection<int> auxEncontrados = new ObservableCollection<int>();
-            foreach (int item in listaID)
-            {
-                int suma;
-                oButaca = new Butaca();
-                oButaca = TrabajarButaca.traerButaca(item);
-                suma = oButaca.But_Fila * oButaca.But_Nro;
-                auxEncontrados.Add(suma);
-            }
-            return auxEncontrados;
-        }
-
-
-
-        Button btn(int i)
+        ButtonButaca btn(int i)
         {
-            Button b = new Button();
-            if (listadoAsientosOcupados.Count != 0)
-            {
-                for (int j = 0; j <= listadoAsientosOcupados.Count; j++)
-                {
-                    if (i != listadoAsientosOcupados[j])
-                    {
-                        b.Name = "butaca" + i.ToString();
-                        b.Width = (1000 / sala.Sala_Columnas);
-                        b.Height = (520 / sala.Sala_Filas);
-                        b.Content = i.ToString();
-                        b.Click += b_Click;
+            ButtonButaca b = new ButtonButaca();
 
-                    }
-                    else
+            b.Name = "butaca" + i.ToString();
+            b.Width = (1000 / sala.Sala_Columnas);
+            b.Height = (520 / sala.Sala_Filas);
+            b.Content = i.ToString();
+            b.ButacaId = listadoButacasTickets[i - 1].But_ID;
+            b.Click += b_Click;
+            b.Background = Brushes.Green;
+
+            if (listaEncontrados.Count > 0)
+            {
+                for (int j = 0; j < listaEncontrados.Count; j++)
+                {
+                    //MessageBox.Show(i.ToString()+"||"+listadoAsientosOcupados[j].ToString());
+                    if (b.ButacaId == listaEncontrados[j])
                     {
-                        b.Name = "butaca" + i.ToString();
-                        b.Width = (1000 / sala.Sala_Columnas);
-                        b.Height = (520 / sala.Sala_Filas);
-                        b.Content = i.ToString();
-                        b.Background = Brushes.Gray;
-                    }
+                        //MessageBox.Show("Pinté rojo butaca: "+ i.ToString());
+                        b.Background = Brushes.Red;
+                    }                        
                 }
             }
-            else {
-                b.Name = "butaca" + i.ToString();
-                b.Width = (1000 / sala.Sala_Columnas);
-                b.Height = (520 / sala.Sala_Filas);
-                b.Content = i.ToString();
-                b.Click += b_Click;
+            else 
+            {    
+                b.Background = Brushes.Yellow;
             }
-
-            
+     
             return b;
         }
+
         void b_Click(object sender, EventArgs e)
         {
             Console.Beep();
-            Button b = (Button)sender;
+            ButtonButaca b = (ButtonButaca)sender;
             if (MessageBox.Show("Desea seleccionar esta butaca?", b.Name.ToString(), MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-
-                b.Background = Brushes.Gray;
+                b.Background = Brushes.Red;
+                oFrmTickets.butacaSeleccionadaId = b.ButacaId;
+                oFrmTickets.lblNumBut.Content = "Butaca Seleccionada: " + b.ButacaId;
+                this.Close();
             }
         }
 
@@ -121,6 +106,7 @@ namespace Vistas
         private void cargarButacas(int numeroSala) 
         {
             int butacas = 0;
+            ObservableCollection<int> butacas_id = new ObservableCollection<int>();
 
             DataTable dt = TrabajarSala.traerSalas();
             for (int i = 0; i < dt.Rows.Count; i++) 
@@ -130,13 +116,20 @@ namespace Vistas
                     butacas = (int)dt.Rows[i]["sala_cantbutacas"];
                 }
             }
-            int n = butacas;
-            MessageBox.Show("Cantidad Butacas: " + n.ToString());
-            wrpButaca.Children.Clear();
-            for (int i = 1; i <= n; i++)
-            {
-                wrpButaca.Children.Add(btn(i));
 
+            DataTable dtButacas = TrabajarButaca.traerButacaSala(numeroSala);
+            for (int i = 0; i < dtButacas.Rows.Count; i++) 
+            {
+                butacas_id.Add((int)dtButacas.Rows[i]["but_id"]);
+            }
+
+
+            int n = butacas;
+            wrpButaca.Children.Clear();
+            for (int i = 0; i < n; i++)
+            {
+                listadoButacasTickets.Add(new ButacaTicket(butacas_id[i],i+1));
+                wrpButaca.Children.Add(btn(i+1));
             }
         }
 
