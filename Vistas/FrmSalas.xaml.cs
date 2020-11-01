@@ -29,6 +29,8 @@ namespace Vistas
 
         int opcion = 0;
         int cantidadBut = 0;
+        int columnas = 0;
+        int filas = 0;
 
         /// <summary>
         /// Validación de textbox para que solo se escriban números
@@ -111,6 +113,8 @@ namespace Vistas
                 cbDenominacion.Text = oSala.Sala_Denominacion;
                 lblCantidadButacas.Content = "Cantidad de Butacas:          " + oSala.Sala_CantButacas;
                 cantidadBut = oSala.Sala_CantButacas;
+                columnas = oSala.Sala_Columnas;
+                filas = oSala.Sala_Filas;
                 btnModificar.IsEnabled = true;
                 btnEliminar.IsEnabled = true;
             }
@@ -211,9 +215,13 @@ namespace Vistas
                     if (txtColumnas.Text != "" && txtColumnas.Text != "0" && txtFilas.Text != "" && txtFilas.Text != "0") 
                     {
                         cantidadBut = Convert.ToInt32(txtColumnas.Text) * Convert.ToInt32(txtFilas.Text);
+                        columnas = Convert.ToInt32(txtColumnas.Text);
+                        filas =Convert.ToInt32(txtFilas.Text);
                         Sala oSala = new Sala();
                         oSala.Sala_Denominacion = cbDenominacion.SelectedValue.ToString();
                         oSala.Sala_CantButacas = cantidadBut;
+                        oSala.Sala_Columnas = columnas;
+                        oSala.Sala_Filas = filas;
                         TrabajarSala.AgregarSala(oSala);
                         actualizarGrilla();
                         noMostrarFilasyColumnas();
@@ -236,6 +244,8 @@ namespace Vistas
                     oSala.Sala_NroSala = Convert.ToInt32(txtNroSala.Text);
                     oSala.Sala_Denominacion = cbDenominacion.SelectedValue.ToString();
                     oSala.Sala_CantButacas = cantidadBut;
+                    oSala.Sala_Columnas = columnas;
+                    oSala.Sala_Filas = filas;
                     TrabajarSala.ModificarSala(oSala);
                     actualizarGrilla();
                     MessageBox.Show("¡Sala Modificada con éxito!");

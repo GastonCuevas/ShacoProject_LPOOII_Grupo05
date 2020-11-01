@@ -126,8 +126,6 @@ C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Gen
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.baml
 C:\Users\xigna\Documents\XD\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.g.cs
-I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.baml
-I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmModificarCliente.g.cs
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmUsuarios.baml
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\frmUsuarios.g.cs
 I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmUsuarios.baml
@@ -193,3 +191,12 @@ C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj
 C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\Brunoich\Documents\shaco proyect\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.frmPantallaCarga.resources
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\Vistas.frmPantallaCarga.resources
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmSalas.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmTickets.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmVentaTicket.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmVistaPrevia.baml
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmSalas.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmTickets.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmVentaTicket.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\frmVistaPrevia.g.cs
+I:\Cosas\escuela\Apu\LPoo\GithubDesktop\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.frmPantallaCarga.resources

@@ -57,7 +57,7 @@ namespace ClasesBase
                 //VALIDACION//
                 if (columnName == "Cli_DNI")
                 {
-                    if (Cli_DNI.ToString().Length != 8)
+                    if (Cli_DNI.ToString().Length >= 7 && Cli_DNI.ToString().Length <=10)
                     {
                         mensaje = "Largo del DNI incorrecto";
                     }

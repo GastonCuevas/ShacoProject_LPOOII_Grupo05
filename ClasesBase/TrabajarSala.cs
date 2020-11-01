@@ -68,6 +68,8 @@ namespace ClasesBase
                 oSala.Sala_NroSala = reader.GetInt32(reader.GetOrdinal("SALA_NroSala"));
                 oSala.Sala_Denominacion = reader.GetString(reader.GetOrdinal("SALA_Denominacion"));
                 oSala.Sala_CantButacas = reader.GetInt32(reader.GetOrdinal("SALA_CantButacas"));
+                oSala.Sala_Columnas = reader.GetInt32(reader.GetOrdinal("SALA_Columnas"));
+                oSala.Sala_Filas = reader.GetInt32(reader.GetOrdinal("SALA_Filas"));
             }
             conn.Close();
             return oSala;
@@ -79,14 +81,16 @@ namespace ClasesBase
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Sala(SALA_CantButacas,SALA_Denominacion)
+            cmd.CommandText = @"insert into Sala(SALA_CantButacas,SALA_Denominacion,SALA_Columnas,SALA_Filas)
                                 values
-                                (@b,@d)";
+                                (@b,@d,@c,@f)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
 
             cmd.Parameters.AddWithValue("@b", oSala.Sala_CantButacas);
             cmd.Parameters.AddWithValue("@d", oSala.Sala_Denominacion);
+            cmd.Parameters.AddWithValue("@c", oSala.Sala_Columnas);
+            cmd.Parameters.AddWithValue("@f", oSala.Sala_Filas);
 
 
             conn.Open();
@@ -102,7 +106,7 @@ namespace ClasesBase
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"update Sala
                                 set
-                                SALA_CantButacas=@b,SALA_Denominacion=@d
+                                SALA_CantButacas=@b,SALA_Denominacion=@d,SALA_Columnas=@c,SALA_Filas=@f
                                 where
                                 SALA_NroSala=@nro";
             cmd.CommandType = CommandType.Text;
@@ -110,6 +114,8 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@nro", oSala.Sala_NroSala);
             cmd.Parameters.AddWithValue("@b", oSala.Sala_CantButacas);
             cmd.Parameters.AddWithValue("@d", oSala.Sala_Denominacion);
+            cmd.Parameters.AddWithValue("@c", oSala.Sala_Columnas);
+            cmd.Parameters.AddWithValue("@f", oSala.Sala_Filas);
 
             conn.Open();
             cmd.ExecuteNonQuery();

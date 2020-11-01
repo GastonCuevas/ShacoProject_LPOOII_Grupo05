@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Usuario : INotifyPropertyChanged
+    public class Usuario : INotifyPropertyChanged, IDataErrorInfo
     {
         private int usu_ID;
 
@@ -62,6 +62,48 @@ namespace ClasesBase
             if(PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
+        }
+
+        public string Error
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string this[string columnName]
+        {
+            get {
+                string mensaje = string.Empty;
+                //VALIDACION//
+                if (columnName == "Usu_ApellidoNombre")
+                {
+                    if (string.IsNullOrEmpty(Usu_ApellidoNombre))
+                    {
+                        mensaje = "Apellido y nombre es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Usu_Contraseña")
+                {
+                    if (string.IsNullOrEmpty(Usu_Contraseña))
+                    {
+                        mensaje = "Contraseña es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Usu_Contraseña")
+                {
+                    if (string.IsNullOrEmpty(Usu_Contraseña))
+                    {
+                        mensaje = "Contraseña es un campo obligatorio";
+                    }
+                }
+                if (columnName == "Usu_NombreUsuario")
+                {
+                    if (string.IsNullOrEmpty(Usu_NombreUsuario))
+                    {
+                        mensaje = "Nombre de usuario es un campo obligatorio";
+                    }
+                }
+                return mensaje;
             }
         }
     }

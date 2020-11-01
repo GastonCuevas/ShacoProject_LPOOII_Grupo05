@@ -35,9 +35,9 @@ namespace ClasesBase
             get { return pro_Codigo; }
             set { pro_Codigo = value; }
         }
-        private string but_ID;
+        private int but_ID;
 
-        public string But_ID
+        public int But_ID
         {
             get { return but_ID; }
             set { but_ID = value; }

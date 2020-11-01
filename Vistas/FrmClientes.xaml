@@ -63,7 +63,7 @@
             </TextBox.Text>
         </TextBox>
         <Label Content="Dni" Height="28" HorizontalAlignment="Left" Margin="5,7,0,0" Name="lblDni" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,65,0,0" Name="txtNombre" VerticalAlignment="Top" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Nombre, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="103,0,0,233" Name="txtNombre" VerticalAlignment="Bottom" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Nombre, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />
         <Label Content="Nombre" Height="28" HorizontalAlignment="Left" Margin="5,60,0,0" Name="lblNombre" VerticalAlignment="Top" />
         <Label Content="Apellido" Height="27" HorizontalAlignment="Left" Margin="5,115,0,0" Name="lblApellido" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="103,121,0,0" Name="txtApellido" VerticalAlignment="Top" Width="206" Text="{Binding Source={StaticResource oCliente}, Path=Cli_Apellido, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Style="{StaticResource EstiloError}" IsEnabled="False" />

@@ -89,6 +89,31 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+        //Traer una butaca
+        public static Butaca traerButaca(int id)
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select * FROM Butaca where BUT_ID=@id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Butaca oButaca = null;
+            if (reader.Read())
+            {
+                oButaca = new Butaca();
+                oButaca.But_Estado = (string)reader["BUT_Estado"];
+                oButaca.But_Nro = (int)reader["BUT_Nro"];
+                oButaca.But_Fila = (int)reader["BUT_Fila"];
+                oButaca.Sala_NroSala = (int)reader["SALA_NroSala"];
+                oButaca.But_ID = (int)reader["BUT_ID"];
+            }
+            conn.Close();
+            return oButaca;
+        }
 
     }
 }

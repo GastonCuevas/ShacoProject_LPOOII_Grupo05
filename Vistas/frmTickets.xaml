@@ -40,15 +40,13 @@
         </ListView>
 
         <Label Content="Cliente: " Height="28" HorizontalAlignment="Left" Margin="12,28,0,0" Name="lblCliente" VerticalAlignment="Top" />
-        <Label Content="Fila: " Height="28" HorizontalAlignment="Left" Margin="12,62,0,0" Name="lblFila" VerticalAlignment="Top" />
-        <Label Content="Número Butaca: " Height="28" HorizontalAlignment="Left" Margin="12,96,0,0" Name="lblNumBut" VerticalAlignment="Top" />
-        <Label Content="Proyección" Height="28" HorizontalAlignment="Left" Margin="12,130,0,0" Name="lblProyeccion" VerticalAlignment="Top" />
+        <Button Content="Seleccionar Butaca" Height="28" Margin="12,96,499,324" Name="btnSeleccionarButaca" Click="btnSeleccionarButaca_Click" />
+        <Label Content="Butaca Seleccionada " Height="28" HorizontalAlignment="Left" Margin="10,130,0,0" Name="lblNumBut" VerticalAlignment="Top" />
+        <Label Content="Proyección" Height="28" HorizontalAlignment="Left" Margin="12,62,0,0" Name="lblProyeccion" VerticalAlignment="Top" />
         <Label Content="Fecha de Venta: " Height="28" HorizontalAlignment="Left" Margin="12,164,0,0" Name="lblFechaVenta" VerticalAlignment="Top" />
         <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_clientes}}" DisplayMemberPath="datos" SelectedValuePath="CLI_DNI" Height="23" HorizontalAlignment="Left" Margin="152,33,0,0" Name="cbCliente" VerticalAlignment="Top" Width="144" />
-        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_butacas}}" DisplayMemberPath="butacas" SelectedValuePath="BUT_Nro" Height="23" HorizontalAlignment="Left" Margin="152,67,0,0" Name="cbFila" VerticalAlignment="Top" Width="144" />
-        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_butacas}}" DisplayMemberPath="BUT_Nro" SelectedValuePath="BUT_Nro" Height="23" HorizontalAlignment="Left" Margin="152,101,0,0" Name="cbNumButaca" VerticalAlignment="Top" Width="144" />
-        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_proyecciones}}" DisplayMemberPath="datos" SelectedValuePath="PRO_Codigo" Height="23" HorizontalAlignment="Left" Margin="152,135,0,0" Name="cbProyeccion" VerticalAlignment="Top" Width="144" />
+        <ComboBox SelectedIndex="0" ItemsSource="{Binding Source={StaticResource lista_proyecciones}}" DisplayMemberPath="datos" SelectedValuePath="PRO_Codigo" Height="23" HorizontalAlignment="Left" Margin="152,67,0,0" Name="cbProyeccion" VerticalAlignment="Top" Width="144" />
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="152,167,0,0" Name="dtpFechaVenta" VerticalAlignment="Top" Width="144" />
-        <Button Content="Realizar Venta" Height="25" HorizontalAlignment="Left" Margin="82,214,0,0" Name="btnVenderTicket" VerticalAlignment="Top" Width="139" Click="btnVenderTicket_Click"/>
+        <Button Content="Realizar Venta" Height="25" HorizontalAlignment="Left" Margin="82,257,0,0" Name="btnVenderTicket" VerticalAlignment="Top" Width="139" Click="btnVenderTicket_Click"/>
     </Grid>
 </Window>

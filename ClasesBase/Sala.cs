@@ -29,5 +29,19 @@ namespace ClasesBase
             get { return sala_Denominacion; }
             set { sala_Denominacion = value; }
         }
+        private int sala_Columnas;
+
+        public int Sala_Columnas
+        {
+            get { return sala_Columnas; }
+            set { sala_Columnas = value; }
+        }
+        private int sala_Filas;
+
+        public int Sala_Filas
+        {
+            get { return sala_Filas; }
+            set { sala_Filas = value; }
+        }
     }
 }

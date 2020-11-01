@@ -43,13 +43,13 @@ namespace Vistas
         {
             if (System.Windows.MessageBox.Show("¿Confirmar Venta?", "Venta de Tickets", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                /*Ticket oTicket = new Ticket();
-                oTicket.But_ID = cbFila.SelectedValue.ToString();
-                oTicket.But_Nro = Convert.ToInt32(cbNumButaca.SelectedValue.ToString());
+                Ticket oTicket = new Ticket();
+                oTicket.But_ID = 40;
+                oTicket.Tick_Nro = 45;
                 oTicket.Cli_DNI = Convert.ToInt32(cbCliente.SelectedValue.ToString());
                 oTicket.Pro_Codigo = cbProyeccion.SelectedValue.ToString();
                 oTicket.Tick_FechaVenta = (DateTime)dtpFechaVenta.SelectedDate;
-
+                oTicket.Tick_Precio = Convert.ToDecimal(12);
                 TrabajarTicket.AgregarTicket(oTicket);
                 MessageBox.Show("Venta realizada con éxito");
 
@@ -57,9 +57,19 @@ namespace Vistas
                 grdTickets.ItemsSource = dt.DefaultView;
 
                 frmVentaTicket oFrmVentaTicket = new frmVentaTicket(usuario,oTicket);
-                oFrmVentaTicket.Show();*/
+                oFrmVentaTicket.Show();
 
             }
+        }
+
+        private void btnSeleccionarButaca_Click(object sender, RoutedEventArgs e)
+        {
+            Proyeccion oProyeccion = TrabajarProyeccion.traerProyeccion(cbProyeccion.SelectedValue.ToString());
+            
+            Sala oSala = TrabajarSala.traerSala(oProyeccion.Sala_NroSala);
+            MessageBox.Show(oSala.Sala_Columnas.ToString());
+            FrmButacas butacas = new FrmButacas(oSala,oProyeccion);
+            butacas.Show();
         }
     }
 }
