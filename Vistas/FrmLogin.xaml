@@ -5,7 +5,7 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         Title="" Height="526" Width="340" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Black" Opacity="0.97" AllowsTransparency="True">
     <Grid Width="Auto" FlowDirection="LeftToRight" Background="{x:Null}">
-        <control:Login x:Name="controlLogin" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0" Height="137" Margin="0,191,21,159" Width="229" Loaded="controlLogin_Loaded"></control:Login>
+        <control:Login x:Name="controlLogin" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0" Height="137" Margin="0,191,21,159" Width="229"></control:Login>
         <fa:ImageAwesome Icon="UserCircle" Width="40" Height="40" Foreground="White" Margin="28,211,250,236" VerticalAlignment="Stretch"></fa:ImageAwesome>
         <fa:ImageAwesome Icon="Lock" Width="40" Height="40" Foreground="White" Margin="28,267,250,180"></fa:ImageAwesome>
         <Button Style="{StaticResource BotónAccion}" Content="Ingresar" Height="30" HorizontalAlignment="Center" Margin="61,0,61,50" Name="btnIngresar" VerticalAlignment="Bottom" Width="200" Click="btnIngresar_Click"></Button>

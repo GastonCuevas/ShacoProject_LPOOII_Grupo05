@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("denominacionsala.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/shaco%20carga.gif")]
 
 

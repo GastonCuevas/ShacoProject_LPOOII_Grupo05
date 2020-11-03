@@ -56,16 +56,13 @@ namespace Vistas
             else
             {
                 MessageBox.Show("Bienvenido: " + userLogued.Usu_ApellidoNombre + ", Rol: " + userLogued.Rol_Codigo);
+                frmPantallaCarga oFrmCarga = new frmPantallaCarga(userLogued);
                 FrmPrincipal oFrmPrincipal = new FrmPrincipal(userLogued);
+                oFrmCarga.ShowDialog();
                 oFrmPrincipal.Show();
                 this.Close();
             }
             
-        }
-
-        private void controlLogin_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
