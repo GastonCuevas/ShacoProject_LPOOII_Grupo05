@@ -55,9 +55,9 @@ namespace Vistas
             }
             else
             {
-                MessageBox.Show("Bienvenido: " + userLogued.Usu_ApellidoNombre + ", Rol: " + userLogued.Rol_Codigo);
                 frmPantallaCarga oFrmCarga = new frmPantallaCarga(userLogued);
                 FrmPrincipal oFrmPrincipal = new FrmPrincipal(userLogued);
+                this.Hide();
                 oFrmCarga.ShowDialog();
                 oFrmPrincipal.Show();
                 this.Close();
