@@ -14,5 +14,6 @@
         <Rectangle AllowDrop="False" DataContext="{Binding}" Fill="#FF640000" Height="34" HorizontalAlignment="Center" Margin="0" Name="rectangle1" Stretch="Fill" Stroke="#FF640000" VerticalAlignment="Top" Width="340" />
         <Rectangle Fill="#FF640000" Height="6" HorizontalAlignment="Center" Margin="0" Name="rectangle2" Stroke="#FF640000" VerticalAlignment="Bottom" Width="340" />
         <Ellipse Height="700" HorizontalAlignment="Center" Margin="0" Name="ellipse1" Stroke="#FF640000" StrokeThickness="40" VerticalAlignment="Center" Width="465" />
+        <MediaElement LoadedBehavior="Play" Height="24" HorizontalAlignment="Left" Margin="28,354,0,0" Name="music" VerticalAlignment="Top" Width="40" />
     </Grid>
 </Window>

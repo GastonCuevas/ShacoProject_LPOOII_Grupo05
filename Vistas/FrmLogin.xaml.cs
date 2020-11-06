@@ -55,6 +55,7 @@ namespace Vistas
             }
             else
             {
+                music.Source = new Uri("C:/Users/Brunoich/Documents/GitHub/ShacoProject_LPOOII_Grupo05/Vistas/Resources/y2mate.com - Guerra Mundial Z BSO -- Isolated System -- Muse_320kbps.mp3");
                 frmPantallaCarga oFrmCarga = new frmPantallaCarga(userLogued);
                 FrmPrincipal oFrmPrincipal = new FrmPrincipal(userLogued);
                 this.Hide();
