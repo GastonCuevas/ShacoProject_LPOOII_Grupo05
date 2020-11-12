@@ -250,3 +250,5 @@ C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\De
 C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\CircularProgressBar.dll
 C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\WinFormAnimation.dll
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\CircularProgressBar.dll
+C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\WinFormAnimation.dll

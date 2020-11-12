@@ -57,11 +57,11 @@ namespace Vistas
         {
             ButtonButaca b = new ButtonButaca();
 
-            b.Name = "butaca" + i.ToString();
+            b.Name = "butaca" + (i+1).ToString();
             b.Width = (1000 / sala.Sala_Columnas);
             b.Height = (520 / sala.Sala_Filas);
-            b.Content = i.ToString();
-            b.ButacaId = listadoButacasTickets[i - 1].But_ID;
+            b.Content = (i+1).ToString();
+            b.ButacaId = listadoButacasTickets[i].But_ID;
             b.Click += b_Click;
             b.Background = Brushes.Green;
 
@@ -77,10 +77,6 @@ namespace Vistas
                     }                        
                 }
             }
-            else 
-            {    
-                b.Background = Brushes.Yellow;
-            }
      
             return b;
         }
@@ -89,11 +85,12 @@ namespace Vistas
         {
             Console.Beep();
             ButtonButaca b = (ButtonButaca)sender;
-            if (MessageBox.Show("Desea seleccionar esta butaca?", b.Name.ToString(), MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Desea seleccionar esta butaca?", "Butaca " + b.Content.ToString(), MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
+                Butaca oButaca = TrabajarButaca.traerButaca(b.ButacaId);
                 b.Background = Brushes.Red;
                 oFrmTickets.butacaSeleccionadaId = b.ButacaId;
-                oFrmTickets.lblNumBut.Content = "Butaca Seleccionada: " + b.ButacaId;
+                oFrmTickets.lblNumBut.Content = "Butaca Seleccionada: Fila: " + oButaca.But_Fila + " - Número: " + oButaca.But_Nro;
                 this.Close();
             }
         }
@@ -129,7 +126,7 @@ namespace Vistas
             for (int i = 0; i < n; i++)
             {
                 listadoButacasTickets.Add(new ButacaTicket(butacas_id[i],i+1));
-                wrpButaca.Children.Add(btn(i+1));
+                wrpButaca.Children.Add(btn(i));
             }
         }
 

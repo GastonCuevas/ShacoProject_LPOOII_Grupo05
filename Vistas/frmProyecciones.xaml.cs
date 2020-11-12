@@ -230,6 +230,7 @@ namespace Vistas
                     MessageBox.Show("Proyección Incluida");
                     limpiarCampos();
                     ocultarCampos();
+                    btnAgregar.IsEnabled = true;
                 }
             }
             else

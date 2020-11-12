@@ -245,7 +245,7 @@ namespace Vistas
                         crearButacas(Convert.ToInt32(txtColumnas.Text), Convert.ToInt32(txtFilas.Text),numero);
                         txtColumnas.Text = "";
                         txtFilas.Text = "";
-                        MessageBox.Show("¡Sala Modificada con éxito!");
+                        MessageBox.Show("¡Sala creada con éxito!");
                         cbDenominacion.IsEnabled = false;
                         btnConfirmar.Visibility = Visibility.Hidden;
                         btnCancelar.Visibility = Visibility.Hidden;
@@ -274,7 +274,7 @@ namespace Vistas
                     oSala.Sala_Filas = filas;
                     TrabajarSala.ModificarSala(oSala);
                     actualizarGrilla();
-                    MessageBox.Show("¡Sala Modificada con éxito!");
+                    MessageBox.Show("¡Sala modificada con éxito!");
                     cbDenominacion.IsEnabled = false;
                     habilidarBotones();
                 }
@@ -285,7 +285,7 @@ namespace Vistas
                     TrabajarButaca.EliminarButaca(Convert.ToInt32(txtNroSala.Text));
                     TrabajarProyeccion.EliminarProyeccionSala(Convert.ToInt32(txtNroSala.Text));
                     txtNroSala.Text = "";
-                    MessageBox.Show("¡Sala Eliminada con éxito!");
+                    MessageBox.Show("¡Sala eliminada con éxito!");
                     cbDenominacion.IsEnabled = false;
                     habilidarBotones2();
                 } 
@@ -294,14 +294,14 @@ namespace Vistas
 
         private void crearButacas(int col, int fila, int nroSala) 
         {
-            for (int i = 1; i <= col; i++) 
+            for (int i = 1; i <= fila; i++) 
             {
-                for (int j = 1; j <= fila; j++ )
+                for (int j = 1; j <= col; j++ )
                 {
                     Butaca oButaca = new Butaca();
                     oButaca.But_Estado = "Libre";
-                    oButaca.But_Nro = i;
-                    oButaca.But_Fila = j;
+                    oButaca.But_Nro = j;
+                    oButaca.But_Fila = i;
                     oButaca.Sala_NroSala = nroSala;
 
                     TrabajarButaca.AgregarButaca(oButaca);
