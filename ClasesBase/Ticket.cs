@@ -50,5 +50,15 @@ namespace ClasesBase
             get { return tick_Precio; }
             set { tick_Precio = value; }
         }
+
+        /*public Ticket(int numero, DateTime fecha, int dni, string pro_codigo, int butId, decimal precio) 
+        {
+            Tick_Nro = numero;
+            Tick_FechaVenta = fecha;
+            Cli_DNI = dni;
+            Pro_Codigo = pro_codigo;
+            butId = But_ID;
+            Tick_Precio = precio;
+        }*/
     }
 }

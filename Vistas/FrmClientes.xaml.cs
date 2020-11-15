@@ -255,5 +255,11 @@ namespace Vistas
             desHabilitarTXT();
             limpiarCampos();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            frmTickets oFrmTickets = new frmTickets();
+            oFrmTickets.Show();
+        }
     }
 }

@@ -26,7 +26,7 @@
   <Class Name="ClasesBase.Pelicula">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQgAgAAAAgIICAAAAQAAgAAAAAAACAAAAAACAggAAA=</HashCode>
+      <HashCode>AAQgAgAAAAgIICAAAAQAAgAAAAAAACAAAAAACAkgAAA=</HashCode>
       <FileName>Pelicula.cs</FileName>
     </TypeIdentifier>
   </Class>

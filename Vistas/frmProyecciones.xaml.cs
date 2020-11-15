@@ -9,10 +9,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+//using System.Windows.Shapes;
+using System.IO;
 using ClasesBase;
 using System.Data.SqlClient;
 using System.Data;
+using System.Reflection;
+using System.IO;
 
 namespace Vistas
 {
@@ -24,6 +27,47 @@ namespace Vistas
         public frmProyecciones()
         {
             InitializeComponent();
+
+            var peliculas = GetPeliculas();
+            if (peliculas.Count > 0) 
+            {
+                ListViewProyecciones.ItemsSource = peliculas;
+            }
+        }
+
+        private List<VisorPelicula> GetPeliculas()
+        {
+            DataTable dt = TrabajarPelicula.traerPeliculas();
+            VisorPelicula oPelicula = new VisorPelicula();
+            List<VisorPelicula> listadoPeliculas = new List<VisorPelicula>();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                oPelicula = new VisorPelicula();
+                string image = String.Empty;
+                image = Convert.ToString(dt.Rows[i]["pel_imagen"]);
+                oPelicula.Imagen = GetImageSource(CreateAbsolutePathTo(image));
+                oPelicula.Titulo = (string)dt.Rows[i]["pel_titulo"];
+                listadoPeliculas.Add(oPelicula);
+            }
+
+            return listadoPeliculas;
+        }
+
+        private static string CreateAbsolutePathTo(string mediaFile)
+        {
+            return Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName, mediaFile);
+        }
+
+        //Método que convierte en BitMap el directorio de la imagen seleccionada de dialog para poder usarlo como source en la imagen
+        public ImageSource GetImageSource(string filename)
+        {
+            string _fileName = filename;
+            BitmapImage glowIcon = new BitmapImage();
+            glowIcon.BeginInit();
+            glowIcon.UriSource = new Uri(_fileName);
+            glowIcon.EndInit();
+            return glowIcon;
         }
 
         /// <summary>
@@ -226,7 +270,7 @@ namespace Vistas
                 {
                     TrabajarProyeccion.AgregarProyeccion(oProyeccion);
                     DataTable dt = TrabajarProyeccion.traerProyecciones();
-                    grdProyecciones.ItemsSource = dt.DefaultView;
+                    //grdProyecciones.ItemsSource = dt.DefaultView;
                     MessageBox.Show("Proyección Incluida");
                     limpiarCampos();
                     ocultarCampos();
@@ -251,7 +295,7 @@ namespace Vistas
                 oProyeccion.Sala_NroSala = Convert.ToInt32(cbSala.Text);
                 TrabajarProyeccion.ModificarProyeccion(oProyeccion);
                 DataTable dt = TrabajarProyeccion.traerProyecciones();
-                grdProyecciones.ItemsSource = dt.DefaultView;
+                //grdProyecciones.ItemsSource = dt.DefaultView;
                 System.Windows.MessageBox.Show("¡Proyección modificada con éxito!");
                 ocultarCampos();
                 limpiarCampos();
@@ -272,7 +316,7 @@ namespace Vistas
             string cod = txtCodigo.Text;
             TrabajarProyeccion.EliminarProyeccion(cod);
             DataTable dt = TrabajarProyeccion.traerProyecciones();
-            grdProyecciones.ItemsSource = dt.DefaultView;
+            //grdProyecciones.ItemsSource = dt.DefaultView;
             System.Windows.MessageBox.Show("¡Proyección eliminada con éxito!");
             limpiarCampos();
             ocultarCampos();
@@ -280,6 +324,18 @@ namespace Vistas
             btnModificar.IsEnabled = false;
             btnEliminar.IsEnabled = false;
             btnAgregar.IsEnabled = true;
+        }
+
+        private void btnListadoProyecciones_Click(object sender, RoutedEventArgs e)
+        {
+            FrmListaProyecciones oFrmListaProyecciones = new FrmListaProyecciones();
+            oFrmListaProyecciones.Show();
+        }
+
+        private void btnMasInfo_Click(object sender, RoutedEventArgs e)
+        {
+            VisorProyecciones oFrmVisorProyecciones = new VisorProyecciones();
+            oFrmVisorProyecciones.Show();
         }
     }
 }

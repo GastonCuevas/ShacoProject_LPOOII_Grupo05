@@ -9,12 +9,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+//using System.Windows.Shapes;
 using System.Windows.Forms;
 using ClasesBase;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
+using System.Reflection;
 
 namespace Vistas
 {
@@ -28,7 +30,9 @@ namespace Vistas
             InitializeComponent();
         }
 
-        public OpenFileDialog oOpenFileDialogImagen = new OpenFileDialog(); 
+        public OpenFileDialog oOpenFileDialogImagen = new OpenFileDialog();
+        public OpenFileDialog oOpenFileDialogVideo = new OpenFileDialog();
+        private string videoRuta = String.Empty;
 
         /// <summary>
         /// Método que agrega una película
@@ -79,6 +83,8 @@ namespace Vistas
                 mostrarCampos();
                 btnConfirmarModificar.Visibility = Visibility.Visible;
                 txtCodigo.IsEnabled = false;
+                btnCargar.IsEnabled = false;
+                btnCargarVideo.IsEnabled = false;
             }
         }
 
@@ -108,16 +114,19 @@ namespace Vistas
             cbGenero.IsEnabled = true;
             cbClase.IsEnabled = true;
             txtDuracion.IsEnabled = true;
+            txtSinopsis.IsEnabled = true;
             btnCargar.IsEnabled = true;
+            btnCargarVideo.IsEnabled = true;
         }
 
         private void desHabilitarTXT()
         {
             txtTitulo.IsEnabled = false;
             txtDuracion.IsEnabled = false;
+            txtSinopsis.IsEnabled = false;
             cbClase.IsEnabled = false;
             cbGenero.IsEnabled = false;
-            btnCargar.IsEnabled = true;
+            btnCargar.IsEnabled = false;
         }
 
         /// <summary>
@@ -144,9 +153,12 @@ namespace Vistas
             txtTitulo.Text = "";
             txtDuracion.Text = "";
             txtCodigo.Text = "";
+            txtSinopsis.Text = "";
             cbGenero.Text = null;
             cbClase.Text = null;
             imgVistaPrevia.Source = null;
+            lblRutavideo.Content = "";
+            video.Source = null;
         }
 
         /// <summary>
@@ -171,6 +183,9 @@ namespace Vistas
             cbGenero.SelectedIndex = 0;
             txtDuracion.Text = "0";
             cbClase.SelectedIndex = 0;
+            lblRutavideo.Content = "";
+            txtSinopsis.Text = "";
+            video.Source = null;
             imgVistaPrevia.Source = null;
             if (peli != null)
             {
@@ -180,7 +195,10 @@ namespace Vistas
                     cbGenero.SelectedValue = peli.Pel_Genero;
                     txtDuracion.Text = peli.Pel_Duracion;
                     cbClase.SelectedValue = peli.Pel_Clase;
-                    imgVistaPrevia.Source = GetImageSource(peli.Pel_Imagen);
+                    imgVistaPrevia.Source = GetImageSource(CreateAbsolutePathTo(peli.Pel_Imagen));
+                    lblRutavideo.Content = peli.Pel_trailer;
+                    video.Source = new Uri(CreateAbsolutePathTo(peli.Pel_trailer), UriKind.Absolute);
+                    txtSinopsis.Text = peli.Pel_Sinopsis;
                     btnModificar.IsEnabled = true;
                     btnEliminar.IsEnabled = true;
                 }
@@ -190,9 +208,11 @@ namespace Vistas
                 btnModificar.IsEnabled = false;
                 btnEliminar.IsEnabled = false;
             }
+        }
 
-
-
+        private static string CreateAbsolutePathTo(string mediaFile)
+        {
+            return Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName, mediaFile);
         }
 
         //Este método carga la imagen de la película
@@ -232,15 +252,18 @@ namespace Vistas
         //Botones de Confirmación de operaciones
         private void btnConfirmarModificar_Click(object sender, RoutedEventArgs e)
         {
-            if (txtCodigo.Text != "" && txtDuracion.Text != "0" && txtTitulo.Text != "" && cbGenero.Text != "" && cbClase.Text != "" && imgVistaPrevia.Source != null)
+            if (txtCodigo.Text != "" && txtDuracion.Text != "0" && txtTitulo.Text != "" && cbGenero.Text != "" && cbClase.Text != "" && imgVistaPrevia.Source != null && txtSinopsis.Text != "" && lblRutavideo.Content != "")
             {
                 Pelicula oPelicula = new Pelicula();
                 oPelicula.Pel_Codigo = txtCodigo.Text;
                 oPelicula.Pel_Titulo = txtTitulo.Text;
                 oPelicula.Pel_Duracion = txtDuracion.Text;
+                oPelicula.Pel_Sinopsis = txtSinopsis.Text;
+                oPelicula.Pel_trailer = Convert.ToString(lblRutavideo.Content);
                 oPelicula.Pel_Genero = cbGenero.Text;
                 oPelicula.Pel_Clase = cbClase.Text;
                 oPelicula.Pel_Imagen = Convert.ToString(imgVistaPrevia.Source);
+                oPelicula.Pel_trailer = Convert.ToString(lblRutavideo.Content);
                 TrabajarPelicula.ModificarPelicula(oPelicula);
                 DataTable dt = TrabajarPelicula.traerPeliculas();
                 grdPeliculas.ItemsSource = dt.DefaultView;
@@ -251,6 +274,8 @@ namespace Vistas
                 btnEliminar.IsEnabled = false;
                 desHabilitarTXT();
                 txtCodigo.IsEnabled = true;
+                btnCargar.IsEnabled = false;
+                btnCargarVideo.IsEnabled = false;
             }
             else
             {
@@ -261,6 +286,7 @@ namespace Vistas
         private void btnConfirmarEliminar_Click(object sender, RoutedEventArgs e)
         {
             string cod = txtCodigo.Text;
+            Pelicula pel = TrabajarPelicula.traerPelicula(cod);
             TrabajarPelicula.EliminarPelicula(cod);
             DataTable dt = TrabajarPelicula.traerPeliculas();
             grdPeliculas.ItemsSource = dt.DefaultView;
@@ -270,6 +296,26 @@ namespace Vistas
             txtCodigo.IsEnabled = true;
             btnModificar.IsEnabled = false;
             btnEliminar.IsEnabled = false;
+            btnCargar.IsEnabled = false;
+            btnCargarVideo.IsEnabled = false;
+
+            /*
+            string path = CreateAbsolutePathTo(pel.Pel_Imagen);
+
+            if (File.Exists(path)) 
+            {
+                oOpenFileDialogImagen.FileName = "";
+                File.Delete(path);
+            }
+
+            path = CreateAbsolutePathTo(pel.Pel_trailer);
+
+            using (StreamReader sr = new StreamReader(path))
+            {
+                sr.Close();
+            }
+
+            File.Delete(path);*/
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -279,12 +325,14 @@ namespace Vistas
             btnAgregar.IsEnabled = true;
             ocultarCampos();
             desHabilitarTXT();
+            btnCargar.IsEnabled = false;
+            btnCargarVideo.IsEnabled = false;
         }
 
         private void btnConfirmarAgregar_Click(object sender, RoutedEventArgs e)
         {
             if (txtTitulo.Text != "" && cbGenero.Text != "" && cbClase.Text != "" && txtCodigo.Text != ""
-               && txtDuracion.Text != "")
+               && txtDuracion.Text != "" && txtSinopsis.Text != "" && (string)lblRutavideo.Content != string.Empty)
             {
                 Pelicula oPel = new Pelicula();
                 oPel.Pel_Titulo = txtTitulo.Text;
@@ -292,7 +340,11 @@ namespace Vistas
                 oPel.Pel_Codigo = txtCodigo.Text;
                 oPel.Pel_Genero = cbGenero.Text;
                 oPel.Pel_Clase = cbClase.Text;
-                oPel.Pel_Imagen = imgVistaPrevia.Source.ToString();
+                oPel.Pel_Imagen = oOpenFileDialogImagen.SafeFileName;
+                File.Copy(oOpenFileDialogImagen.FileName, CreateAbsolutePathTo(oOpenFileDialogImagen.SafeFileName));
+                oPel.Pel_trailer = videoRuta;
+                File.Copy(oOpenFileDialogVideo.FileName, CreateAbsolutePathTo(oOpenFileDialogVideo.SafeFileName));
+                oPel.Pel_Sinopsis = txtSinopsis.Text;
 
                 Boolean bandera = TrabajarPelicula.validarPelicula(txtCodigo.Text);
 
@@ -314,6 +366,8 @@ namespace Vistas
                         desHabilitarTXT();
                         btnModificar.IsEnabled = false;
                         btnEliminar.IsEnabled = false;
+                        btnCargar.IsEnabled = false;
+                        btnCargarVideo.IsEnabled = false;
                     }
                 }
             }
@@ -321,6 +375,43 @@ namespace Vistas
             {
                 System.Windows.MessageBox.Show("¡Hay campos vacíos, complételos!");
             }
+        }
+
+        private void btnCargarVideo_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Agregamos algunas validaciones como el tipo de archivos que se puede seleccionar
+                oOpenFileDialogVideo.Filter = "All files (*.*)|*.*";
+                oOpenFileDialogVideo.Multiselect = false;
+                oOpenFileDialogVideo.RestoreDirectory = true;
+
+                oOpenFileDialogVideo.ShowDialog();
+
+                if (this.oOpenFileDialogVideo.FileName.Equals("") == false)
+                {
+                    videoRuta = oOpenFileDialogVideo.SafeFileName;
+                    lblRutavideo.Content = oOpenFileDialogVideo.SafeFileName.ToString();
+                    video.Source = new Uri(oOpenFileDialogVideo.FileName);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("No se puede cargar este archivo: " + ex.ToString());
+            }
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            video.LoadedBehavior = MediaState.Manual;
+            video.Play();
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            video.LoadedBehavior = MediaState.Manual;
+            video.Pause();
         }
     }
 }

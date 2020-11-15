@@ -95,6 +95,9 @@
     <Compile Include="ControlesUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaProyecciones.xaml.cs">
+      <DependentUpon>FrmListaProyecciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="frmPantallaCarga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +126,10 @@
       <DependentUpon>ListadoUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="VisorPelicula.cs" />
+    <Compile Include="VisorProyecciones.xaml.cs">
+      <DependentUpon>VisorProyecciones.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrmButacas.xaml.cs">
@@ -191,6 +198,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FrmListaProyecciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrmLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -232,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PlantillaMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisorProyecciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -278,6 +293,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaco Carga.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinema.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,57 @@
+﻿<Window x:Class="Vistas.FrmListaProyecciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        Title="Listado de Proyecciones" Height="518" Width="645">
+
+    <Window.Resources>
+        <ObjectDataProvider
+            ObjectType="{x:Type svc:TrabajarProyeccion}"
+            MethodName="traerProyeccionesSemana"
+            x:Key="lista_proyecciones"
+           />
+    </Window.Resources>
+
+    <Grid>
+        <ListView Name="grdProyecciones" Margin="71,132,75,46"
+                  ItemsSource="{Binding Source={StaticResource lista_proyecciones}}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="80" Header="Código" DisplayMemberBinding="{Binding Path=ProyeccionCodigo}"/>
+                    <GridViewColumn Width="150" Header="Película" DisplayMemberBinding="{Binding Path=PeliculaTitulo}"/>
+                    <GridViewColumn Width="90" Header="Fecha" DisplayMemberBinding="{Binding Path=ProyeccionFecha}"/>
+                    <GridViewColumn Width="80" Header="Hora" DisplayMemberBinding="{Binding Path=ProyeccionHora}"/>
+                    <GridViewColumn Width="70" Header="Sala" DisplayMemberBinding="{Binding Path=ProyeccionNroSala}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="71,39,0,0" Name="txtBuscarNombre" VerticalAlignment="Top" Width="243" TextChanged="txtBuscarNombre_TextChanged"/>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="337,12,0,0" Name="dPFecha1" VerticalAlignment="Top" Width="211" />
+        <Button Content="" Height="52" HorizontalAlignment="Left" Margin="554,12,0,0" Name="btnBuscarFecha" VerticalAlignment="Top" Width="52" Click="btnBuscarFecha_Click" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Rectangle Fill="White"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <fa:ImageAwesome Icon="Calendar" Width="35" Height="35" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="337,39,0,0" Name="dPFecha2" VerticalAlignment="Top" Width="211" />
+        <Label Content="Buscar por nombre de película: " Height="28" HorizontalAlignment="Left" Margin="71,9,0,0" Name="lblNombrePelicula" VerticalAlignment="Top" Width="243" />
+        <Button Content="" Height="30" HorizontalAlignment="Left" Margin="518,96,0,0" Name="btnRefrescar" VerticalAlignment="Top" Width="30" Click="btnRefrescar_Click" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="White"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <fa:ImageAwesome Icon="Refresh" Width="20" Height="20" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Ver Todas" Height="23" HorizontalAlignment="Left" Margin="71,103,0,0" Name="btnTodas" VerticalAlignment="Top" Width="75" Click="btnTodas_Click"/>
+    </Grid>
+</Window>

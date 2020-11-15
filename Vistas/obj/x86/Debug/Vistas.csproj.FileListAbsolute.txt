@@ -252,3 +252,7 @@ C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\
 C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\bin\Debug\WinFormAnimation.dll
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\CircularProgressBar.dll
 C:\Users\gas_c\OneDrive\Documentos\Visual Studio 2010\Projects\LPOOII_GRUPO05\Vistas\bin\Debug\WinFormAnimation.dll
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmListaProyecciones.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmListaProyecciones.g.cs
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\VisorProyecciones.baml
+C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\VisorProyecciones.g.cs

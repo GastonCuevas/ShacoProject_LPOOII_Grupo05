@@ -16,23 +16,23 @@
         <Canvas Name="canvas_content" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}" Margin="12,22,12,25">
             <StackPanel Margin="40" Canvas.Left="359" Canvas.Top="-20" Height="278">
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <Button Name="btnFirts" Content="|&lt;" Click="btnFirts_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
-                    <Button Name="btnPrevius" Content="&lt;" Click="btnPrevius_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
-                    <Button Name="btnNext" Content="&gt;" Click="btnNext_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
-                    <Button Name="btnLast" Content="&gt;|" Click="btnLast_Click" Margin="0 0 10 0" Width="40" Height="20"></Button>
+                    <Button Name="btnFirts" Content="|&lt;" Click="btnFirts_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                    <Button Name="btnPrevius" Content="&lt;" Click="btnPrevius_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                    <Button Name="btnNext" Content="&gt;" Click="btnNext_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                    <Button Name="btnLast" Content="&gt;|" Click="btnLast_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
                 </StackPanel>
                 <StackPanel Width="190" Height="192" Margin="5">
                     <TextBlock Text="{Binding Usu_NombreUsuario}" Height="25" Background="Aqua" Padding="5"/>
                     <TextBlock Text="{Binding Usu_Contraseña}" Height="25" Background="Azure" Padding="5"/>
                     <TextBlock Text="{Binding Usu_ApellidoNombre}" Height="25" Background="Aqua" Padding="5"/>
                     <TextBlock Text="{Binding Rol_Codigo}" Height="25" Background="Aqua" Padding="5"/>
-                    <Button Name="btnSeleccionar" Content="Seleccionar" Click="btnSeleccionar_Click" Height="26" Width="86" Margin="10"></Button>
-                    <Button Content="Listado de usuarios" Height="26" Name="btnListado" Width="132" Click="btnListado_Click" />
+                    <Button Name="btnSeleccionar" Content="Seleccionar" Click="btnSeleccionar_Click" Height="26" Width="86" Margin="10" Cursor="Hand"></Button>
+                    <Button Content="Listado de usuarios" Height="26" Name="btnListado" Width="132" Click="btnListado_Click" Cursor="Hand" />
                 </StackPanel>
             </StackPanel>
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="btnAgregar" Content="Agregar" Click="btnAgregar_Click" Margin="5"></Button>
+                    <Button Name="btnAgregar" Content="Agregar" Click="btnAgregar_Click" Margin="5" Cursor="Hand"></Button>
                     <Button Name="btnEliminar" Content="Eliminar" Click="btnEliminar_Click" Margin="5" IsEnabled="False"></Button>
                     <Button Name="btnCancelar" Content="Cancelar" Click="btnCancelar_Click" Margin="5" IsEnabled="False"></Button>
                     <Button Name="btnGuardar" Content="Guardar" Click="btnGuardar_Click" Margin="5" IsEnabled="False"></Button>

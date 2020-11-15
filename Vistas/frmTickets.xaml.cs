@@ -35,6 +35,7 @@ namespace Vistas
         {
             InitializeComponent();
             usuario = vendedor;
+            MessageBox.Show(usuario.Usu_ApellidoNombre);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -75,6 +76,13 @@ namespace Vistas
 
             FrmButacas butacas = new FrmButacas(oSala,oProyeccion,this);
             butacas.Show();
+        }
+
+        private void btnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            FrmClientes oFrmClientes = new FrmClientes();
+            oFrmClientes.Show();
+            this.Close();
         }
     }
 }

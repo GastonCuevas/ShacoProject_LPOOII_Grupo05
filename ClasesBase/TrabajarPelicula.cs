@@ -50,6 +50,8 @@ namespace ClasesBase
                 oPelicula.Pel_Duracion = (string)reader["pel_duracion"];
                 oPelicula.Pel_Clase = (string)reader["pel_clase"];
                 oPelicula.Pel_Imagen = (string)reader["pel_imagen"];
+                oPelicula.Pel_trailer = (string)reader["pel_trailer"];
+                oPelicula.Pel_Sinopsis = (string)reader["pel_sinopsis"];
             }
             conn.Close();
             return oPelicula;
@@ -100,9 +102,9 @@ namespace ClasesBase
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"insert into Pelicula(PEL_Codigo,PEL_Titulo,PEL_Duracion,PEL_Clase,PEL_Genero,PEL_Imagen)
+            cmd.CommandText = @"insert into Pelicula(PEL_Codigo,PEL_Titulo,PEL_Duracion,PEL_Clase,PEL_Genero,PEL_Imagen,PEL_Trailer,PEL_Sinopsis)
                                 values
-                                (@codigo,@T,@D,@C,@G,@I)";
+                                (@codigo,@T,@D,@C,@G,@I,@V,@S)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
 
@@ -112,6 +114,8 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@C", oPelicula.Pel_Clase);
             cmd.Parameters.AddWithValue("@G", oPelicula.Pel_Genero);
             cmd.Parameters.AddWithValue("@I", oPelicula.Pel_Imagen);
+            cmd.Parameters.AddWithValue("@V", oPelicula.Pel_trailer);
+            cmd.Parameters.AddWithValue("@S", oPelicula.Pel_Sinopsis);
 
 
             conn.Open();
@@ -127,7 +131,7 @@ namespace ClasesBase
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"update Pelicula
                                 set
-                                PEL_Codigo=@codigo,PEL_Titulo=@T,PEL_Duracion=@D,PEL_Clase=@C,PEL_Genero=@G,PEL_Imagen=@I
+                                PEL_Codigo=@codigo,PEL_Titulo=@T,PEL_Duracion=@D,PEL_Clase=@C,PEL_Genero=@G,PEL_Imagen=@I,PEL_Trailer=@V,PEL_Sinopsis=@S
                                 where
                                 PEL_Codigo=@codigo";
             cmd.CommandType = CommandType.Text;
@@ -138,6 +142,8 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@G", oPelicula.Pel_Genero);
             cmd.Parameters.AddWithValue("@I", oPelicula.Pel_Imagen);
             cmd.Parameters.AddWithValue("@T", oPelicula.Pel_Titulo);
+            cmd.Parameters.AddWithValue("@V", oPelicula.Pel_trailer);
+            cmd.Parameters.AddWithValue("@S", oPelicula.Pel_Sinopsis);
 
             conn.Open();
             cmd.ExecuteNonQuery();

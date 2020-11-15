@@ -1,0 +1,91 @@
+﻿<Window x:Class="Vistas.VisorProyecciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        Title="Visor de Proyecciones" Height="640" Width="610">
+
+    <Grid Width="594" Height="606">
+        <Canvas Name="canvas_content" DataContext="{Binding VisorPelicula}" Margin="12,22,12,12"></Canvas>
+        <StackPanel Orientation="Vertical" Width="564" Margin="12,12,18,12">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                <Button Name="btnFirts" Content="|&lt;" Click="btnFirts_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                <Button Name="btnPrevius" Content="&lt;" Click="btnPrevius_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                <Button Name="btnNext" Content="&gt;" Click="btnNext_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+                <Button Name="btnLast" Content="&gt;|" Click="btnLast_Click" Margin="0 0 10 0" Width="40" Height="20" Cursor="Hand"></Button>
+            </StackPanel>
+            <StackPanel Margin="20 0" HorizontalAlignment="Center">
+                <ItemsControl x:Name="ListViewProyecciones">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="10" Height="250" Width="500">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="200" Height="240" CornerRadius="5" Margin="5">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding Imagen}" />
+                                        </Border.Background>
+                                    </Border>
+                                    <StackPanel Orientation="Vertical" Width="480">
+                                        <TextBlock Margin="5" Text="{Binding Titulo}" FontFamily="Lemon" FontSize="17" HorizontalAlignment="Left" />
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="5" Text="{Binding Genero}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Clase}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Duracion}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left">
+                                                    Min</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Width="480">
+                                            <TextBlock Margin="5" FontFamily="Lemon" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Left">
+                                                    Sinopsis: <LineBreak />
+                                                    <TextBlock Margin="5" Text="{Binding Sinopsis}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                                </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="5" Text="Fecha y Hora: " FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Pro_Fecha}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Pro_Hora}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left">
+                                                    Hs</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="5" Text="Sala: " FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Sala_NroSala}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5" Text="{Binding Sala_Denominacion}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                            <TextBlock Margin="5 5 5 0" Text="$" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Right"></TextBlock>
+                                            <TextBlock Margin="0 5" Text="{Binding Sala_Precio}" FontFamily="Lemon" FontSize="12" HorizontalAlignment="Left" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <MediaElement LoadedBehavior="Play" Height="224" Name="video" Width="448" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Width="62" Margin="5">
+                    <Button Content="" Height="30" HorizontalAlignment="Left" Name="btnPlay" VerticalAlignment="Top" Width="30" Click="btnPlay_Click" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <fa:ImageAwesome Icon="PlayCircle" Width="20" Height="20" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Content="" Height="30" HorizontalAlignment="Left" Name="btnPause" VerticalAlignment="Top" Width="30" Click="btnPause_Click" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <fa:ImageAwesome Icon="PauseCircle" Width="20" Height="20" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -59,7 +59,7 @@ namespace Vistas
 
             b.Name = "butaca" + (i+1).ToString();
             b.Width = (1000 / sala.Sala_Columnas);
-            b.Height = (520 / sala.Sala_Filas);
+            b.Height = (500 / sala.Sala_Filas);
             b.Content = (i+1).ToString();
             b.ButacaId = listadoButacasTickets[i].But_ID;
             b.Click += b_Click;

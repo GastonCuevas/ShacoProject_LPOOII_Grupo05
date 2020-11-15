@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
-        Title="Películas" Height="603" Width="947">
+        Title="Películas" Height="668" Width="1110">
     
     <Window.Resources>
         <ObjectDataProvider
@@ -12,20 +12,20 @@
             x:Key="lista_peliculas"
            />
     </Window.Resources>
-    <Grid Height="560" Width="925">
+    <Grid Height="628" Width="1089">
         
         <Grid.Resources>
             <XmlDataProvider x:Key="clave_pelGenero" Source="PelGenero.xml" XPath="/generos"/>
             <XmlDataProvider x:Key="clave_pelClase" Source="PelClase.xml" XPath="/clases"/>
         </Grid.Resources>
         
-        <ListView Name="grdPeliculas" Margin="453,18,12,160"
+        <ListView Name="grdPeliculas" Margin="486,17,92,200"
                   ItemsSource="{Binding Source={StaticResource lista_peliculas}}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="80" Header="Código" DisplayMemberBinding="{Binding Path=PEL_Codigo}"/>
                     <GridViewColumn Width="150" Header="Título" DisplayMemberBinding="{Binding Path=PEL_Titulo}"/>
-                    <GridViewColumn Width="70" Header="Género" DisplayMemberBinding="{Binding Path=PEL_Genero}"/>
+                    <GridViewColumn Width="120" Header="Género" DisplayMemberBinding="{Binding Path=PEL_Genero}"/>
                     <GridViewColumn Width="80" Header="Duración" DisplayMemberBinding="{Binding Path=PEL_Duracion}"/>
                     <GridViewColumn Width="70" Header="Clase" DisplayMemberBinding="{Binding Path=PEL_Clase}"/>
                 </GridView>
@@ -33,7 +33,7 @@
         </ListView>
         
         <Label Content="Código:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblCodigo" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,17,674,0" Name="txtCodigo" VerticalAlignment="Top" Width="161" MaxLength="10" TextChanged="txtCodigo_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,17,838,0" Name="txtCodigo" VerticalAlignment="Top" Width="161" MaxLength="10" TextChanged="txtCodigo_TextChanged" />
         <Label Content="Título:" Height="28" HorizontalAlignment="Left" Margin="12,59,0,0" Name="lblTitulo" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="90,64,0,0" Name="txtTitulo" VerticalAlignment="Top" Width="161" IsEnabled="False"/>
         <Label Content="Género:" Height="28" HorizontalAlignment="Left" Margin="12,106,0,0" Name="lblGenero" VerticalAlignment="Top" />
@@ -42,15 +42,43 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="90,159,0,0" Name="txtDuracion" VerticalAlignment="Top" Width="161"  PreviewTextInput="txtDuracion_PreviewTextInput" MaxLength="10" IsEnabled="False"/>
         <Label Content="Clase:" Height="28" HorizontalAlignment="Left" Margin="12,208,0,0" Name="lblclase" VerticalAlignment="Top" />
         <ComboBox SelectedIndex="0" Height="23" ItemsSource="{Binding Source={StaticResource clave_pelClase}, XPath=clave/@name}" HorizontalAlignment="Left" Margin="90,208,0,0" Name="cbClase" VerticalAlignment="Top" Width="161" DataContext="{Binding}" IsEnabled="False"/>
-        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="20,450,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="90" Click="btnAgregar_Click"/>
-        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="135,450,0,0" Name="btnModificar" VerticalAlignment="Top" Width="90" Click="btnModificar_Click" IsEnabled="False"/>
-        <Button Content="Eliminar" Height="23" HorizontalAlignment="Right" Margin="0,450,574,0" Name="btnEliminar" VerticalAlignment="Top" Width="90" Click="btnEliminar_Click" IsEnabled="False"/>
+        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="12,593,0,0" Name="btnAgregar" VerticalAlignment="Top" Width="90" Click="btnAgregar_Click" Cursor="Hand" />
+        <Button Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="125,593,0,0" Name="btnModificar" VerticalAlignment="Top" Width="90" Click="btnModificar_Click" IsEnabled="False" Cursor="Hand" />
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Right" Margin="0,593,760,0" Name="btnEliminar" VerticalAlignment="Top" Width="90" Click="btnEliminar_Click" IsEnabled="False" Cursor="Hand" />
         <Image Height="150" HorizontalAlignment="Left" Margin="90,250,0,0" Name="imgVistaPrevia" Stretch="Fill" VerticalAlignment="Top" Width="161" />
-        <Button Content="Cargar" Height="23" HorizontalAlignment="Left" Margin="12,377,0,0" Name="btnCargar" VerticalAlignment="Top" Width="62" Click="btnCargar_Click" IsEnabled="False"/>
+        <Button Content="Cargar Imagen" Height="23" HorizontalAlignment="Left" Margin="104,406,0,0" Name="btnCargar" VerticalAlignment="Top" Width="131" Click="btnCargar_Click" IsEnabled="False" Cursor="Hand" />
+        <Button Content="Seleccionar Trailer" Height="23" HorizontalAlignment="Left" Margin="283,405,0,0" Name="btnCargarVideo" VerticalAlignment="Top" Width="146" Click="btnCargarVideo_Click" IsEnabled="False" Cursor="Hand" />
         <Label Content="Imagen: " Height="28" HorizontalAlignment="Left" Margin="12,250,0,0" Name="lblImagen" VerticalAlignment="Top" Width="63" />
         <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="293,37,0,0" Name="btnConfirmarAgregar" Click="btnConfirmarAgregar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
         <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="293,37,0,0" Name="btnConfirmarModificar" Click="btnConfirmarModificar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
-        <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="293,37,0,0" Name="btnConfirmarEliminar" Click="btnConfirmarEliminar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden"/>
-        <Button Content="Cancelar" Height="71" HorizontalAlignment="Left" Margin="293,165,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="109" Visibility="Hidden" Click="btnCancelar_Click"/>
+        <Button Content="Confirmar" Height="71" HorizontalAlignment="Left" Margin="293,37,0,0" Name="btnConfirmarEliminar" Click="btnConfirmarEliminar_Click" VerticalAlignment="Top" Width="109" Visibility="Hidden" Cursor="Hand" />
+        <Button Content="Cancelar" Height="71" HorizontalAlignment="Left" Margin="293,165,0,0" Name="btnCancelar" VerticalAlignment="Top" Width="109" Visibility="Hidden" Click="btnCancelar_Click" Cursor="Hand" />
+        <Label Content="Trailer: " Height="28" HorizontalAlignment="Left" Margin="12,440,0,0" Name="lblTrailer" VerticalAlignment="Top" Width="62" />
+        <Label Content="" Height="28" HorizontalAlignment="Left" Margin="80,440,0,0" Name="lblRutavideo" VerticalAlignment="Top" Width="997" />
+        <Label Content="Sinopsis: " Height="28" HorizontalAlignment="Left" Margin="18,503,0,0" Name="lblSinopsis" VerticalAlignment="Top" Width="69" />
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Height="68" HorizontalAlignment="Left" Margin="90,509,0,0" Name="txtSinopsis" VerticalAlignment="Top" Width="987" IsEnabled="False"/>
+        <MediaElement LoadedBehavior="Play" Height="113" HorizontalAlignment="Left" Margin="257,250,0,0" Name="video" VerticalAlignment="Top" Width="201"/>
+        <Button Content="" Height="30" HorizontalAlignment="Left" Margin="318,369,0,0" Name="btnPlay" VerticalAlignment="Top" Width="30" Click="btnPlay_Click" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="White"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <fa:ImageAwesome Icon="PlayCircle" Width="20" Height="20" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="" Height="30" HorizontalAlignment="Left" Margin="354,369,0,0" Name="btnPause" VerticalAlignment="Top" Width="30" Click="btnPause_Click" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="White"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <fa:ImageAwesome Icon="PauseCircle" Width="20" Height="20" Foreground="Coral" VerticalAlignment="Stretch"></fa:ImageAwesome>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

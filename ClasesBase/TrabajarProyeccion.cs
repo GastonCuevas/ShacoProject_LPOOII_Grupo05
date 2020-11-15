@@ -13,7 +13,7 @@ namespace ClasesBase
         {
             SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select * FROM proyeccion";
+            cmd.CommandText = "Select * FROM vistaProyeccion";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             conn.Open();
@@ -22,6 +22,73 @@ namespace ClasesBase
             da.Fill(dt);
             conn.Close();
             return (dt);
+        }
+
+        public static DataTable traerProyeccionesSemana()
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select * FROM vistaProyeccion where ProyeccionFecha between getdate() and (getdate()+7)";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            conn.Close();
+            return (dt);
+        }
+
+        public static DataTable traerProyeccionesEntreDosFechas(DateTime fecha1, DateTime fecha2)
+        {
+            SqlConnection conn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select * FROM vistaProyeccion where ProyeccionFecha between @fecha1 and @fecha2";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@fecha1", fecha1);
+            cmd.Parameters.AddWithValue("@fecha2", fecha2);
+
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            conn.Close();
+            return (dt);
+        }
+
+        /// <summary>
+        /// Método que trae las proyecciones de la tabla Proyección según nombre de película
+        /// </summary>
+        /// <param name="nombre"></param>
+        public static DataTable buscarProyecciones(String nombre)
+        {
+            //Conexión
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+
+            //Configuración de la consulta - Update con parametros
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "traerProyeccionesNombre";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            //Configuración de los parametros
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+
+            //Creación de la tabla
+
+            DataTable dt = new DataTable();
+
+            //Cración del adaptador
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+
+            //Llenamos la tabla con los datos que necesitamos
+            da.Fill(dt);
+
+            //Retornamos la tabla cargada
+            return dt;
         }
 
         public static DataTable traerProyeccionesCB()

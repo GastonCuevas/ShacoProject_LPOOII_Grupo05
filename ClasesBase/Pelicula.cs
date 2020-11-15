@@ -58,5 +58,13 @@ namespace ClasesBase
             get { return pel_trailer; }
             set { pel_trailer = value; }
         }
+
+        private string pel_Sinopsis;
+
+        public string Pel_Sinopsis
+        {
+            get { return pel_Sinopsis; }
+            set { pel_Sinopsis = value; }
+        }
     }
 }
