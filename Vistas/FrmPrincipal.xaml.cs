@@ -159,5 +159,17 @@ namespace Vistas
             this.Close();
             oFrmLogin.Show();
         }
+
+        private void btClientes_Click(object sender, RoutedEventArgs e)
+        {
+            FrmClientes oFrmClientes = new FrmClientes();
+            oFrmClientes.Show();
+        }
+
+        private void btTickets_Click(object sender, RoutedEventArgs e)
+        {
+            frmTickets oFrmTickets = new frmTickets(user);
+            oFrmTickets.Show();
+        }
     }
 }
