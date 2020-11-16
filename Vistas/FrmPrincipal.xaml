@@ -1,23 +1,83 @@
 ﻿<Window x:Class="Vistas.FrmPrincipal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Panel Principal" Height="433" Width="651">
-    <Grid>
-        <Menu Height="48" HorizontalAlignment="Left" Name="menuVendedor" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
-            <MenuItem Header="Clientes" Name="miClientes" Click="miClientes_Click"></MenuItem>
-            <MenuItem Header="Tickets" Name="miTickets" Click="miTickets_Click"></MenuItem>
-        </Menu>
-        <Menu Height="46" HorizontalAlignment="Left" Name="menuAdmin" VerticalAlignment="Top" Width="629" FontSize="14" Foreground="White" Background="#B40404">
-            <MenuItem Header="Usuarios" Name="miUsuarios" Click="miUsuarios_Click"></MenuItem>
-            <MenuItem Header="Películas" Name="miPeliculas" Click="miPeliculas_Click"></MenuItem>
-            <MenuItem Header="Proyecciones" Name="miProyeccciones" Click="miProyeccciones_Click"></MenuItem>
-            <MenuItem Header="Salas" Name="miSalas" Click="miSalas_Click"></MenuItem>
-        </Menu>
-        <Button Content="Cerrar Sesión" Height="23" HorizontalAlignment="Left" Margin="531,0,0,0" Name="btnCerrarSesion" VerticalAlignment="Top" Width="98" Click="btnCerrarSesion_Click" />
-        <Label Content="Bienvenido: " Height="28" HorizontalAlignment="Left" Margin="180,56,0,0" Name="lblUsuarioLogueado" VerticalAlignment="Top" Width="215" />
-        <Image Name="imgFondoPrincipal" Width="550" Height="300" Margin="26,82,30,12" Stretch="Fill">
-            <Image.Source>Images/shacomain.jpg</Image.Source>
+        Title="Panel Principal" Height="433" Width="651" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Black" MouseDown="Window_MouseDown">
+    <Grid Background="{x:Null}">
+        <Image Name="imgMenu" HorizontalAlignment="Left" Stretch="Fill" Width="150" Source="/Vistas;component/Images/shaco%20menu.jpg" Opacity="0.6">
+            <Image.OpacityMask>
+                <RadialGradientBrush>
+                    <GradientStop Color="#E7000000" Offset="0.543" />
+                    <GradientStop Color="#60FFFFFF" Offset="1" />
+                </RadialGradientBrush>
+            </Image.OpacityMask>
         </Image>
+        <StackPanel Orientation="Vertical" Height="165" HorizontalAlignment="Left" Margin="0,127,0,0" Name="menuAdministrador" VerticalAlignment="Top" Width="150">
+            <Button Height="30" Name="btUsuarios" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btUsuarios_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,20,0"></Rectangle>
+                    <Image Source="Images/empleados.png" Width="40" Height="40" Margin="0,0,12,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Usuarios" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Height="30" Name="btPeliculas" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btPeliculas_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,27,0"></Rectangle>
+                    <Image Source="Images/cine2.png" Width="25" Height="25" Margin="0,0,19,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Peliculas" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Height="30" Name="btProyecciones" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btProyecciones_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,27,0"></Rectangle>
+                    <Image Source="Images/carrete-de-pelicula2.png" Width="25" Height="25" Margin="0,0,8,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Proyecciones" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Height="30" Name="btSalas" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btSalas_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,27,0"></Rectangle>
+                    <Image Source="Images/silla-de-cine2.png" Width="25" Height="25" Margin="0,0,28,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Salas" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Name="userInfo" Orientation="Vertical" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150">
+            <Image Name="imageUsu" Source="Images/user1.png" Width="75" Height="75" HorizontalAlignment="Center" Margin="0,20,0,0"></Image>
+            <Label Content="Welcome: " Height="28" HorizontalAlignment="Center" Name="lblUsuarioLogueado" VerticalAlignment="Center" Width="150" Style="{StaticResource Txt}" FontSize="12"/>
+        </StackPanel>
+        <Button Height="30" Width="150" Name="btSalir" HorizontalAlignment="Left" Margin="0,353,479,10" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btSalir_Click">
+            <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,27,0"></Rectangle>
+                <Image Source="Images/off2.png" Width="24" Height="24" Margin="0,0,28,0" VerticalAlignment="Center"></Image>
+                <TextBlock Text="Salir" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Button>
+        
+        <StackPanel Orientation="Vertical" Height="165" HorizontalAlignment="Left" Margin="0,127,0,0" Name="menuVend" VerticalAlignment="Top" Width="150">
+            <Button Height="30" Name="btClientes" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btUsuarios_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,20,0"></Rectangle>
+                    <Image Source="Images/clientes.png" Width="40" Height="40" Margin="0,0,14,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Clientes" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Height="30" Name="btTickets" Margin="0,10,0,0" Background="{x:Null}" DataContext="{Binding}" Style="{StaticResource BotónMenu}" HorizontalContentAlignment="Left" Click="btPeliculas_Click">
+                <StackPanel Orientation="Horizontal" Width="auto" Height="auto">
+                    <Rectangle Fill="#FF640000" Width="8" Height="auto" HorizontalAlignment="Left" Margin="0,0,27,0"></Rectangle>
+                    <Image Source="Images/tickets2.png" Width="25" Height="25" Margin="0,0,23,0" VerticalAlignment="Center"></Image>
+                    <TextBlock Text="Tickets" TextAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid Height="20" Background="#FF640000" HorizontalAlignment="Left" VerticalAlignment="Top" Name="menuApp" Width="651">
+            <Button Width="20" Height="20" Style="{StaticResource BotónMenu}" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,20,0" HorizontalAlignment="Right" Click="Button_Click">
+                <Image Name="Exit" Source="Images/cerrar.png"></Image>
+            </Button>
+            <Button Width="20" Height="20" Style="{StaticResource BotónMenu}" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,50,0" HorizontalAlignment="Right" Click="Button_Click_1">
+                <Image Name="Min" Source="Images/minimazar.png"></Image>
+            </Button>
+            <DockPanel Height="374" HorizontalAlignment="Left" Margin="147,20,0,0" Name="controlPanel" VerticalAlignment="Top" Width="504" Background="#FFAF5B5B" />
+        </Grid>
     </Grid>
 </Window>
 

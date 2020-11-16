@@ -50,9 +50,9 @@
         <Setter Property="Background" Value="Yellow"/>
         <Setter Property="Foreground" Value="Black"/>
     </Style>
-   
-    
-    
+
+
+
     <Style TargetType="TextBox" x:Key="TxtEstandar">
         <Setter Property="Background" Value="#FF190000"></Setter>
         <Setter Property="BorderBrush" Value="#FF640000"></Setter>
@@ -80,6 +80,14 @@
     <Style TargetType="Button" x:Key="BotónAccion">
         <Setter Property="Background" Value="#FF190000"></Setter>
         <Setter Property="BorderBrush" Value="#FF640000"></Setter>
+        <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+        <Setter Property="FontSize" Value="12"></Setter>
+        <Setter Property="Foreground" Value="white"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="BotónMenu">
+        <Setter Property="BorderBrush" Value="{x:Null}"></Setter>
         <Setter Property="FontFamily" Value="Segoe UI"></Setter>
         <Setter Property="FontSize" Value="12"></Setter>
         <Setter Property="Foreground" Value="white"></Setter>

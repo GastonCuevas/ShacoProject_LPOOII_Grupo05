@@ -256,3 +256,7 @@ C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vi
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\FrmListaProyecciones.g.cs
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\VisorProyecciones.baml
 C:\Users\gas_c\onedrive\documentos\visual studio 2010\Projects\LPOOII_GRUPO05\Vistas\obj\x86\Debug\VisorProyecciones.g.cs
+C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmListaProyecciones.baml
+C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\VisorProyecciones.baml
+C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\FrmListaProyecciones.g.cs
+C:\Users\Brunoich\Documents\GitHub\ShacoProject_LPOOII_Grupo05\Vistas\obj\x86\Debug\VisorProyecciones.g.cs

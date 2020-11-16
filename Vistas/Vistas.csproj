@@ -297,6 +297,51 @@
   <ItemGroup>
     <Resource Include="Images\cinema.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\shaco menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\producto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cine2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\carrete-de-pelicula2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\silla-de-cine2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\contra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\off2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tickets2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimazar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

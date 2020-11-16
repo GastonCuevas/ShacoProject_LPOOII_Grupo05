@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
+using System.Runtime.InteropServices;
 
 namespace Vistas
 {
@@ -43,14 +44,14 @@ namespace Vistas
 
             if (userLogued.Rol_Codigo.Equals("ADM"))
             {
-                menuVendedor.Visibility = System.Windows.Visibility.Collapsed;
+                menuVend.Visibility = System.Windows.Visibility.Collapsed;
             }
             else 
             {
-                menuAdmin.Visibility = System.Windows.Visibility.Collapsed;
+                menuAdministrador.Visibility = System.Windows.Visibility.Collapsed;
             }
 
-            lblUsuarioLogueado.Content = "Bienvenido: " + userLogued.Usu_ApellidoNombre;
+            lblUsuarioLogueado.Content = userLogued.Usu_ApellidoNombre;
         }
 
         //Método que muestra el formulario de gestión de clientes.
@@ -110,5 +111,53 @@ namespace Vistas
             oFrmLogin.Show();
         }
 
+        //nuevo menu
+
+        private void btUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            frmUsuarios oFrmUsuarios = new frmUsuarios();
+            oFrmUsuarios.Show();
+        }
+
+        private void btPeliculas_Click(object sender, RoutedEventArgs e)
+        {
+            FrmPeliculas oFrmPeliculas = new FrmPeliculas();
+            oFrmPeliculas.Show();
+        }
+
+        private void btProyecciones_Click(object sender, RoutedEventArgs e)
+        {
+            frmProyecciones oFrmProyecciones = new frmProyecciones();
+            oFrmProyecciones.Show();
+        }
+
+        private void btSalas_Click(object sender, RoutedEventArgs e)
+        {
+            FrmSalas oFrmSalas = new FrmSalas();
+            oFrmSalas.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void btSalir_Click(object sender, RoutedEventArgs e)
+        {
+            FrmLogin oFrmLogin = new FrmLogin();
+            this.Close();
+            oFrmLogin.Show();
+        }
     }
 }
